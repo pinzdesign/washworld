@@ -19,15 +19,15 @@ Dvs en core som vi kan udvikle på fremover, med alt vi beslutter os for.
 
 1. Clone repo:
 
-git clone https://github.com/pinzdesign/washworld.git
+`git clone https://github.com/pinzdesign/washworld.git`
 
 2. Start Dockeren op
 
 3. I terminalen kør:
 
-docker compose up --build
+`docker compose up --build`
 
-3 containere popper op i Dockeren
+Tre containere popper op i Dockeren
 
 4. Åbn phpMyAdmin og importer databasen...der er ikke ret meget, bare en test tabel med test_id og test_message, databasen bliver også oprettet under setup, så bare opret tabellen
 
