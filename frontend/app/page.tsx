@@ -9,9 +9,10 @@ type TestItem = {
 
 export default function Home() {
   const [data, setData] = useState<TestItem[]>([]);
+  const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
-    fetch("http://localhost:5000/test")
+    fetch(`${baseURL}/test`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error(err));
