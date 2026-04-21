@@ -67,10 +67,10 @@ Frontend:
 http://localhost:3000
 
 Backend API:
-http://localhost:5000
+http://localhost:5001
 
 Test endpoint:
-http://localhost:5000/test
+http://localhost:5001/test
 
 phpMyAdmin:
 http://localhost:8080
