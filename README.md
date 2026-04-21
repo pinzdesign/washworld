@@ -31,7 +31,32 @@ Tre containere popper op i Dockeren
 
 4. Åbn phpMyAdmin og importer databasen...der er ikke ret meget, bare en test tabel med test_id og test_message, databasen bliver også oprettet under setup, så bare opret tabellen
 
-NB: Der er ikke noget behov for at køre "npm run dev" for nextJS fordi det hele er containerized allerede
+5. Byg frontend.
+
+5a. I terminalen, skift til frontend mappen:
+
+`cd frontend`
+
+Stien skifter til *sti*/frontend - her skal next packages blive installeret, fordi github oploader ikke alle next packages
+
+5b. I terminalen kør
+
+`npm install`
+
+Alle packages blive installeret.
+
+5c. Byg frontend med
+
+`npm run dev`
+
+Åbn frontend siden (der burde være et link)
+
+Hvis du kan se:
+
+Wash World
+Running!
+
+Så betyder det at det hele virker (Beskeden Running! kommer fra databasen)
 
 ---
 
