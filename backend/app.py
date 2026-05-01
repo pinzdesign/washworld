@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from icecream import ic
+from werkzeug.security import generate_password_hash, check_password_hash
 import x
 import uuid
 import mysql.connector
@@ -36,7 +37,7 @@ def test():
 def signup():
     try:
         user_email = x.validate_user_email()
-        user_password = x.validate_user_password()
+        user_password = generate_password_hash(x.validate_user_password())
         user_first_name = x.validate_user_first_name()
         user_last_name = x.validate_user_last_name()
         user_phone = x.validate_user_phone()
@@ -128,8 +129,8 @@ def verify_account(key):
 
         return "Your account has been verified"
     except Exception as ex: 
-
-        return str(ex), 500
+        ic(ex)
+        return "Internal error", 500
     finally:
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close() 
