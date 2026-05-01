@@ -1,24 +1,141 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
-from x import db
-# import jwt
-import datetime
+from icecream import ic
+import x
+import uuid
+import mysql.connector
 
-SECRET_KEY = "supersecretkey"
+import os
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+# import jwt
+import time
+
+SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
 app = Flask(__name__)
 
 CORS(app)
 
+#############################
 @app.route("/test")
 def test():
-    connection, cursor = db()
+    connection, cursor = x.db()
 
     cursor.execute("SELECT test_id, test_message FROM test")
     rows = cursor.fetchall()
 
     connection.close()
     return jsonify(rows)
+
+
+#############################
+@app.post("/signup")
+def signup():
+    try:
+        user_email = x.validate_user_email()
+        user_password = x.validate_user_password()
+        user_first_name = x.validate_user_first_name()
+        user_last_name = x.validate_user_last_name()
+        user_phone = x.validate_user_phone()
+        user_verification_key = uuid.uuid4().hex
+        user_verified_at = 0
+        created_at = int(time.time())
+
+        connection, cursor = x.db()
+        q = """INSERT INTO users
+        (user_email, user_password, user_first_name, user_last_name, user_phone, user_verification_key, user_verified_at, created_at)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
+        cursor.execute(q, (user_email, user_password, user_first_name, user_last_name, user_phone, user_verification_key, user_verified_at, created_at))
+        connection.commit()
+
+        base_url = os.environ.get("FRONTEND_URL", "http://127.0.0.1:3000")
+        html = render_template("email_welcome.html", user_verification_key=user_verification_key, base_url=base_url)
+
+        send_email(html, user_email)
+        return "Please check your email maybe it arrived in the spam folder"
+    except mysql.connector.IntegrityError as ex:
+        if ex.errno == 1062:
+            return "Email already registered", 409
+        ic(ex)
+        return "Internal error", 500
+    except Exception as ex:
+        msg = str(ex)
+        if msg.startswith("company_exception"):
+            field = msg.replace("company_exception ", "")
+            return f"Invalid {field}", 400
+        ic(ex)
+        return "Internal error", 500
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
+
+##############################
+def send_email(html, user_email):
+    try:    
+        sender_email = os.environ.get("EMAIL_SENDER", None)
+        password = os.environ.get("EMAIL_PASSWORD", None)
+
+        receiver_email = user_email
+
+        message = MIMEMultipart()
+        message["From"] = "WashWorld"
+        message["To"] = receiver_email
+        message["Subject"] = "Please verify your account"
+
+        message.attach(MIMEText(html, "html"))
+
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message.as_string())
+
+
+        return "email sent"
+       
+    except Exception as ex:
+        return "cannot send email", 500
+    finally:
+        pass
+
+
+##############################
+@app.get("/verify/<key>")
+def verify_account(key):
+    try:
+        if not key or len(key) != 32:
+            return "Invalid verification key", 400
+
+        connection, cursor = x.db()
+
+        q = "SELECT * FROM users WHERE user_verification_key = %s"
+        cursor.execute(q, (key,))
+        user = cursor.fetchone()
+
+        if not user:
+            return "Invalid verification key", 404
+
+        if user["user_verified_at"] != 0:
+            return "Account is already verified", 400
+
+
+        q = "UPDATE users SET user_verified_at = %s WHERE user_pk = %s"
+        cursor.execute(q, (int(time.time()), user["user_pk"]))
+        connection.commit()
+
+        return "Your account has been verified"
+    except Exception as ex: 
+
+        return str(ex), 500
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close() 
+
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

@@ -10,6 +10,8 @@ services:
       - 5001:5000 
     volumes:
       - ./backend:/app
+    env_file:
+      - ./backend/.env 
 
   mariadb:
     image: mariadb:10.6.20
