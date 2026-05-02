@@ -1,31 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-type TestItem = {
-  test_id: number;
-  test_message: string;
-};
+import Login from "@/components/Login";
+import UserProfile from "@/components/UserProfile";
 
 export default function Home() {
-  const [data, setData] = useState<TestItem[]>([]);
-  const baseURL = process.env.NEXT_PUBLIC_API_URL;
+  const [token, setToken] = useState<string | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch(`${baseURL}/test`)
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => console.error(err));
+    const storedToken = localStorage.getItem("token");
+    setToken(storedToken);
+    setIsLoaded(true);
   }, []);
+
+  // Prevent render until client is ready
+  if (!isLoaded) return null;
 
   return (
     <main>
       <h1>Wash World</h1>
-          {data.map((item) => (
-            <div key={item.test_id}>
-              {item.test_message}
-            </div>
-          ))}
+
+      {!token ? <Login /> : <UserProfile />}
     </main>
   );
 }
