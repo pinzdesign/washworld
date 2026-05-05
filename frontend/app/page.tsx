@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Login from "@/components/Login";
 import UserProfile from "@/components/UserProfile";
+import MembershipsController from "@/components/MembershipsController";
 
 export default function Home() {
   const [token, setToken] = useState<string | null>(null);
@@ -22,6 +23,7 @@ export default function Home() {
       <h1>Wash World</h1>
 
       {!token ? <Login /> : <UserProfile />}
+      {token ? <MembershipsController /> : null }
     </main>
   );
 }

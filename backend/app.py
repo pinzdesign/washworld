@@ -223,5 +223,114 @@ def user_profile():
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
 
+#############################
+# PASSWORD PROTECTED: Get all memberships for logged-in user
+@app.get("/memberships")
+def get_memberships():
+    try:
+        token = request.headers.get("Authorization", "").replace("Bearer ", "")
+
+        if not token:
+            return "Missing token", 401
+
+        try:
+            decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        except jwt.ExpiredSignatureError:
+            return "Token expired", 401
+        except Exception:
+            return "Invalid token", 401
+
+        user_pk = decoded["user_pk"]
+
+        connection, cursor = x.db()
+
+        q = """
+        SELECT 
+            m.membership_pk,
+            m.car_plate,
+            m.primary_dep_ext_id,
+            m.access_all_dep,
+            m.membership_start_at,
+            m.membership_end_at,
+            m.membership_status,
+            mt.membership_type_name,
+            mt.membership_type_price,
+            mt.membership_desc
+        FROM membership m
+        JOIN membership_type mt 
+            ON m.membership_type_fk = mt.membership_type_pk
+        WHERE m.user_fk = %s
+        AND m.deleted_at = 0
+        ORDER BY m.created_at DESC
+        """
+
+        cursor.execute(q, (user_pk,))
+        memberships = cursor.fetchall()
+
+        return jsonify({
+            "memberships": memberships
+        })
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
+#############################
+# PASSWORD PROTECTED: Soft delete membership
+@app.delete("/memberships/<int:membership_pk>")
+def delete_membership(membership_pk):
+    try:
+        token = request.headers.get("Authorization", "").replace("Bearer ", "")
+
+        if not token:
+            return "Missing token", 401
+
+        try:
+            decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        except jwt.ExpiredSignatureError:
+            return "Token expired", 401
+        except Exception:
+            return "Invalid token", 401
+
+        user_pk = decoded["user_pk"]
+
+        connection, cursor = x.db()
+
+        # Check ownership
+        q = """
+        SELECT membership_pk 
+        FROM membership 
+        WHERE membership_pk = %s 
+        AND user_fk = %s 
+        AND deleted_at = 0
+        """
+        cursor.execute(q, (membership_pk, user_pk))
+        membership = cursor.fetchone()
+
+        if not membership:
+            return "Membership not found", 404
+
+        # Soft delete
+        q = """
+        UPDATE membership
+        SET deleted_at = %s,
+            membership_status = 'cancelled'
+        WHERE membership_pk = %s
+        """
+        cursor.execute(q, (int(time.time()), membership_pk))
+        connection.commit()
+
+        return "Membership removed"
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
