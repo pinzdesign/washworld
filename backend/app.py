@@ -5,6 +5,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import x
 import uuid
 import mysql.connector
+import random
+import string
 
 import os
 import smtplib
@@ -101,7 +103,6 @@ def send_email(html, user_email):
     finally:
         pass
 
-
 ##############################
 @app.get("/verify/<key>")
 def verify_account(key):
@@ -179,19 +180,7 @@ def login():
 @app.get("/user")
 def user_profile():
     try:
-        token = request.headers.get("Authorization", "").replace("Bearer ", "")
-
-        if not token:
-            return "Missing token", 401
-
-        try:
-            decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        except jwt.ExpiredSignatureError:
-            return "Token expired", 401
-        except Exception:
-            return "Invalid token", 401
-
-        user_pk = decoded["user_pk"]
+        user_pk = auth()
 
         connection, cursor = x.db()
 
@@ -228,19 +217,7 @@ def user_profile():
 @app.get("/memberships")
 def get_memberships():
     try:
-        token = request.headers.get("Authorization", "").replace("Bearer ", "")
-
-        if not token:
-            return "Missing token", 401
-
-        try:
-            decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        except jwt.ExpiredSignatureError:
-            return "Token expired", 401
-        except Exception:
-            return "Invalid token", 401
-
-        user_pk = decoded["user_pk"]
+        user_pk = auth()
 
         connection, cursor = x.db()
 
@@ -280,22 +257,10 @@ def get_memberships():
 
 #############################
 # PASSWORD PROTECTED: Soft delete membership
-@app.delete("/memberships/<int:membership_pk>")
+@app.patch("/memberships/<int:membership_pk>")
 def delete_membership(membership_pk):
     try:
-        token = request.headers.get("Authorization", "").replace("Bearer ", "")
-
-        if not token:
-            return "Missing token", 401
-
-        try:
-            decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        except jwt.ExpiredSignatureError:
-            return "Token expired", 401
-        except Exception:
-            return "Invalid token", 401
-
-        user_pk = decoded["user_pk"]
+        user_pk = auth()
 
         connection, cursor = x.db()
 
@@ -332,5 +297,274 @@ def delete_membership(membership_pk):
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
 
+#############################
+# PASSWORD PROTECTED: Get service history for logged-in user
+@app.get("/service-history")
+def get_service_history():
+    try:
+        user_pk = auth()
+
+        connection, cursor = x.db()
+
+        q = """
+        SELECT
+            sh.service_history_pk,
+            sh.service_fk,
+            sh.membership_fk,
+
+            sh.department_ext_id,
+
+            sh.car_plate,
+
+            sh.base_price,
+            sh.final_price,
+
+            sh.covered_by_membership,
+
+            sh.service_at,
+
+            s.service_name,
+            s.service_type,
+
+            mt.membership_type_name
+
+        FROM service_history sh
+
+        JOIN service s
+            ON sh.service_fk = s.service_pk
+
+        LEFT JOIN membership m
+            ON sh.membership_fk = m.membership_pk
+
+        LEFT JOIN membership_type mt
+            ON m.membership_type_fk = mt.membership_type_pk
+
+        WHERE sh.user_fk = %s
+
+        ORDER BY sh.service_at DESC
+        """
+
+        cursor.execute(q, (user_pk,))
+        history = cursor.fetchall()
+
+        return jsonify({
+            "history": history
+        })
+
+    except Exception as ex:
+        msg = str(ex)
+
+        if msg == "missing_token":
+            return "Missing token", 401
+
+        if msg == "token_expired":
+            return "Token expired", 401
+
+        if msg == "invalid_token":
+            return "Invalid token", 401
+
+        ic(ex)
+        return "Internal error", 500
+
+    finally:
+        if "cursor" in locals():
+            cursor.close()
+
+        if "connection" in locals():
+            connection.close()
+
+# Scanner simulation:
+# This will simulate car plate scanner at terminal, response values are hardcoded
+# There is a 50/50 chance to use a randomly generated plate, or use one from database, simulating a registered user
+# (chance that random generator will stumble upon registered number is inexistant)
+
+@app.post("/simulate-scan")
+def simulate_scan():
+    try:
+        jwt_user_fk = auth()
+
+        connection, cursor = x.db()
+
+        # 1. SCAN ONLY
+        car_plate, department_ext_id = scan_car_plate(cursor)
+
+        # 2. SERVICE (hardcoded for now)
+        service_fk = 2
+        service_type = "gold"
+        base_price = 59
+
+        # 3. LOOKUP MEMBERSHIP
+        membership = get_membership_by_plate(cursor, car_plate)
+
+        # 4. PRICE DECISION - for simplicity, if there is no match between registered plan and chosen service, just charge full price
+        final_price, covered = calculate_price(
+            membership,
+            service_type,
+            base_price
+        )
+
+        # 5. ALWAYS WRITE HISTORY
+        write_history(
+            cursor,
+            connection,
+            jwt_user_fk,
+            car_plate,
+            membership,
+            service_fk,
+            department_ext_id,
+            base_price,
+            final_price,
+            covered
+        )
+
+        # 6. RESPONSE
+        return jsonify({
+            "success": True,
+            "car_plate": car_plate,
+            "membership_found": membership is not None,
+            "membership": membership["membership_type_name"] if membership else None,
+            "final_price": final_price,
+            "covered_by_membership": covered
+        })
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+
+    finally:
+        if "cursor" in locals():
+            cursor.close()
+        if "connection" in locals():
+            connection.close()
+
+#############################
+# HELPERS - maybe move to x?
+#############################
+
+# Authorisation check, moved it here, let's keep it DRY
+def auth():
+    token = request.headers.get("Authorization", "").replace("Bearer ", "")
+
+    if not token:
+        raise Exception("missing_token")
+
+    try:
+        decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        return decoded["user_pk"]
+
+    except jwt.ExpiredSignatureError:
+        raise Exception("token_expired")
+
+    except Exception:
+        raise Exception("invalid_token")
+
+#############################
+# Generate a random car plate, for scanning simulator
+def generate_random_plate():
+    letters = ''.join(random.choices(string.ascii_uppercase, k=2))
+    numbers = ''.join(random.choices(string.digits, k=5))
+
+    return f"{letters}{numbers}"
+
+#############################
+# Add history entry in databse
+def write_history(
+    cursor,
+    connection,
+    jwt_user_fk,
+    car_plate,
+    membership,
+    service_fk,
+    department_ext_id,
+    base_price,
+    final_price,
+    covered_by_membership
+):
+
+    membership_fk = membership["membership_pk"] if membership else None
+
+    cursor.execute("""
+        INSERT INTO service_history (
+            user_fk,
+            membership_fk,
+            service_fk,
+            department_ext_id,
+            car_plate,
+            base_price,
+            final_price,
+            covered_by_membership,
+            service_at
+        )
+        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
+    """, (
+        jwt_user_fk,
+        membership_fk,
+        service_fk,
+        department_ext_id,
+        car_plate,
+        base_price,
+        final_price,
+        covered_by_membership,
+        int(time.time())
+    ))
+
+    connection.commit()
+
+# Plate scanner - returns a random plate OR one from database
+def scan_car_plate(cursor):
+    use_existing = random.choice([True, False])
+
+    scanned_plate = None
+
+    if use_existing:
+        cursor.execute("""
+            SELECT car_plate
+            FROM membership
+            WHERE membership_status = 'active'
+            AND deleted_at = 0
+            ORDER BY RAND()
+            LIMIT 1
+        """)
+
+        row = cursor.fetchone()
+
+        if row:
+            scanned_plate = row["car_plate"]
+
+    if not scanned_plate:
+        scanned_plate = generate_random_plate()
+
+    # 123 is department
+    return scanned_plate, "123"
+
+def get_membership_by_plate(cursor, car_plate):
+    cursor.execute("""
+        SELECT
+            m.membership_pk,
+            m.user_fk,
+            m.car_plate,
+            mt.membership_type_name
+        FROM membership m
+        JOIN membership_type mt
+            ON m.membership_type_fk = mt.membership_type_pk
+        WHERE m.car_plate = %s
+        AND m.deleted_at = 0
+        AND m.membership_status = 'active'
+        LIMIT 1
+    """, (car_plate,))
+
+    return cursor.fetchone()
+
+# Calculates pricing based of membership match
+def calculate_price(membership, service_type, base_price):
+    if not membership:
+        return base_price, False
+
+    if membership["membership_type_name"].lower() == service_type:
+        return 0, True
+
+    return base_price, False
+
+# Need this at the end!
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

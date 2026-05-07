@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: mariadb
--- Genereringstid: 05. 05 2026 kl. 11:47:02
+-- Genereringstid: 07. 05 2026 kl. 16:22:25
 -- Serverversion: 10.6.20-MariaDB-ubu2004
 -- PHP-version: 8.3.26
 
@@ -67,9 +67,62 @@ CREATE TABLE `membership_type` (
 --
 
 INSERT INTO `membership_type` (`membership_type_pk`, `membership_type_name`, `membership_type_price`, `membership_desc`) VALUES
-(1, 'Guld', 139, 'En guld standard.'),
-(2, 'Premium', 169, 'En mere grundig vask med noget ekstra.'),
-(3, 'Brilliant', 199, 'Den bedste oplevelse med alle ekstras inkluderet.');
+(1, 'gold', 139, 'En guld standard.'),
+(2, 'premium', 169, 'En mere grundig vask med noget ekstra.'),
+(3, 'brilliant', 199, 'Den bedste oplevelse med alle ekstras inkluderet.');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `service`
+--
+
+CREATE TABLE `service` (
+  `service_pk` int(200) NOT NULL,
+  `service_name` varchar(200) NOT NULL,
+  `service_price` decimal(65,0) NOT NULL,
+  `service_desc` varchar(200) NOT NULL,
+  `service_type` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Data dump for tabellen `service`
+--
+
+INSERT INTO `service` (`service_pk`, `service_name`, `service_price`, `service_desc`, `service_type`) VALUES
+(1, 'Premium Enkeltvask', 89, 'Enkeltvask med premium features', 'premium'),
+(2, 'Guld Enkeltvask', 59, 'Enkeltvask med Guld features', 'gold'),
+(3, 'Brilliant Enkeltvask', 119, 'Enkeltvask med Guld features', 'brilliant');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `service_history`
+--
+
+CREATE TABLE `service_history` (
+  `service_history_pk` int(200) NOT NULL,
+  `user_fk` int(11) DEFAULT NULL,
+  `service_fk` int(200) NOT NULL,
+  `membership_fk` int(11) DEFAULT NULL,
+  `department_ext_id` int(200) NOT NULL,
+  `base_price` int(200) NOT NULL,
+  `final_price` int(200) NOT NULL,
+  `covered_by_membership` tinyint(1) NOT NULL,
+  `service_at` bigint(200) NOT NULL,
+  `car_plate` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Data dump for tabellen `service_history`
+--
+
+INSERT INTO `service_history` (`service_history_pk`, `user_fk`, `service_fk`, `membership_fk`, `department_ext_id`, `base_price`, `final_price`, `covered_by_membership`, `service_at`, `car_plate`) VALUES
+(1, 19, 2, NULL, 123, 59, 59, 0, 1778169765, 'RV28918'),
+(2, 19, 2, 2, 123, 59, 0, 1, 1778169781, 'AF 24333'),
+(3, 19, 2, NULL, 123, 59, 59, 0, 1778169826, 'AC33101'),
+(4, 19, 2, NULL, 123, 59, 59, 0, 1778170400, 'DX64519'),
+(5, 19, 2, 2, 123, 59, 0, 1, 1778170534, 'AF 24333');
 
 -- --------------------------------------------------------
 
@@ -134,6 +187,18 @@ ALTER TABLE `membership_type`
   ADD PRIMARY KEY (`membership_type_pk`);
 
 --
+-- Indeks for tabel `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`service_pk`);
+
+--
+-- Indeks for tabel `service_history`
+--
+ALTER TABLE `service_history`
+  ADD PRIMARY KEY (`service_history_pk`);
+
+--
 -- Indeks for tabel `test`
 --
 ALTER TABLE `test`
@@ -161,6 +226,18 @@ ALTER TABLE `membership`
 --
 ALTER TABLE `membership_type`
   MODIFY `membership_type_pk` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `service`
+--
+ALTER TABLE `service`
+  MODIFY `service_pk` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `service_history`
+--
+ALTER TABLE `service_history`
+  MODIFY `service_history_pk` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tilføj AUTO_INCREMENT i tabel `test`
