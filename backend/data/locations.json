@@ -1,0 +1,5806 @@
+[
+  {
+    "uid": "Locations6059ea3c128c9",
+    "Location_id": "1059",
+    "name": "Aabenraa - Egevej",
+    "address": "Egevej 4, 6200 Aabenraa",
+    "coordinates": {
+      "lat": "55.0656429",
+      "lng": "9.3644501"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-04-28",
+    "soft_opening": "2021-04-28",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens607e78606297c",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Røde kro",
+    "post_id": "1020",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/aabenraa-egevej/",
+    "skip_count": 1,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/1-vaskehal.jpg.png",
+    "base_capacity": 7,
+    "availability": 1.0,
+    "adjusted_capacity": 7.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916187cd75",
+    "Location_id": "1033",
+    "name": "Aalborg - Otto Mønstedsvej",
+    "address": "Otto Mønsteds Vej 5, 9200 Aalborg",
+    "coordinates": {
+      "lat": "57.015248",
+      "lng": "9.896256"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-10-01",
+    "soft_opening": "2018-10-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13520402fc5",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Meny,Skalborg",
+    "post_id": "981",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/aalborg-otto-monstedsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915fcd689f",
+    "Location_id": "1029",
+    "name": "Aalborg, Gug - Gammel Vissevej",
+    "address": "Gammel Vissevej 1C, 9210 Aalborg - Gug",
+    "coordinates": {
+      "lat": "57.00631387314069",
+      "lng": "9.925946295261383"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-07-01",
+    "soft_opening": "2018-07-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351f87de01",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Gug",
+    "post_id": "980",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/aalborg-gug-gammel-vissevej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/Ikke-navngivet-1-4.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5eaae8872dd50",
+    "Location_id": "1048",
+    "name": "Ballerup - Industriparken",
+    "address": "Industriparken 6, 2750 Ballerup",
+    "coordinates": {
+      "lat": "55.728714",
+      "lng": "12.373295"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-07-31",
+    "soft_opening": "2020-07-31",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "dad34985-df1e-49eb-afbf-7f09ddd4d80d",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ SKIP - 2 hoses"
+          },
+          {
+            "uid": "dad34985-df1e-49eb-afbf-7f09ddd4d80d",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ SKIP - 2 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "72a766d7-aa3d-4800-a100-1eb29abfa9a7",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Nilfisk Vacuum"
+          },
+          {
+            "uid": "72a766d7-aa3d-4800-a100-1eb29abfa9a7",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Nilfisk Vacuum"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5efc36ec2830b",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1009",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ballerup-industriparken/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/03/28140256/WashWorld_m_bil2.jpg",
+    "base_capacity": 16,
+    "availability": 0.5,
+    "adjusted_capacity": 8.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5d84c6994bed4",
+    "Location_id": "1041",
+    "name": "Brande - Vestergårdsvej",
+    "address": "Vestergårdsvej 3, 7330 Brande",
+    "coordinates": {
+      "lat": "55.960647",
+      "lng": "9.103426"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-11-23",
+    "soft_opening": "2019-11-23",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d887018329af",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1004",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/brande-vestergardsvej/",
+    "skip_count": 0,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 5,
+    "availability": 1.0,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5da06f74e0475",
+    "Location_id": "1043",
+    "name": "Brøndby Strand - Gl. Køge Landevej",
+    "address": "Gammel Køge Landevej 690, 2660 Brøndby Strand",
+    "coordinates": {
+      "lat": "55.618231",
+      "lng": "12.423950"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-01-16",
+    "soft_opening": "2020-01-16",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 2",
+            "service_unit_model_name": "High Presure Prewash"
+          },
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreens5e204f6d367e7",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Vallensbæk",
+    "post_id": "1006",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/brondby-strand-gl-koge-landevej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 14,
+    "availability": 1.0,
+    "adjusted_capacity": 14.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916270081c",
+    "Location_id": "1015",
+    "name": "Ebeltoft - Færgevejen",
+    "address": "Færgevejen 3, 8400 Ebeltoft",
+    "coordinates": {
+      "lat": "56.1908092",
+      "lng": "10.672123100000022"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-03-01",
+    "soft_opening": "2017-03-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "4"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13520e43942",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "982",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ebeltoft-faergevejen/",
+    "skip_count": 0,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 5,
+    "availability": 1.0,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5c47170bac41e",
+    "Location_id": "1037",
+    "name": "Esbjerg - Sædding Ringvej",
+    "address": "Sædding Ringvej 6, 6710 Esbjerg",
+    "coordinates": {
+      "lat": "55.5037278",
+      "lng": "8.40741920000005"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-03-01",
+    "soft_opening": "2019-03-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352d507068",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1000",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/esbjerg-saedding-ringvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140223/Ikke-navngivet-1-1.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b684c660541d",
+    "Location_id": "1021",
+    "name": "Farum - Gammelgårdsvej",
+    "address": "Gammelgårdsvej 84, 3520 Farum",
+    "coordinates": {
+      "lat": 55.816943,
+      "lng": 12.37035
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-07-01",
+    "soft_opening": "2017-07-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 3,
+        "details": [
+          {
+            "uid": "73d9632d-9457-4960-9b51-bc2cefd97aba",
+            "name": "Bås 3",
+            "service_unit_model_name": "Christ Compact - 4 hoses + vacuum"
+          },
+          {
+            "uid": "73d9632d-9457-4960-9b51-bc2cefd97aba",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Compact - 4 hoses + vacuum"
+          },
+          {
+            "uid": "73d9632d-9457-4960-9b51-bc2cefd97aba",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Compact - 4 hoses + vacuum"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d134b970b6d0",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "964",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/farum-gammelgardsvej/",
+    "skip_count": 3,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 23,
+    "availability": 1.0,
+    "adjusted_capacity": 23.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b891640bb970",
+    "Location_id": "1028",
+    "name": "Fredericia - Strevelinsvej",
+    "address": "Strevelinsvej 5, 7000 Fredericia",
+    "coordinates": {
+      "lat": "55.535519125891085",
+      "lng": "9.718700051307678"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-06-01",
+    "soft_opening": "2018-06-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135219378d9",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Erritsø",
+    "post_id": "983",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/fredericia-strevelinsvej/",
+    "skip_count": 0,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 17,
+    "availability": 1.0,
+    "adjusted_capacity": 17.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations62b02cef22bb4",
+    "Location_id": "1073",
+    "name": "Fredericia - Vejlevej",
+    "address": "Vejlevej 20, 7000 Fredericia",
+    "coordinates": {
+      "lat": "55.5696911",
+      "lng": "9.7276223"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-11-18",
+    "soft_opening": "2022-11-18",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens62b02d1726965",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Erritsø",
+    "post_id": "5146",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/fredericia-vejlevej/",
+    "skip_count": 0,
+    "halls_count": 1,
+    "image": false,
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations6059ee387a20a",
+    "Location_id": "1062",
+    "name": "Frederikshavn - Apholmenvej",
+    "address": "Apholmenvej 9, 9900 Frederikshavn",
+    "coordinates": {
+      "lat": "57.46219325161582",
+      "lng": "10.519448227310988"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-09-15",
+    "soft_opening": "2021-09-15",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens60c0bde70c087",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1612",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/frederikshavn-apholmenvej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140214/Ikke-navngivet-1-5.png",
+    "base_capacity": 14,
+    "availability": 1.0,
+    "adjusted_capacity": 14.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915adc3e81",
+    "Location_id": "1012",
+    "name": "Frederikssund - Askelundsvej",
+    "address": "Askelundsvej 8, 3600 Frederikssund",
+    "coordinates": {
+      "lat": "55.84515080248969",
+      "lng": "12.074291110038757"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-11-01",
+    "soft_opening": "2016-11-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d134c5624f25",
+    "hidden": 0,
+    "atav": 1,
+    "alias": null,
+    "post_id": "965",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/frederikssund-askelundsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915b163c12",
+    "Location_id": "1003",
+    "name": "Frederiksværk - Hanehovedvej",
+    "address": "Hanehovedvej 49, 3300 Frederiksværk",
+    "coordinates": {
+      "lat": "55.9775589",
+      "lng": "12.007447100000036"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2014-03-01",
+    "soft_opening": "2014-03-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d134c7f09f5b",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "966",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/frederiksvaerk-hanehovedvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": false,
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations6059eab0d16d4",
+    "Location_id": "1060",
+    "name": "Grenå - Hesselvang",
+    "address": "Hesselvang 1, 8500 Grenå",
+    "coordinates": {
+      "lat": "56.3838951",
+      "lng": "10.8644506"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-06-02",
+    "soft_opening": "2021-06-02",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens6092a05eabfa8",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1021",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/grena-hesselvang/",
+    "skip_count": 2,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 9,
+    "availability": 1.0,
+    "adjusted_capacity": 9.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations60b0f1337310b",
+    "Location_id": "1064",
+    "name": "Haderslev - Sverigesvej",
+    "address": "Sverigesvej 2M, 6100 Haderslev",
+    "coordinates": {
+      "lat": "55.2592112",
+      "lng": "9.4741292"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-10-20",
+    "soft_opening": "2021-10-20",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens6116711816b1f",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1614",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/haderslev-sverigesvej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140212/2-vask-1.png",
+    "base_capacity": 14,
+    "availability": 1.0,
+    "adjusted_capacity": 14.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5f7461d580f8a",
+    "Location_id": "1051",
+    "name": "Helsingør - Klostermosevej",
+    "address": "Klostermosevej 103, 3000 Helsingør",
+    "coordinates": {
+      "lat": "56.024018",
+      "lng": "12.571863"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-12-11",
+    "soft_opening": "2020-12-11",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5f7461f8f3cb9",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1013",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/helsingor-klostermosevej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 14,
+    "availability": 0.5,
+    "adjusted_capacity": 7.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5eaaea162e200",
+    "Location_id": "1049",
+    "name": "Herlev - Nørrelundvej",
+    "address": "Nørrelundvej 2, 2730 Herlev",
+    "coordinates": {
+      "lat": "55.725365",
+      "lng": "12.416697"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-08-14",
+    "soft_opening": "2020-08-14",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "dad34985-df1e-49eb-afbf-7f09ddd4d80d",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ SKIP - 2 hoses"
+          },
+          {
+            "uid": "dad34985-df1e-49eb-afbf-7f09ddd4d80d",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ SKIP - 2 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5f27a3891831a",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Herlev Hovedgade",
+    "post_id": "1011",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/herlev-norrelundvej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/Ikke-navngivet-1-4.png",
+    "base_capacity": 14,
+    "availability": 0.5,
+    "adjusted_capacity": 7.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5cb5e32a39c19",
+    "Location_id": "1039",
+    "name": "Herning - Dæmningen",
+    "address": "Dæmningen 21, 7400 Herning",
+    "coordinates": {
+      "lat": "56.132141",
+      "lng": "8.959350"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-07-26",
+    "soft_opening": "2019-07-26",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d25ef09570d0",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1002",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/herning-daemningen/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations6127e5427f263",
+    "Location_id": "1066",
+    "name": "Herning - Guldborgvej",
+    "address": "Guldborgvej 2-4, 7400 Herning",
+    "coordinates": {
+      "lat": "56.1535542",
+      "lng": "8.9847445"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-12-10",
+    "soft_opening": "2021-12-10",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens617934d7b1a23",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1617",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/herning-guldborgvej/",
+    "skip_count": 1,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140215/2_2-1.png",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations61b263848b56e",
+    "Location_id": "1068",
+    "name": "Hillerød - Industrivænget ",
+    "address": "Industrivænget 3, 3400 Hillerød",
+    "coordinates": {
+      "lat": 55.931481,
+      "lng": 12.282996
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-03-23",
+    "soft_opening": "2022-03-23",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens61c448746b30d",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "3152",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/hilleroed-industrivaenget/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": false,
+    "base_capacity": 14,
+    "availability": 1.0,
+    "adjusted_capacity": 14.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916502d557",
+    "Location_id": "1034",
+    "name": "Hjørring - Sprogøvej",
+    "address": "Sprogøvej 2, 9800 Hjørring",
+    "coordinates": {
+      "lat": "57.455593834918346",
+      "lng": "10.039465427398682"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-10-01",
+    "soft_opening": "2018-10-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135224925a2",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "984",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/hjorring-sprogovej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140224/Ikke-navngivet-1.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915ba48ae4",
+    "Location_id": "1027",
+    "name": "Holbæk - Springstrup",
+    "address": "Springstrup 5, 4300 Holbæk",
+    "coordinates": {
+      "lat": "55.70302615069463",
+      "lng": "11.666091084480286"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-03-24",
+    "soft_opening": "2021-03-24",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135156cdeb2",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "968",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/holbaek-springstrup/",
+    "skip_count": 2,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 21,
+    "availability": 0.67,
+    "adjusted_capacity": 14.07,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5cb09534932c65",
+    "Location_id": "1038",
+    "name": "Holstebro - Nybo Bakke",
+    "address": "Nybo Bakke 2, 7500 Holstebro",
+    "coordinates": {
+      "lat": "56.341889",
+      "lng": "8.635395"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-06-09",
+    "soft_opening": "2021-06-09",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135305cce36",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1001",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/holstebro-nybovej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5f8562dc53802",
+    "Location_id": "1052",
+    "name": "Horsens - Vejlevej",
+    "address": "Vejlevej 102, 8700 Horsens",
+    "coordinates": {
+      "lat": "55.833085",
+      "lng": "9.804744"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-11-18",
+    "soft_opening": "2020-11-18",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5f9a7e1dee8b1",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1014",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/horsens-vejlevej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 14,
+    "availability": 1.0,
+    "adjusted_capacity": 14.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations610a74677bc09",
+    "Location_id": "1065",
+    "name": "Højbjerg - Bjødstrupvej",
+    "address": "Bjødstrupvej 20E, 8270 Højbjerg",
+    "coordinates": {
+      "lat": "56.107525",
+      "lng": "10.166967"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-11-24",
+    "soft_opening": "2021-11-24",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens6116717f0bc75",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Århus",
+    "post_id": "1615",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/hojbjerg-bjodstrupvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140214/2.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5f856453c9add",
+    "Location_id": "1053",
+    "name": "Ikast - Europavej",
+    "address": "Europavej 3, 7430 Ikast",
+    "coordinates": {
+      "lat": "56.1236985",
+      "lng": "9.1754224"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-11-20",
+    "soft_opening": "2020-11-20",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5fa2a998ea75f",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1015",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ikast-europavej/",
+    "skip_count": 2,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/1-vaskehal.jpg.png",
+    "base_capacity": 9,
+    "availability": 1.0,
+    "adjusted_capacity": 9.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations6059eb8562cb4",
+    "Location_id": "1063",
+    "name": "Ishøj - Vejleåvej",
+    "address": "Vejleåvej 19, 2635 Ishøj",
+    "coordinates": {
+      "lat": "55.62338454215139",
+      "lng": "12.321166813346327"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-12-01",
+    "soft_opening": "2021-12-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens60c0bd119c3f2",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1611",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ishoj-vejleavej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140211/2-1.png",
+    "base_capacity": 14,
+    "availability": 0.5,
+    "adjusted_capacity": 7.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5fa3bd20928d3",
+    "Location_id": "1055",
+    "name": "Kalundborg - Holbækvej",
+    "address": "Holbækvej 74, 4400 Kalundborg",
+    "coordinates": {
+      "lat": "55.678767",
+      "lng": "11.13583"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-03-24",
+    "soft_opening": "2021-03-24",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5fa3c222a40c1",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1016",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/kalundborg-holbaekvej/",
+    "skip_count": 1,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 12,
+    "availability": 0.5,
+    "adjusted_capacity": 6.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5b89165b6e6b9",
+    "Location_id": "1026",
+    "name": "Kolding - Vejlevej 132",
+    "address": "Vejlevej 132, 6000 Kolding",
+    "coordinates": {
+      "lat": "55.5040386",
+      "lng": "9.4582265"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-04-26",
+    "soft_opening": "2021-04-26",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens60866ad57aa57",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "985",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/kolding-vejlevej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations600ed7d679b72",
+    "Location_id": "1056",
+    "name": "Kolding - Vejlevej 251",
+    "address": "Vejlevej 251, 6000 Kolding",
+    "coordinates": {
+      "lat": "55.5136635",
+      "lng": "9.4546968"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-04-21",
+    "soft_opening": "2021-04-21",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens602395a13b896",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Kolding storcenter",
+    "post_id": "1018",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/kolding-vejlevej-251/",
+    "skip_count": 2,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 21,
+    "availability": 0.67,
+    "adjusted_capacity": 14.07,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations600ed8154c21f",
+    "Location_id": "1058",
+    "name": "Køge - Københavnsvej",
+    "address": "Københavnsvej 86, 4600 Køge",
+    "coordinates": {
+      "lat": "55.471805",
+      "lng": "12.181953"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-05-05",
+    "soft_opening": "2021-05-05",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens602395f86afc9",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1019",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/koge-kobenhavnsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5e709e4151e7f",
+    "Location_id": "1046",
+    "name": "Lystrup - Lægårdsvej",
+    "address": "Lægårdsvej 4, 8520 Lystrup",
+    "coordinates": {
+      "lat": "56.225669",
+      "lng": "10.238525"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-03-25",
+    "soft_opening": "2020-03-25",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          },
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 2",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreens5e70ace530ea1",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Århus",
+    "post_id": "1007",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/lystrup-laegardsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916e25ea50",
+    "Location_id": "1024",
+    "name": "Middelfart - Skovsvinget",
+    "address": "Skovsvinget 27c, 5500 Middelfart",
+    "coordinates": {
+      "lat": "55.51201276139861",
+      "lng": "9.766180515289307"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-11-01",
+    "soft_opening": "2017-11-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135291983fd",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "994",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/middelfart-skovsvinget/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 0.5,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": "Hal 2 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations618ced3ae2606",
+    "Location_id": "1067",
+    "name": "Nakskov - Løjtoftevej",
+    "address": "Løjtoftevej 6, 4900 Nakskov ",
+    "coordinates": {
+      "lat": "54.832475",
+      "lng": "11.149662"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-03-04",
+    "soft_opening": "2022-03-04",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens61c448d264d1e",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "2179",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/nakskov-lojtoftevej/",
+    "skip_count": 2,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 9,
+    "availability": 1.0,
+    "adjusted_capacity": 9.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916f45cfcc",
+    "Location_id": "1036",
+    "name": "Nyborg - Storebæltsvej",
+    "address": "Storebæltsvej 7F, 5800 Nyborg",
+    "coordinates": {
+      "lat": "55.30849794548207",
+      "lng": "10.809624195098877"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-12-01",
+    "soft_opening": "2018-12-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreen5d13529bd134e",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "995",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/nyborg-storebaeltsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 11,
+    "availability": 1.0,
+    "adjusted_capacity": 11.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915c06d0ba",
+    "Location_id": "1004",
+    "name": "Nykøbing Falster - Guldborgsundcentret",
+    "address": "Guldborgsundcentret 32, 4800 Nykøbing Falster",
+    "coordinates": {
+      "lat": "54.75880136632285",
+      "lng": "11.851437091827393"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-01-01",
+    "soft_opening": "2016-01-01",
+    "washhall_size": "WashhallSizes5d08bf1f99e57",
+    "max_height": "2,6",
+    "wheel_width": "2,0",
+    "mirror_length": "2,38",
+    "wash_name": "Washtec1",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13516347414",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "969",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/nykobing-falster-guldborgsundcentret/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915c5dbab3",
+    "Location_id": "1022",
+    "name": "Næstved - Erantisvej",
+    "address": "Erantisvej 52, 4700 Næstved",
+    "coordinates": {
+      "lat": "55.2391725675618",
+      "lng": "11.777976751327515"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-09-01",
+    "soft_opening": "2017-09-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "dad34985-df1e-49eb-afbf-7f09ddd4d80d",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ SKIP - 2 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13516e2bfb0-Infoscreen5d13517c35935",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "970",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/naestved-erantisvej/",
+    "skip_count": 1,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 17,
+    "availability": 1.0,
+    "adjusted_capacity": 17.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915ca07ed4",
+    "Location_id": "1023",
+    "name": "Næstved - Gl. Holstedvej",
+    "address": "Gammel Holstedvej 1, 4700 Næstved",
+    "coordinates": {
+      "lat": "55.2496811",
+      "lng": "11.78203099999996"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-09-01",
+    "soft_opening": "2017-09-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13518725cbc",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Jem & Fix",
+    "post_id": "971",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/naestved-gl-holstedvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations60812fc2682c5",
+    "Location_id": "1061",
+    "name": "Nørresundby - Loftbrovej",
+    "address": "Loftbrovej 2, 9400 Nørresundby",
+    "coordinates": {
+      "lat": "57.0891424",
+      "lng": "9.969241"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-08-25",
+    "soft_opening": "2021-08-25",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens60c0be7d34988",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1613",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/norresundby-loftbrovej/",
+    "skip_count": 2,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140213/2-vaskehaller.jpg-1.png",
+    "base_capacity": 16,
+    "availability": 0.5,
+    "adjusted_capacity": 8.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5b89170b0408d",
+    "Location_id": "1018",
+    "name": "Odense - Nyborgvej",
+    "address": "Nyborgvej 343, 5220 Odense",
+    "coordinates": {
+      "lat": 55.3915296,
+      "lng": 10.435819199999969
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-06-01",
+    "soft_opening": "2017-06-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352b2a1e6d",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "997",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/odense-nyborgvej/",
+    "skip_count": 0,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 15,
+    "availability": 1.0,
+    "adjusted_capacity": 15.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations628b76056484d",
+    "Location_id": "1072",
+    "name": "Odense SØ - Ørbækvej",
+    "address": "Ørbækvej 99, 5220 Odense SØ",
+    "coordinates": {
+      "lat": "55.379874",
+      "lng": "10.433066"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-08-05",
+    "soft_opening": "2022-07-27",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens628b8b2a91082",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "4968",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/odense-so-orbaekvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916fdcc802",
+    "Location_id": "1025",
+    "name": "Odense V - Bystævnevej",
+    "address": "Bystævnevej 5, 5200 Odense",
+    "coordinates": {
+      "lat": "55.39502570059316",
+      "lng": "10.346524715423584"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-12-01",
+    "soft_opening": "2017-12-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352a6ccc82",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Bolbro,Rømersvej",
+    "post_id": "996",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/odense-v-bystaevnevej/",
+    "skip_count": 2,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 21,
+    "availability": 0.67,
+    "adjusted_capacity": 14.07,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5b89166b35380",
+    "Location_id": "1009",
+    "name": "Randers - Messingvej",
+    "address": "Messingvej 10, 8940 Randers",
+    "coordinates": {
+      "lat": 56.43036172292578,
+      "lng": 10.053815245628357
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-07-01",
+    "soft_opening": "2016-07-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135246164ff",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Paderup,Århusvej",
+    "post_id": "987",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/randers-messingvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916653fb36",
+    "Location_id": "1007",
+    "name": "Randers - Udbyhøjvej",
+    "address": "Udbyhøjvej 7, 8930 Randers",
+    "coordinates": {
+      "lat": 56.46604681568229,
+      "lng": 10.05424976348877
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-07-01",
+    "soft_opening": "2016-07-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13523be48b5",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Dronningborg,McDonalds i Randers",
+    "post_id": "986",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/randers-udbyhojvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5fa3bd89ae014",
+    "Location_id": "1057",
+    "name": "Ribe - Trojels Knæ",
+    "address": "Trojels Knæ 6, 6760 Ribe",
+    "coordinates": {
+      "lat": "55.351485",
+      "lng": "8.780311"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2021-06-02",
+    "soft_opening": "2021-06-02",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5fa3c2720fb0c",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1017",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ribe-trojels-knae/",
+    "skip_count": 2,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 9,
+    "availability": 1.0,
+    "adjusted_capacity": 9.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915cde35cc",
+    "Location_id": "1013",
+    "name": "Ringsted - Frejasvej",
+    "address": "Frejasvej 43, 4100 Ringsted",
+    "coordinates": {
+      "lat": 55.43066930735536,
+      "lng": 11.801419258117676
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-12-01",
+    "soft_opening": "2016-12-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreen5d13519d0627c",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Fabriksparken",
+    "post_id": "972",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ringsted-frejasvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 11,
+    "availability": 1.0,
+    "adjusted_capacity": 11.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915d313338",
+    "Location_id": "1019",
+    "name": "Ringsted - Nørregade",
+    "address": "Nørregade 70, 4100 Ringsted",
+    "coordinates": {
+      "lat": 55.45139205714039,
+      "lng": 11.790081560611725
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-06-01",
+    "soft_opening": "2017-06-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351a805896",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Outlet / McDonalds",
+    "post_id": "973",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/ringsted-norregade/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5eaae3b421d0e",
+    "Location_id": "1047",
+    "name": "Risskov - Ravnsøvej",
+    "address": "Ravnsøvej 48B, 8240 Risskov",
+    "coordinates": {
+      "lat": "56.202062",
+      "lng": "10.244490"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-07-03",
+    "soft_opening": "2020-07-03",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5ee1cc2203690",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1008",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/risskov-ravnsovej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915d7c6b84",
+    "Location_id": "1011",
+    "name": "Roskilde - Byleddet",
+    "address": "Byleddet 2, 4000 Roskilde",
+    "coordinates": {
+      "lat": "55.64370949464964",
+      "lng": "12.109114229679108"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-11-01",
+    "soft_opening": "2016-11-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "4"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreen5d1351b5d5a39",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Industrivej",
+    "post_id": "974",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/roskilde-byleddet/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 11,
+    "availability": 0.5,
+    "adjusted_capacity": 5.5,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5b8915dbc1b44",
+    "Location_id": "1044",
+    "name": "Roskilde - Ringstedvej",
+    "address": "Ringstedvej 73, 4000 Roskilde",
+    "coordinates": {
+      "lat": "55.62842689768946",
+      "lng": "12.066559455701054"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-12-17",
+    "soft_opening": "2019-12-17",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351c1aabf7",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "975",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/roskilde-ringstedvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b89168581477",
+    "Location_id": "1031",
+    "name": "Silkeborg - Nordre Ringvej",
+    "address": "Nordre Ringvej 90, 8600 Silkeborg",
+    "coordinates": {
+      "lat": "56.18141297417625",
+      "lng": "9.536954224330657"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-09-01",
+    "soft_opening": "2018-09-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352503491e",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "988",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/silkeborg-nordre-ringvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140224/Ikke-navngivet-1.png",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations628b70fb64f7e",
+    "Location_id": "1070",
+    "name": "Skive - Øster Fælled vej",
+    "address": "Øster Fælled vej 4, 7800 Skive",
+    "coordinates": {
+      "lat": "56.5615666",
+      "lng": "9.0395673"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-12-02",
+    "soft_opening": "2022-11-25",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens628b8a8fc78e6",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "4939",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/skive-oster-faelled-vej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 12,
+    "availability": 1.0,
+    "adjusted_capacity": 12.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915e1609d9",
+    "Location_id": "1006",
+    "name": "Slagelse - Idagårdsvej",
+    "address": "Idagårdsvej 2, 4200 Slagelse",
+    "coordinates": {
+      "lat": 55.39173530633495,
+      "lng": 11.353002190589905
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-04-01",
+    "soft_opening": "2016-04-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351cc028d1",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "976",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/slagelse-idagardsvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 0.5,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Undervogsskyld i Hal 1, er ude af drift og kan ikke benyttes. "
+  },
+  {
+    "uid": "Locations5b8915e513c14",
+    "Location_id": "1005",
+    "name": "Slagelse - Smedegade",
+    "address": "Smedegade 77, 4200 Slagelse",
+    "coordinates": {
+      "lat": 55.407685070822424,
+      "lng": 11.36784553527832
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-04-01",
+    "soft_opening": "2016-04-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351d584459",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "977",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/slagelse-smedegade/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915e8a502f",
+    "Location_id": "1008",
+    "name": "Sorø - Apotekervej",
+    "address": "Apotekervej 14, 4180 Sorø",
+    "coordinates": {
+      "lat": 55.44513682000782,
+      "lng": 11.563255190849304
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-07-01",
+    "soft_opening": "2016-07-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351dfd4019",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "978",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/soro-apotekervej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations628b74bd93aec",
+    "Location_id": "1071",
+    "name": "Struer - Bredgade",
+    "address": "Bredgade 58, 7600 Struer ",
+    "coordinates": {
+      "lat": 56.48043486486458,
+      "lng": 8.58553517739368
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-08-12",
+    "soft_opening": "2022-08-04",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens628b8ae4dc42b",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "4940",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/struer-bredgade/",
+    "skip_count": 0,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2022/02/02084352/DSC7628.jpg",
+    "base_capacity": 5,
+    "availability": 1.0,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8917189763d",
+    "Location_id": "1017",
+    "name": "Svendborg - Nyborgvej",
+    "address": "Nyborgvej 4, 5700 Svendborg",
+    "coordinates": {
+      "lat": "55.06289309338622",
+      "lng": "10.618591904640198"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-04-01",
+    "soft_opening": "2017-04-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "4"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352bd51570",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "998",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/svendborg-nyborgvej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b891723e12b2",
+    "Location_id": "1016",
+    "name": "Svendborg - Odensevej",
+    "address": "Odensevej 94, 5700 Svendborg",
+    "coordinates": {
+      "lat": "55.07294981427255",
+      "lng": "10.582398176193237"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-03-01",
+    "soft_opening": "2017-03-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8906072f0af",
+    "region_name": "Fyn",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352ca16cc8",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Ford i Svendborg",
+    "post_id": "999",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/svendborg-odensevej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.66,
+      "08:00": 0.66,
+      "09:00": 0.33,
+      "10:00": 0.33,
+      "11:00": 0.33,
+      "12:00": 0.33,
+      "13:00": 0.33,
+      "14:00": 0.33,
+      "15:00": 0.99,
+      "16:00": 0.99,
+      "17:00": 0.99,
+      "18:00": 0.66,
+      "19:00": 0.66,
+      "20:00": 0.22,
+      "21:00": 0.22
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8915b64748b",
+    "Location_id": "1045",
+    "name": "Søborg - Dynamovej",
+    "address": "Dynamovej 4, 2860 Søborg",
+    "coordinates": {
+      "lat": "55.73373131910534",
+      "lng": "12.459960579872131"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-06-28",
+    "soft_opening": "2020-06-28",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 4,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 3,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 3",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 6,
+        "details": [
+          {
+            "uid": "228b1de3-2dce-4e92-aa41-8b5f2f724b1c",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Blade"
+          },
+          {
+            "uid": "228b1de3-2dce-4e92-aa41-8b5f2f724b1c",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Blade"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 3",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "72a766d7-aa3d-4800-a100-1eb29abfa9a7",
+            "name": "Støvsuger 5",
+            "service_unit_model_name": "Nilfisk Vacuum"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 4",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "72a766d7-aa3d-4800-a100-1eb29abfa9a7",
+            "name": "Støvsuger 6",
+            "service_unit_model_name": "Nilfisk Vacuum"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5ef8707fc0221-Infoscreens5ef870e125b30-Infoscreens5f44d175283a3",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Bauhaus,Gladsaxe",
+    "post_id": "967",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/soborg-dynamovej/",
+    "skip_count": 3,
+    "halls_count": 5,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/5.png",
+    "base_capacity": 32,
+    "availability": 0.75,
+    "adjusted_capacity": 24.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": "Hal 2, 3 og 4 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5b891691e291f",
+    "Location_id": "1020",
+    "name": "Sønderborg - Centerpassagen",
+    "address": "Centerpassagen 4, 6400 Sønderborg",
+    "coordinates": {
+      "lat": "54.91943029999999",
+      "lng": "9.80803400000002"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-07-01",
+    "soft_opening": "2017-07-01",
+    "washhall_size": "WashhallSizes5d08bf485814f",
+    "max_height": "2,6",
+    "wheel_width": "2,2",
+    "mirror_length": "2,58",
+    "wash_name": "Washtec2",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "4"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13525a845e7",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "989",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/sonderborg-centerpassagen/",
+    "skip_count": 0,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140218/3.png",
+    "base_capacity": 15,
+    "availability": 1.0,
+    "adjusted_capacity": 15.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations628b6beb5032f",
+    "Location_id": "1069",
+    "name": "Taastrup - Roskildevej",
+    "address": "Roskildevej 376, 2630 Taastrup",
+    "coordinates": {
+      "lat": "55.6580371",
+      "lng": "12.2947118"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2022-07-29",
+    "soft_opening": "2022-07-21",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 3,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 4,
+        "details": [
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 4",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 2",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 1",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          },
+          {
+            "uid": "0221d2b0-1712-44de-b0b0-fb49a33c3e53",
+            "name": "Støvsuger 3",
+            "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
+          }
+        ]
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens628b8a1948213",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "4941",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/taastrup-roskildevej/",
+    "skip_count": 0,
+    "halls_count": 3,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/5.png",
+    "base_capacity": 19,
+    "availability": 1.0,
+    "adjusted_capacity": 19.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5f5b1d7040c4a",
+    "Location_id": "1054",
+    "name": "Thisted - Østerbakken",
+    "address": "Østerbakken 111, 7700 Thisted",
+    "coordinates": {
+      "lat": "56.968852",
+      "lng": "8.735134"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-09-11",
+    "soft_opening": "2020-09-11",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 2,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 2",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          },
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5f5b1e17eb49e",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1012",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/thisted-osterbakken/",
+    "skip_count": 2,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 9,
+    "availability": 1.0,
+    "adjusted_capacity": 9.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5d47fb08cd3e6",
+    "Location_id": "1040",
+    "name": "Tilst - Blomstervej",
+    "address": "Blomstervej 2T, 8381 Tilst",
+    "coordinates": {
+      "lat": "56.181787",
+      "lng": "10.125000"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-09-27",
+    "soft_opening": "2019-09-27",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d64df0284e78",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Århus",
+    "post_id": "1003",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/tilst-blomstervej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b89169e67974",
+    "Location_id": "1010",
+    "name": "Tønder - Centerbuen",
+    "address": "Centerbuen 5, 6270 Tønder",
+    "coordinates": {
+      "lat": 54.95150464239765,
+      "lng": 8.887799978256226
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2016-10-01",
+    "soft_opening": "2016-10-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 1,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d135264d7f78",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "990",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/tonder-centerbuen/",
+    "skip_count": 0,
+    "halls_count": 1,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/1-vaskehal.jpg-1.png",
+    "base_capacity": 5,
+    "availability": 1.0,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916aba77ac",
+    "Location_id": "1030",
+    "name": "Vejle - Soldalen",
+    "address": "Soldalen 4, 7100 Vejle",
+    "coordinates": {
+      "lat": "55.681238105582004",
+      "lng": "9.567455649375916"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-09-01",
+    "soft_opening": "2018-09-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "3"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352703ad27",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Vindinge",
+    "post_id": "991",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/vejle-soldalen/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140217/2-scaled.jpg",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916b710ec9",
+    "Location_id": "1032",
+    "name": "Vejle - Solkilde Allé",
+    "address": "Solkilde Alle 11, 7100 Vejle",
+    "coordinates": {
+      "lat": "55.72345860000001",
+      "lng": "9.584777799999983"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-09-01",
+    "soft_opening": "2018-09-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d13527cafe84",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Bilka",
+    "post_id": "992",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/vejle-solkilde-alle/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140219/2-vask.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5d886a79cce9a",
+    "Location_id": "1042",
+    "name": "Viborg - Falkevej",
+    "address": "Falkevej 25, 8800 Viborg",
+    "coordinates": {
+      "lat": "56.444161",
+      "lng": "9.388456"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2019-12-17",
+    "soft_opening": "2019-12-17",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "5ba7cbec-e8a8-4af6-89c6-27860ba6c3ad",
+            "name": "Prewash 1",
+            "service_unit_model_name": "High Presure Prewash"
+          }
+        ]
+      }
+    },
+    "infoscreen": "Infoscreen5d8870542c4a5",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "1005",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/viborg-falkevej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 11,
+    "availability": 1.0,
+    "adjusted_capacity": 11.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": ""
+  },
+  {
+    "uid": "Locations5b8916c327873",
+    "Location_id": "1014",
+    "name": "Viborg - Vognmagervej",
+    "address": "Vognmagervej 21E, 8800 Viborg",
+    "coordinates": {
+      "lat": 56.469365758210174,
+      "lng": 9.409430623054504
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2017-01-01",
+    "soft_opening": "2017-01-01",
+    "washhall_size": "WashhallSizes54f432ca05097",
+    "max_height": "2,6",
+    "wheel_width": "2,25",
+    "mirror_length": "2,55",
+    "wash_name": "Big Bertha",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "6"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1352873d05e",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "993",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/viborg-vognmagervej/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140216/2_2.png",
+    "base_capacity": 10,
+    "availability": 0.5,
+    "adjusted_capacity": 5.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": "Hal 2 er ude af drift. Tekniker er tilkaldt."
+  },
+  {
+    "uid": "Locations5eaae937a552e",
+    "Location_id": "1050",
+    "name": "Viby - Gunnar Clausens vej",
+    "address": "Gunnar Clausens Vej 2A, 8260 Viby",
+    "coordinates": {
+      "lat": "56.111373",
+      "lng": "10.125033"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2020-09-09",
+    "soft_opening": "2020-09-09",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905f1e31f1",
+    "region_name": "Jylland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 1,
+        "details": [
+          {
+            "uid": "0ebf2a65-a7b9-4c60-b543-c773ee14500f",
+            "name": "Bås 1",
+            "service_unit_model_name": "Christ Tombstone - 4 hoses"
+          }
+        ]
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreens5f2bb41fe5443",
+    "hidden": 0,
+    "atav": 0,
+    "alias": "Århus",
+    "post_id": "1010",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/viby-gunnar-clausens-vej/",
+    "skip_count": 1,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140220/Ikke-navngivet-1-4.png",
+    "base_capacity": 12,
+    "availability": 0.5,
+    "adjusted_capacity": 6.0,
+    "load_profile": {
+      "07:00": 0.6,
+      "08:00": 0.6,
+      "09:00": 0.3,
+      "10:00": 0.3,
+      "11:00": 0.3,
+      "12:00": 0.3,
+      "13:00": 0.3,
+      "14:00": 0.3,
+      "15:00": 0.9,
+      "16:00": 0.9,
+      "17:00": 0.9,
+      "18:00": 0.6,
+      "19:00": 0.6,
+      "20:00": 0.2,
+      "21:00": 0.2
+    },
+    "operational_message": "Vi udfører service i hal 2, så du får en bedre vaskeoplevelse."
+  },
+  {
+    "uid": "Locations5b8915ed201c5",
+    "Location_id": "1035",
+    "name": "Vordingborg - Valdemarsgade",
+    "address": "Valdemarsgade 57, 4760 Vordingborg",
+    "coordinates": {
+      "lat": "55.010855159280844",
+      "lng": "11.910488605499268"
+    },
+    "open_hours": "7-22",
+    "pip_open_hours": "7-22",
+    "grand_opening": "2018-11-01",
+    "soft_opening": "2018-11-01",
+    "washhall_size": "WashhallSizes5d08bea2a9377",
+    "max_height": "2,6",
+    "wheel_width": "2,15",
+    "mirror_length": "2,55",
+    "wash_name": "Christ",
+    "country_id": "Country5b89063fa0568",
+    "region": "Regions5b8905e018d88",
+    "region_name": "Sjælland",
+    "has_addons": "1",
+    "service_units": {
+      "hall": {
+        "total_count": 2,
+        "machine_type": "2"
+      },
+      "self_wash": {
+        "total_count": 0,
+        "details": []
+      },
+      "mat_cleaner": {
+        "total_count": 0,
+        "details": []
+      },
+      "vacuum": {
+        "total_count": 0,
+        "details": []
+      },
+      "pre_wash": {
+        "total_count": 0,
+        "details": []
+      }
+    },
+    "infoscreen": "Infoscreen5d1351eabc98b",
+    "hidden": 0,
+    "atav": 0,
+    "alias": null,
+    "post_id": "979",
+    "url": "https://washworld.dk/find-wash-world-vaskehal/vordingborg-valdemarsgade/",
+    "skip_count": 0,
+    "halls_count": 2,
+    "image": "https://washworld-wordpress-production.storage.googleapis.com/wp-content/uploads/2021/11/28140221/2-vaskehaller.jpg.png",
+    "base_capacity": 10,
+    "availability": 1.0,
+    "adjusted_capacity": 10.0,
+    "load_profile": {
+      "07:00": 0.78,
+      "08:00": 0.78,
+      "09:00": 0.39,
+      "10:00": 0.39,
+      "11:00": 0.39,
+      "12:00": 0.39,
+      "13:00": 0.39,
+      "14:00": 0.39,
+      "15:00": 1.0,
+      "16:00": 1.0,
+      "17:00": 1.0,
+      "18:00": 0.78,
+      "19:00": 0.78,
+      "20:00": 0.26,
+      "21:00": 0.26
+    },
+    "operational_message": ""
+  }
+]

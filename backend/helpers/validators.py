@@ -48,3 +48,40 @@ def validate_user_phone():
     if not user_phone.isdigit() or len(user_phone) != USER_PHONE_LENGTH:
         raise Exception("company_exception user_phone")
     return user_phone
+
+##############################
+LAT_MIN = -90
+LAT_MAX = 90
+def validate_lat(lat_str):
+    try:
+        lat = float(lat_str)
+    except (TypeError, ValueError):
+        raise Exception("company_exception lat")
+    if not (LAT_MIN <= lat <= LAT_MAX):
+        raise Exception("company_exception lat")
+    return lat
+
+##############################
+LNG_MIN = -180
+LNG_MAX = 180
+def validate_lng(lng_str):
+    try:
+        lng = float(lng_str)
+    except (TypeError, ValueError):
+        raise Exception("company_exception lng")
+    if not (LNG_MIN <= lng <= LNG_MAX):
+        raise Exception("company_exception lng")
+    return lng
+
+##############################
+LIMIT_DEFAULT = 5
+LIMIT_MIN = 1
+LIMIT_MAX = 50
+def validate_limit(limit_str):
+    if limit_str is None:
+        return LIMIT_DEFAULT
+    try:
+        limit = int(limit_str)
+    except (TypeError, ValueError):
+        raise Exception("company_exception limit")
+    return max(LIMIT_MIN, min(limit, LIMIT_MAX))

@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, sql_partials, auth, misc, email_service
+from helpers import validators, connector, sql_partials, auth, misc, email_service, locations
 import uuid
 import mysql.connector
 import jwt
@@ -397,6 +397,43 @@ def simulate_scan():
         if "connection" in locals():
             connection.close()
 
+
+############################
+@app.get("/locations")
+def get_locations():
+    try:
+        return jsonify(locations.get_all())
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+
+############################
+@app.get("/locations/<int:location_id>")
+def get_location_by_id(location_id):
+    try:
+        loc = locations.get_by_id(location_id)
+        if not loc:
+            return "Location not found", 404
+        return jsonify(loc)
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+
+############################
+@app.get("/locations/nearby")
+def get_nearby_locations():
+    try:
+        lat = validators.validate_lat(request.args.get("lat"))
+        lng = validators.validate_lng(request.args.get("lng"))
+        limit = validators.validate_limit(request.args.get("limit"))
+        return jsonify(locations.get_nearest(lat, lng, limit))
+    except Exception as ex:
+        msg = str(ex)
+        if msg.startswith("company_exception"):
+            field = msg.replace("company_exception ", "")
+            return f"Invalid {field}", 400
+        ic(ex)
+        return "Internal error", 500
 
 # Need this at the end!
 if __name__ == "__main__":
