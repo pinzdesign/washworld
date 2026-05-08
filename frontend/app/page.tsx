@@ -7,6 +7,8 @@ import UserProfile from "@/components/UserProfile";
 import MembershipsController from "@/components/MembershipsController";
 import ServiceHistory from "@/components/ServiceHistory";
 import PlateScanner from "@/components/PlateScanner";
+import NearbyWashHalls from "@/components/NearbyWashHalls";
+
 
 export default function Home() {
   const [token, setToken] = useState<string | null>(null);
@@ -28,6 +30,8 @@ export default function Home() {
         Wash World
       </h1>
 
+      <NearbyWashHalls />
+      
       {token ? (
         <PlateScanner
           onScanComplete={() =>
