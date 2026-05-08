@@ -2,18 +2,16 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-import x
+from helpers import validators, connector, auth, sql_partials, misc
 import uuid
 import mysql.connector
-import random
-import string
+import jwt
 
 import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-import jwt
 import time
 
 SECRET_KEY = os.environ.get("SECRET_KEY", None)
@@ -25,7 +23,7 @@ CORS(app)
 #############################
 @app.route("/test")
 def test():
-    connection, cursor = x.db()
+    connection, cursor = connector.db()
 
     cursor.execute("SELECT test_id, test_message FROM test")
     rows = cursor.fetchall()
@@ -38,16 +36,16 @@ def test():
 @app.post("/signup")
 def signup():
     try:
-        user_email = x.validate_user_email()
-        user_password = generate_password_hash(x.validate_user_password())
-        user_first_name = x.validate_user_first_name()
-        user_last_name = x.validate_user_last_name()
-        user_phone = x.validate_user_phone()
+        user_email = validators.validate_user_email()
+        user_password = generate_password_hash(connector.validate_user_password())
+        user_first_name = validators.validate_user_first_name()
+        user_last_name = validators.validate_user_last_name()
+        user_phone = validators.validate_user_phone()
         user_verification_key = uuid.uuid4().hex
         user_verified_at = 0
         created_at = int(time.time())
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
         q = """INSERT INTO users
         (user_email, user_password, user_first_name, user_last_name, user_phone, user_verification_key, user_verified_at, created_at)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
@@ -110,7 +108,7 @@ def verify_account(key):
         if not key or len(key) != 32:
             return "Invalid verification key", 400
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         q = "SELECT * FROM users WHERE user_verification_key = %s"
         cursor.execute(q, (key,))
@@ -141,10 +139,10 @@ def verify_account(key):
 @app.post("/login")
 def login():
     try:
-        user_email = x.validate_user_email()
-        user_password = x.validate_user_password()
+        user_email = validators.validate_user_email()
+        user_password = validators.validate_user_password()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         q = "SELECT * FROM users WHERE user_email = %s LIMIT 1"
         cursor.execute(q, (user_email,))
@@ -180,9 +178,9 @@ def login():
 @app.get("/user")
 def user_profile():
     try:
-        user_pk = auth()
+        user_pk = auth.auth()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         q = "SELECT user_first_name, user_last_name, user_email, user_verified_at FROM users WHERE user_pk = %s"
         cursor.execute(q, (user_pk,))
@@ -217,9 +215,9 @@ def user_profile():
 @app.get("/memberships")
 def get_memberships():
     try:
-        user_pk = auth()
+        user_pk = auth.auth()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         q = """
         SELECT 
@@ -260,9 +258,9 @@ def get_memberships():
 @app.patch("/memberships/<int:membership_pk>")
 def delete_membership(membership_pk):
     try:
-        user_pk = auth()
+        user_pk = auth.auth()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         # Check ownership
         q = """
@@ -298,13 +296,13 @@ def delete_membership(membership_pk):
         if "connection" in locals(): connection.close()
 
 #############################
-# PASSWORD PROTECTED: Get service history for logged-in user
+# PASSWORD PROTECTED: Get service history for logged-in user - NEEDS REWORK!
 @app.get("/service-history")
 def get_service_history():
     try:
-        user_pk = auth()
+        user_pk = auth.auth()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         q = """
         SELECT
@@ -373,20 +371,17 @@ def get_service_history():
         if "connection" in locals():
             connection.close()
 
-# Scanner simulation:
-# This will simulate car plate scanner at terminal, response values are hardcoded
-# There is a 50/50 chance to use a randomly generated plate, or use one from database, simulating a registered user
-# (chance that random generator will stumble upon registered number is inexistant)
+# WILL BE REWORKED/REMOVED COMPLETELY!
 
 @app.post("/simulate-scan")
 def simulate_scan():
     try:
-        jwt_user_fk = auth()
+        jwt_user_fk = auth.auth()
 
-        connection, cursor = x.db()
+        connection, cursor = connector.db()
 
         # 1. SCAN ONLY
-        car_plate, department_ext_id = scan_car_plate(cursor)
+        car_plate, department_ext_id = sql_partials.scan_car_plate(cursor)
 
         # 2. SERVICE (hardcoded for now)
         service_fk = 2
@@ -394,17 +389,17 @@ def simulate_scan():
         base_price = 59
 
         # 3. LOOKUP MEMBERSHIP
-        membership = get_membership_by_plate(cursor, car_plate)
+        membership = sql_partials.get_membership_by_plate(cursor, car_plate)
 
         # 4. PRICE DECISION - for simplicity, if there is no match between registered plan and chosen service, just charge full price
-        final_price, covered = calculate_price(
+        final_price, covered = misc.calculate_price(
             membership,
             service_type,
             base_price
         )
 
         # 5. ALWAYS WRITE HISTORY
-        write_history(
+        sql_partials.write_history(
             cursor,
             connection,
             jwt_user_fk,
@@ -437,133 +432,6 @@ def simulate_scan():
         if "connection" in locals():
             connection.close()
 
-#############################
-# HELPERS - maybe move to x?
-#############################
-
-# Authorisation check, moved it here, let's keep it DRY
-def auth():
-    token = request.headers.get("Authorization", "").replace("Bearer ", "")
-
-    if not token:
-        raise Exception("missing_token")
-
-    try:
-        decoded = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return decoded["user_pk"]
-
-    except jwt.ExpiredSignatureError:
-        raise Exception("token_expired")
-
-    except Exception:
-        raise Exception("invalid_token")
-
-#############################
-# Generate a random car plate, for scanning simulator
-def generate_random_plate():
-    letters = ''.join(random.choices(string.ascii_uppercase, k=2))
-    numbers = ''.join(random.choices(string.digits, k=5))
-
-    return f"{letters}{numbers}"
-
-#############################
-# Add history entry in databse
-def write_history(
-    cursor,
-    connection,
-    jwt_user_fk,
-    car_plate,
-    membership,
-    service_fk,
-    department_ext_id,
-    base_price,
-    final_price,
-    covered_by_membership
-):
-
-    membership_fk = membership["membership_pk"] if membership else None
-
-    cursor.execute("""
-        INSERT INTO service_history (
-            user_fk,
-            membership_fk,
-            service_fk,
-            department_ext_id,
-            car_plate,
-            base_price,
-            final_price,
-            covered_by_membership,
-            service_at
-        )
-        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
-    """, (
-        jwt_user_fk,
-        membership_fk,
-        service_fk,
-        department_ext_id,
-        car_plate,
-        base_price,
-        final_price,
-        covered_by_membership,
-        int(time.time())
-    ))
-
-    connection.commit()
-
-# Plate scanner - returns a random plate OR one from database
-def scan_car_plate(cursor):
-    use_existing = random.choice([True, False])
-
-    scanned_plate = None
-
-    if use_existing:
-        cursor.execute("""
-            SELECT car_plate
-            FROM membership
-            WHERE membership_status = 'active'
-            AND deleted_at = 0
-            ORDER BY RAND()
-            LIMIT 1
-        """)
-
-        row = cursor.fetchone()
-
-        if row:
-            scanned_plate = row["car_plate"]
-
-    if not scanned_plate:
-        scanned_plate = generate_random_plate()
-
-    # 123 is department
-    return scanned_plate, "123"
-
-def get_membership_by_plate(cursor, car_plate):
-    cursor.execute("""
-        SELECT
-            m.membership_pk,
-            m.user_fk,
-            m.car_plate,
-            mt.membership_type_name
-        FROM membership m
-        JOIN membership_type mt
-            ON m.membership_type_fk = mt.membership_type_pk
-        WHERE m.car_plate = %s
-        AND m.deleted_at = 0
-        AND m.membership_status = 'active'
-        LIMIT 1
-    """, (car_plate,))
-
-    return cursor.fetchone()
-
-# Calculates pricing based of membership match
-def calculate_price(membership, service_type, base_price):
-    if not membership:
-        return base_price, False
-
-    if membership["membership_type_name"].lower() == service_type:
-        return 0, True
-
-    return base_price, False
 
 # Need this at the end!
 if __name__ == "__main__":
