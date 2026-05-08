@@ -2,19 +2,15 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, auth, sql_partials, misc
+from helpers import validators, connector, sql_partials, auth, misc, email_service
 import uuid
 import mysql.connector
 import jwt
 
 import os
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+
 
 import time
-
-SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
 app = Flask(__name__)
 
@@ -37,7 +33,7 @@ def test():
 def signup():
     try:
         user_email = validators.validate_user_email()
-        user_password = generate_password_hash(connector.validate_user_password())
+        user_password = generate_password_hash(validators.validate_user_password())
         user_first_name = validators.validate_user_first_name()
         user_last_name = validators.validate_user_last_name()
         user_phone = validators.validate_user_phone()
@@ -55,7 +51,7 @@ def signup():
         base_url = os.environ.get("FRONTEND_URL", "http://127.0.0.1:3000")
         html = render_template("email_welcome.html", user_verification_key=user_verification_key, base_url=base_url)
 
-        send_email(html, user_email)
+        email_service.send_email(html, user_email)
         return "Please check your email maybe it arrived in the spam folder"
     except mysql.connector.IntegrityError as ex:
         if ex.errno == 1062:
@@ -74,32 +70,7 @@ def signup():
         if "connection" in locals(): connection.close()
 
 
-##############################
-def send_email(html, user_email):
-    try:    
-        sender_email = os.environ.get("EMAIL_SENDER", None)
-        password = os.environ.get("EMAIL_PASSWORD", None)
 
-        receiver_email = user_email
-
-        message = MIMEMultipart()
-        message["From"] = "WashWorld"
-        message["To"] = receiver_email
-        message["Subject"] = "Please verify your account"
-
-        message.attach(MIMEText(html, "html"))
-
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver_email, message.as_string())
-
-        return "email sent"
-       
-    except Exception as ex:
-        return "cannot send email", 500
-    finally:
-        pass
 
 ##############################
 @app.get("/verify/<key>")
@@ -154,13 +125,7 @@ def login():
         if not check_password_hash(user["user_password"], user_password):
             return "Invalid credentials", 401
 
-        # Create JWT token
-        payload = {
-            "user_pk": user["user_pk"],
-            "exp": int(time.time()) + 60 * 60 * 24  # 24 hours
-        }
-
-        token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+        token = auth.create_token(user["user_pk"])
 
         return jsonify({
             "token": token
@@ -178,7 +143,7 @@ def login():
 @app.get("/user")
 def user_profile():
     try:
-        user_pk = auth.auth()
+        user_pk = auth.verify_token()
 
         connection, cursor = connector.db()
 
@@ -215,7 +180,7 @@ def user_profile():
 @app.get("/memberships")
 def get_memberships():
     try:
-        user_pk = auth.auth()
+        user_pk = auth.verify_token()
 
         connection, cursor = connector.db()
 
@@ -258,7 +223,7 @@ def get_memberships():
 @app.patch("/memberships/<int:membership_pk>")
 def delete_membership(membership_pk):
     try:
-        user_pk = auth.auth()
+        user_pk = auth.verify_token()
 
         connection, cursor = connector.db()
 
@@ -300,7 +265,7 @@ def delete_membership(membership_pk):
 @app.get("/service-history")
 def get_service_history():
     try:
-        user_pk = auth.auth()
+        user_pk = auth.verify_token()
 
         connection, cursor = connector.db()
 
@@ -376,7 +341,7 @@ def get_service_history():
 @app.post("/simulate-scan")
 def simulate_scan():
     try:
-        jwt_user_fk = auth.auth()
+        jwt_user_fk = auth.verify_token()
 
         connection, cursor = connector.db()
 
