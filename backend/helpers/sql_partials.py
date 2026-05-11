@@ -16,7 +16,10 @@ def write_history(
     covered_by_membership
 ):
 
-    membership_fk = membership["membership_pk"] if membership else None
+    membership_fk = None
+
+    if isinstance(membership, dict):
+        membership_fk = membership.get("membership_pk")
 
     cursor.execute("""
         INSERT INTO service_history (
@@ -45,7 +48,7 @@ def write_history(
 
     connection.commit()
 
-# Plate scanner - returns a random plate OR one from database
+# Plate scanner - returns a random plate OR one from database - UNUSED!
 def scan_car_plate(cursor):
     use_existing = random.choice([True, False])
 
@@ -71,22 +74,3 @@ def scan_car_plate(cursor):
 
     # 123 is department
     return scanned_plate, "123"
-
-# Gets membership by plate number
-def get_membership_by_plate(cursor, car_plate):
-    cursor.execute("""
-        SELECT
-            m.membership_pk,
-            m.user_fk,
-            m.car_plate,
-            mt.membership_type_name
-        FROM membership m
-        JOIN membership_type mt
-            ON m.membership_type_fk = mt.membership_type_pk
-        WHERE m.car_plate = %s
-        AND m.deleted_at = 0
-        AND m.membership_status = 'active'
-        LIMIT 1
-    """, (car_plate,))
-
-    return cursor.fetchone()

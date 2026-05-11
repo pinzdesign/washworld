@@ -9,16 +9,13 @@ import ServiceHistory from "@/components/ServiceHistory";
 import PlateScanner from "@/components/PlateScanner";
 import NearbyWashHalls from "@/components/NearbyWashHalls";
 
-
 export default function Home() {
   const [token, setToken] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [refreshHistory, setRefreshHistory] = useState(0);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
-    const storedToken = localStorage.getItem("token");
-
-    setToken(storedToken);
+    setToken(localStorage.getItem("token"));
     setIsLoaded(true);
   }, []);
 
@@ -26,28 +23,23 @@ export default function Home() {
 
   return (
     <main className="space-y-8">
-      <h1 className="text-3xl font-bold">
-        Wash World
-      </h1>
+      <h1 className="text-3xl font-bold">Wash World</h1>
 
       <NearbyWashHalls />
-      
-      {token ? (
-        <PlateScanner
-          onScanComplete={() =>
-          setRefreshHistory((prev) => prev + 1)
-          }
-        />
-      ) : null}
+
+      <PlateScanner
+        onScanSuccess={() => {
+          setRefreshKey((k) => k + 1);
+        }}
+      />
 
       {!token ? <Login /> : <UserProfile />}
 
-      {token ? <MembershipsController /> : null}
+      {token && <MembershipsController />}
 
-      {token ? (
-        <ServiceHistory refreshKey={refreshHistory} />
-      ) : null}
-      
+      {token && (
+        <ServiceHistory refreshKey={refreshKey} />
+      )}
     </main>
   );
 }
