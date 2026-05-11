@@ -8,6 +8,7 @@ import MembershipsController from "@/components/MembershipsController";
 import ServiceHistory from "@/components/ServiceHistory";
 import PlateScanner from "@/components/PlateScanner";
 import NearbyWashHalls from "@/components/NearbyWashHalls";
+import WashHallMap from "@/components/WashHallMap";
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         Wash World
       </h1>
 
+      <WashHallMap />
       <NearbyWashHalls />
       
       {token ? (

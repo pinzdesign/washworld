@@ -85,3 +85,14 @@ def validate_limit(limit_str):
     except (TypeError, ValueError):
         raise Exception("company_exception limit")
     return max(LIMIT_MIN, min(limit, LIMIT_MAX))
+
+##############################
+ADDRESS_MIN = 3
+ADDRESS_MAX = 200
+def validate_address(address_str):
+    if address_str is None:
+        raise Exception("company_exception address")
+    address = address_str.strip()
+    if not (ADDRESS_MIN <= len(address) <= ADDRESS_MAX):
+        raise Exception("company_exception address")
+    return address

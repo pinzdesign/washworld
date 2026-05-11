@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, sql_partials, auth, misc, email_service, locations
+from helpers import validators, connector, sql_partials, auth, misc, email_service, locations, mapbox
 import uuid
 import mysql.connector
 import jwt
@@ -281,7 +281,7 @@ def get_service_history():
 
             sh.base_price,
             sh.final_price,
-
+ 
             sh.covered_by_membership,
 
             sh.service_at,
@@ -427,6 +427,22 @@ def get_nearby_locations():
         lng = validators.validate_lng(request.args.get("lng"))
         limit = validators.validate_limit(request.args.get("limit"))
         return jsonify(locations.get_nearest(lat, lng, limit))
+    except Exception as ex:
+        msg = str(ex)
+        if msg.startswith("company_exception"):
+            field = msg.replace("company_exception ", "")
+            return f"Invalid {field}", 400
+        ic(ex)
+        return "Internal error", 500
+    
+@app.get("/geocode")
+def geocode_address():
+    try:
+        address = validators.validate_address(request.args.get("address"))
+        result = mapbox.geocode_address(address)
+        if not result:
+            return "Address not found", 404
+        return jsonify(result)
     except Exception as ex:
         msg = str(ex)
         if msg.startswith("company_exception"):
