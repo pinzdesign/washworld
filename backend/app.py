@@ -2,19 +2,22 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, sql_partials, auth, misc, email_service, locations, mapbox
+from helpers import validators, connector, sql_partials, auth, misc, email_service, locations, mapbox, scanner
 import uuid
 import mysql.connector
 import jwt
-
 import os
-
-
 import time
 
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, origins="*")
+
+SECRET_KEY = os.environ.get("SECRET_KEY", None)
+SERVICE_ID = 2
+BASE_PRICE = 59
+CAR_PLATE = "CC12345"
+DEPARTMENT_EXT_ID = 123
 
 #############################
 @app.route("/test")
@@ -68,9 +71,6 @@ def signup():
     finally:
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
-
-
-
 
 ##############################
 @app.get("/verify/<key>")
@@ -260,37 +260,149 @@ def delete_membership(membership_pk):
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
 
-#############################
-# PASSWORD PROTECTED: Get service history for logged-in user - NEEDS REWORK!
-@app.get("/service-history")
-def get_service_history():
+# reworked scanner - will use functions for qr and plate scanner (needs to be changed manually, as we can't scan)
+def get_user_id_from_jwt():
+    auth_header = request.headers.get("Authorization")
+
+    if not auth_header:
+        return None
+
     try:
-        user_pk = auth.verify_token()
+        token = auth_header.split(" ")[1]
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        return payload.get("user_pk")
+    except Exception as e:
+        ic(e)
+        return None
+
+@app.post("/simulate-scan")
+def simulate_scan():
+    conn, cur = connector.db()
+
+    try:
+        user_fk = get_user_id_from_jwt()
+        now = int(time.time())
+
+        # -----------------------------------------
+        # 1. Find membership by plate
+        # -----------------------------------------
+        cur.execute("""
+            SELECT membership_pk,
+                   membership_type_fk,
+                   membership_status,
+                   membership_start_at,
+                   membership_end_at
+            FROM membership
+            WHERE car_plate = %s
+              AND deleted_at = 0
+            LIMIT 1
+        """, (CAR_PLATE,))
+
+        membership = cur.fetchone()
+
+        membership_fk = None
+        final_price = BASE_PRICE
+        covered_by_membership = 0
+
+        if membership:
+            membership_fk = membership["membership_pk"]
+
+            # -----------------------------------------
+            # 2. Check validity
+            # -----------------------------------------
+            is_active = (
+                membership["membership_status"] == "active"
+                and membership["membership_start_at"] <= now
+                and membership["membership_end_at"] >= now
+            )
+
+            # -----------------------------------------
+            # 3. SIMPLE MATCH (KEY FIX)
+            # -----------------------------------------
+            matches_service = (
+                membership["membership_type_fk"] == SERVICE_ID
+            )
+
+            if is_active and matches_service:
+                covered_by_membership = 1
+                final_price = 0
+
+        # -----------------------------------------
+        # 4. Skip if no user and no membership
+        # -----------------------------------------
+        if user_fk is None and membership_fk is None:
+            return jsonify({
+                "message": "No user and no membership - no history created"
+            }), 200
+
+        # -----------------------------------------
+        # 5. Insert history
+        # -----------------------------------------
+        cur.execute("""
+            INSERT INTO service_history (
+                user_fk,
+                service_fk,
+                membership_fk,
+                department_ext_id,
+                base_price,
+                final_price,
+                covered_by_membership,
+                service_at,
+                car_plate
+            )
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """, (
+            user_fk,
+            SERVICE_ID,
+            membership_fk,
+            DEPARTMENT_EXT_ID,
+            BASE_PRICE,
+            final_price,
+            covered_by_membership,
+            now,
+            CAR_PLATE
+        ))
+
+        conn.commit()
+
+        return jsonify({
+            "message": "Service recorded",
+            "user_fk": user_fk,
+            "membership_fk": membership_fk,
+            "final_price": final_price,
+            "covered_by_membership": bool(covered_by_membership)
+        }), 201
+
+    except Exception as e:
+        conn.rollback()
+        ic(e)
+        return jsonify({"error": "Internal server error"}), 500
+
+    finally:
+        cur.close()
+        conn.close()
+    
+@app.get("/history")
+def get_history():
+    try:
+        user_fk = auth.verify_token()
 
         connection, cursor = connector.db()
 
-        q = """
+        query = """
         SELECT
             sh.service_history_pk,
             sh.service_fk,
             sh.membership_fk,
-
             sh.department_ext_id,
-
             sh.car_plate,
-
             sh.base_price,
             sh.final_price,
- 
             sh.covered_by_membership,
-
             sh.service_at,
-
             s.service_name,
             s.service_type,
-
             mt.membership_type_name
-
         FROM service_history sh
 
         JOIN service s
@@ -302,101 +414,32 @@ def get_service_history():
         LEFT JOIN membership_type mt
             ON m.membership_type_fk = mt.membership_type_pk
 
-        WHERE sh.user_fk = %s
+        WHERE
+            sh.user_fk = %s
+            OR sh.membership_fk IN (
+                SELECT membership_pk
+                FROM membership
+                WHERE user_fk = %s
+                  AND deleted_at = 0
+            )
 
         ORDER BY sh.service_at DESC
         """
 
-        cursor.execute(q, (user_pk,))
-        history = cursor.fetchall()
+        cursor.execute(query, (user_fk, user_fk))
+        rows = cursor.fetchall()
 
         return jsonify({
-            "history": history
+            "history": rows
         })
 
-    except Exception as ex:
-        msg = str(ex)
-
-        if msg == "missing_token":
-            return "Missing token", 401
-
-        if msg == "token_expired":
-            return "Token expired", 401
-
-        if msg == "invalid_token":
-            return "Invalid token", 401
-
-        ic(ex)
+    except Exception as e:
+        ic(e)
         return "Internal error", 500
 
     finally:
-        if "cursor" in locals():
-            cursor.close()
-
-        if "connection" in locals():
-            connection.close()
-
-# WILL BE REWORKED/REMOVED COMPLETELY!
-
-@app.post("/simulate-scan")
-def simulate_scan():
-    try:
-        jwt_user_fk = auth.verify_token()
-
-        connection, cursor = connector.db()
-
-        # 1. SCAN ONLY
-        car_plate, department_ext_id = sql_partials.scan_car_plate(cursor)
-
-        # 2. SERVICE (hardcoded for now)
-        service_fk = 2
-        service_type = "gold"
-        base_price = 59
-
-        # 3. LOOKUP MEMBERSHIP
-        membership = sql_partials.get_membership_by_plate(cursor, car_plate)
-
-        # 4. PRICE DECISION - for simplicity, if there is no match between registered plan and chosen service, just charge full price
-        final_price, covered = misc.calculate_price(
-            membership,
-            service_type,
-            base_price
-        )
-
-        # 5. ALWAYS WRITE HISTORY
-        sql_partials.write_history(
-            cursor,
-            connection,
-            jwt_user_fk,
-            car_plate,
-            membership,
-            service_fk,
-            department_ext_id,
-            base_price,
-            final_price,
-            covered
-        )
-
-        # 6. RESPONSE
-        return jsonify({
-            "success": True,
-            "car_plate": car_plate,
-            "membership_found": membership is not None,
-            "membership": membership["membership_type_name"] if membership else None,
-            "final_price": final_price,
-            "covered_by_membership": covered
-        })
-
-    except Exception as ex:
-        ic(ex)
-        return "Internal error", 500
-
-    finally:
-        if "cursor" in locals():
-            cursor.close()
-        if "connection" in locals():
-            connection.close()
-
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
 
 ############################
 @app.get("/locations")
