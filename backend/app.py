@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, sql_partials, auth, misc, email_service, locations, mapbox, scanner
+from helpers import validators, connector, auth, email_service, locations, mapbox, washcoins
 import uuid
 import mysql.connector
 import jwt
@@ -16,20 +16,8 @@ CORS(app, origins="*")
 SECRET_KEY = os.environ.get("SECRET_KEY", None)
 SERVICE_ID = 2
 BASE_PRICE = 59
-CAR_PLATE = "CC12345"
+CAR_PLATE = "ZZ12345"
 DEPARTMENT_EXT_ID = 123
-
-#############################
-@app.route("/test")
-def test():
-    connection, cursor = connector.db()
-
-    cursor.execute("SELECT test_id, test_message FROM test")
-    rows = cursor.fetchall()
-
-    connection.close()
-    return jsonify(rows)
-
 
 #############################
 @app.post("/signup")
@@ -261,26 +249,13 @@ def delete_membership(membership_pk):
         if "connection" in locals(): connection.close()
 
 # reworked scanner - will use functions for qr and plate scanner (needs to be changed manually, as we can't scan)
-def get_user_id_from_jwt():
-    auth_header = request.headers.get("Authorization")
-
-    if not auth_header:
-        return None
-
-    try:
-        token = auth_header.split(" ")[1]
-        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return payload.get("user_pk")
-    except Exception as e:
-        ic(e)
-        return None
 
 @app.post("/simulate-scan")
 def simulate_scan():
     conn, cur = connector.db()
 
     try:
-        user_fk = get_user_id_from_jwt()
+        user_fk = validators.get_user_id_from_jwt()
         now = int(time.time())
 
         # -----------------------------------------
@@ -363,6 +338,15 @@ def simulate_scan():
             CAR_PLATE
         ))
 
+        # -----------------------------------------
+        # Reward washcoins
+        # -----------------------------------------
+        rewarded = washcoins.reward_washcoins(
+            cur,
+            user_fk,
+            covered_by_membership
+        )
+
         conn.commit()
 
         return jsonify({
@@ -370,7 +354,8 @@ def simulate_scan():
             "user_fk": user_fk,
             "membership_fk": membership_fk,
             "final_price": final_price,
-            "covered_by_membership": bool(covered_by_membership)
+            "covered_by_membership": bool(covered_by_membership),
+            "washcoins_rewarded": rewarded
         }), 201
 
     except Exception as e:
