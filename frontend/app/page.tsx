@@ -11,37 +11,37 @@ import NearbyWashHalls from "@/components/NearbyWashHalls";
 import WashHallMap from "@/components/WashHallMap";
 
 export default function Home() {
-  const [token, setToken] = useState<string | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [refreshKey, setRefreshKey] = useState(0);
+	const [token, setToken] = useState<string | null>(null);
+	const [isLoaded, setIsLoaded] = useState(false);
+	const [refreshKey, setRefreshKey] = useState(0);
 
-  useEffect(() => {
-    setToken(localStorage.getItem("token"));
-    setIsLoaded(true);
-  }, []);
+	useEffect(() => {
+		setToken(localStorage.getItem("token"));
+		setIsLoaded(true);
+	}, []);
 
-  if (!isLoaded) return null;
+	if (!isLoaded) return null;
 
-  return (
-    <main className="space-y-8">
-      <h1 className="text-3xl font-bold">Wash World</h1>
+	return (
+		<main className="space-y-8">
+			<h1 className="text-3xl font-bold">Wash World</h1>
 
-      <WashHallMap />
-      <NearbyWashHalls />
+			<WashHallMap />
+			<NearbyWashHalls />
 
-      <PlateScanner
-        onScanSuccess={() => {
-          setRefreshKey((k) => k + 1);
-        }}
-      />
+			<PlateScanner
+				onScanSuccess={() => {
+					setRefreshKey((k) => k + 1);
+				}}
+			/>
 
-      {!token ? <Login /> : <UserProfile />}
+			{!token ? <Login /> : <UserProfile />}
 
-      {token && <MembershipsController />}
+			{token && <MembershipsController />}
 
-      {token && (
-        <ServiceHistory refreshKey={refreshKey} />
-      )}
-    </main>
-  );
+			{token && (
+				<ServiceHistory refreshKey={refreshKey} />
+			)}
+		</main>
+	);
 }
