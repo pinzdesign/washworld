@@ -2,14 +2,22 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
+import { MapPinIcon } from "@heroicons/react/24/solid";
+import type { Location } from "./WashHallCard";
 
-type Location = {
-    Location_id: number;
-    name: string;
-    coordinates: { lat: string; lng: string };
-};
-
-export default function WashHallMap() {
+type Props = {
+    userPosition: { lat: number; lng: number} | null;
+    nearestLocations: Location[];
+    onPositionChange: (lat: number, lng: number) => void;
+    onMarkerClick: (location: Location) => void;
+}
+export default function WashHallMap({ userPosition, nearestLocations, onPositionChange, onMarkerClick }: Props) {
+    const onMarkerClickRef = useRef(onMarkerClick);
+    useEffect(() => {
+        onMarkerClickRef.current = onMarkerClick;
+    });
+    const markersRef = useRef<Map<number, HTMLDivElement>>(new Map());
+    const [markersLoaded, setMarkersLoaded] = useState(false);  
     const mapContainer = useRef<HTMLDivElement>(null);
     const map = useRef<mapboxgl.Map | null>(null)
     const userMarker = useRef<mapboxgl.Marker | null>(null);
@@ -32,7 +40,13 @@ export default function WashHallMap() {
                 [3.0, 52.0], 
                 [20.0, 60.0],
             ],
+            cooperativeGestures: true,
         });
+
+        map.current.addControl(
+            new mapboxgl.NavigationControl({ showCompass: false }),
+            "bottom-right"
+        );
 
         //Hent og vis alle vaskehaller som markers
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/locations`)
@@ -45,30 +59,21 @@ export default function WashHallMap() {
                     el.style.backgroundRepeat = "no-repeat";
                     el.style.width = "32px";
                     el.style.height = "40px";
+                    el.style.cursor = "pointer";
+                    el.addEventListener("click", () => onMarkerClickRef.current(loc));
+
+                    markersRef.current.set(loc.Location_id, el);
+
                     new mapboxgl.Marker({ element: el })
                         .setLngLat([
                             parseFloat(loc.coordinates.lng),
                             parseFloat(loc.coordinates.lat),
                         ])
-                        .setPopup(new mapboxgl.Popup().setText(loc.name))
                         .addTo(map.current!);
                 });
+                setMarkersLoaded(true);
             })
             .catch((err) => console.error("Failed to load locations:", err));
-        
-            // Auto-zoom til brugerens lokation hvis tilladelse allerede er givet
-            if ("permissions" in navigator) {
-                navigator.permissions
-                    .query({ name: "geolocation" })
-                    .then((result) => {
-                        if (result.state === "granted") {
-                            navigator.geolocation.getCurrentPosition(
-                                (pos) => zoomToNearest(pos.coords.latitude, pos.coords.longitude),
-                                (err) => console.log("Could not get position:", err.message)
-                            );
-                        }
-                    });
-            }
 
         return () => {
             map.current?.remove();
@@ -76,38 +81,35 @@ export default function WashHallMap() {
         };
     }, []);
 
-    const zoomToNearest = async (lat: number, lng: number) => {
-        try {
-            const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}/locations/nearby?lat=${lat}&lng=${lng}&limit=5`
-            );
-            if (!res.ok) return;
-            const nearest = await res.json();
+    useEffect(() => {
+        if (!map.current || !userPosition) return;
 
-            if (!map.current) return;
-
-            // Tilføj eller opdater bruger-markeren
-            if (userMarker.current) {
-                userMarker.current.setLngLat([lng, lat]);
-            } else {
-                userMarker.current = new mapboxgl.Marker({ color: "#3FB1CE" })
-                    .setLngLat([lng, lat])
-                    .addTo(map.current);
-            }
-
-            const bounds = new mapboxgl.LngLatBounds();
-            bounds.extend([lng, lat]);
-            nearest.forEach((loc: Location) => {
-                bounds.extend([
-                    parseFloat(loc.coordinates.lng),
-                    parseFloat(loc.coordinates.lat),
-                ]);
-            });
-            map.current.fitBounds(bounds, { padding: 100, maxZoom: 11 });
-        } catch (err) {
-            console.error(err);
+        if (userMarker.current) {
+            userMarker.current.setLngLat([userPosition.lng, userPosition.lat]);
+        } else {
+            userMarker.current = new mapboxgl.Marker({ color: "#3FB1CE" })
+                .setLngLat([userPosition.lng, userPosition.lat])
+                .addTo(map.current);
         }
-    };
+
+        if (nearestLocations.length === 0) return;
+        const bounds = new mapboxgl.LngLatBounds();
+        bounds.extend([userPosition.lng, userPosition.lat]);
+        nearestLocations.forEach((loc) => {
+            bounds.extend([parseFloat(loc.coordinates.lng), parseFloat(loc.coordinates.lat)]);
+        });
+        map.current.fitBounds(bounds, { padding: 100, maxZoom: 11 });
+    }, [userPosition, nearestLocations]);
+
+    useEffect(() => {
+        if (!markersLoaded) return;
+        const nearestIds = new Set(nearestLocations.map((l) => l.Location_id));
+        markersRef.current.forEach((el, id) => {
+            el.style.filter = nearestIds.has(id)
+                ? "drop-shadow(0 0 4px #06C167) drop-shadow(0 0 4px #06C167)"
+                : "";
+        });
+    }, [nearestLocations, markersLoaded]);
 
     const handleSearch = async () => {
         setError("");
@@ -123,18 +125,45 @@ export default function WashHallMap() {
                 return;
             }
             const { lat, lng } = await geocodeRes.json();
-            await zoomToNearest(lat, lng);
+            await onPositionChange(lat, lng);
         } catch (err) {
             console.error(err);
             setError("Der skete en fejl");
         }
     };
 
+    const centerOnUserLocation = () => {
+        if (!navigator.geolocation) {
+            alert("Din browser understter ikek location");
+            return
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                onPositionChange(pos.coords.latitude, pos.coords.longitude);
+            },
+            (err) => {
+                if (err.code === 1) {
+                    alert("Du har afvist adgang tiil din position. Tillad det i browser-instillinger for at bruge denne funktion.");
+                }else{
+                    alert("Kunne ikek finde din position")
+                }
+            }
+        );
+    }
+
     return (
-        <div className="relative w-full h-96 rounded-lg overflow-hidden">
+        <div className="relative w-full h-96">
             <div ref={mapContainer} className="w-full h-full" />
             <div className="absolute top-4 left-4 right-4 z-10">
                 <div className="flex gap-2">
+                    <button
+                        onClick={centerOnUserLocation}
+                        className="bg-black text-white px-4 py-2 rounded"
+                        aria-label="Find min position"
+                    >
+                        <MapPinIcon className="w-5 h-5" />
+                    </button>
                     <input
                         type="text"
                         value={searchTerm}
