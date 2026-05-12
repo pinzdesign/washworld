@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
+import { MapPinIcon } from "@heroicons/react/24/solid";
 
 type Location = {
     Location_id: number;
@@ -32,7 +33,13 @@ export default function WashHallMap() {
                 [3.0, 52.0], 
                 [20.0, 60.0],
             ],
+            cooperativeGestures: true,
         });
+
+        map.current.addControl(
+            new mapboxgl.NavigationControl({ showCompass: false }),
+            "bottom-right"
+        );
 
         //Hent og vis alle vaskehaller som markers
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/locations`)
@@ -130,11 +137,38 @@ export default function WashHallMap() {
         }
     };
 
+    const centerOnUserLocation = () => {
+        if (!navigator.geolocation) {
+            alert("Din browser understter ikek location");
+            return
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                zoomToNearest(pos.coords.latitude, pos.coords.longitude);
+            },
+            (err) => {
+                if (err.code === 1) {
+                    alert("Du har afvist adgang tiil din position. Tillad det i browser-instillinger for at bruge denne funktion.");
+                }else{
+                    alert("Kunne ikek finde din position")
+                }
+            }
+        );
+    }
+
     return (
-        <div className="relative w-full h-96 rounded-lg overflow-hidden">
+        <div className="relative w-full h-96 overflow-hidden">
             <div ref={mapContainer} className="w-full h-full" />
             <div className="absolute top-4 left-4 right-4 z-10">
                 <div className="flex gap-2">
+                    <button
+                        onClick={centerOnUserLocation}
+                        className="bg-black text-white px-4 py-2 rounded"
+                        aria-label="Find min position"
+                    >
+                        <MapPinIcon className="w-5 h-5" />
+                    </button>
                     <input
                         type="text"
                         value={searchTerm}

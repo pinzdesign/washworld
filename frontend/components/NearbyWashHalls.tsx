@@ -51,19 +51,30 @@ export default function NearbyWashHalls() {
     };
 
     useEffect(() => {
-        requestLocation();
+        if ("permissions" in navigator) {
+            navigator.permissions
+                .query({ name: "geolocation" })
+                .then((result) => {
+                    if (result.state === "granted") {
+                        requestLocation();
+                    }
+                });
+        }
     }, []);
 
     return (
         <div>
             <h2>Wash World nær dig</h2>
-            {error && (
-            <div>
-                <p>{error}</p>
+            {!error && locations.length === 0 && (
                 <button onClick={requestLocation}>Brug min lokation</button>
-            </div>
             )}
-            <div className="grid grid-cols-5 gap-4">
+            {error && (
+                <div>
+                    <p>{error}</p>
+                    <button onClick={requestLocation}>Brug min lokation</button>
+                </div>
+            )}
+            <div className="grid grid-cols-5 gap-4 items-start">
                 {locations.map((loc) => (
                 <WashHallCard key={loc.Location_id} location={loc} />
                 ))}
