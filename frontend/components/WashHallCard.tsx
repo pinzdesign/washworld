@@ -6,7 +6,7 @@ type ServiceUnit = {
     total_count: number;
 };
 
-type Location = {
+export type Location = {
     Location_id: number;
     name: string;
     image: string;
@@ -20,13 +20,15 @@ type Location = {
         mat_cleaner: ServiceUnit;
     };
     load_profile?: Record<string, number>;
+    adjusted_load_profile?: Record<string, number>;
     distance_km?: number;
     duration_min?: number;
     operational_message?: string;
-};
+}
 
 type Props = {
     location: Location;
+    isSelected?: boolean;
 };
 
 const FACILITY_LABELS: Record<string, string> = {
@@ -38,19 +40,19 @@ const FACILITY_LABELS: Record<string, string> = {
 };
 
 function loadHeight(load: number) {
-    if (load >= 0.8) return 100;   // 4/4
-    if (load >= 0.7) return 75;    // 3/4
-    if (load >= 0.27) return 50;    // 2/4
+    if (load >= 0.76) return 100;   // 4/4
+    if (load >= 0.585) return 75;    // 3/4
+    if (load >= 0.292) return 50;    // 2/4
     return 25;                       // 1/4
 }
 
 function loadColor(load: number) {
-    if (load >= 0.8) return "#FF6B06";   // orange — travlt
-    if (load >= 0.7) return "#FFC106";  // gul — mellem
+    if (load >= 0.76) return "#FF6B06";   // orange — travlt
+    if (load >= 0.585) return "#FFC106";  // gul — mellem
     return "#06C167";                     // grøn — roligt
 }
 
-export default function WashHallCard({ location }: Props) {
+export default function WashHallCard({ location, isSelected }: Props) {
     const [currentHour, setCurrentHour] = useState<number | null>(null);
 
     useEffect(() => {
@@ -60,12 +62,12 @@ export default function WashHallCard({ location }: Props) {
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className="border border-black/20 rounded-lg overflow-hidden bg-[#f7f7f7]">
-            <img
-                src={location.image}
-                alt={location.name}
-                className="w-full h-40 object-cover"
-            />
+        <div className={`rounded-lg overflow-hidden bg-[#f7f7f7] ${
+            isSelected ? "ring-4 ring-[#06C167]" : "border border-black/20"
+        }`}>
+            {location.image && (
+                <img src={location.image} alt={location.name} className="w-full h-40 object-cover" />
+            )}
             <div className="p-4 space-y-3">
                 <h3 className="font-extrabold text-lg truncate">{location.name}</h3>
                 <div className="min-h-12">
@@ -111,16 +113,16 @@ export default function WashHallCard({ location }: Props) {
                 )}
 
                 {/* Travlhed-graf */}
-                {location.load_profile && (
+                {location.adjusted_load_profile && (
                     <div>
                         <div className="flex items-end gap-1 h-16 border-b border-gray-200">
-                            {Object.entries(location.load_profile).map(([time, load]) => {
+                            {Object.entries(location.adjusted_load_profile).map(([time, load]) => {
                                 const hour = parseInt(time);
                                 const isNow = hour === currentHour;
                                 return (
                                     <div
                                         key={time}
-                                        className={`flex-1 ${isNow ? "ring-2 ring-black" : ""}`}
+                                        className={`flex-1 rounded ${isNow ? "ring-2 ring-black" : ""}`}
                                         style={{
                                             height: `${loadHeight(load)}%`,
                                             backgroundColor: loadColor(load),
@@ -130,8 +132,8 @@ export default function WashHallCard({ location }: Props) {
                             })}
                         </div>
                         <div className="flex justify-between text-xs text-gray-500 mt-1">
-                            <span>{Object.keys(location.load_profile)[0]}</span>
-                            <span>{Object.keys(location.load_profile).slice(-1)[0]}</span>
+                            <span>{Object.keys(location.adjusted_load_profile)[0]}</span>
+                            <span>{Object.keys(location.adjusted_load_profile).slice(-1)[0]}</span>
                         </div>
                     </div>
                 )}
