@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import math
 from helpers import mapbox
+from helpers import load_calculator
 
 MAPBOX_LIMIT = 24
 
@@ -10,6 +11,7 @@ with open(_PATH, encoding="utf-8") as f:
     _LOCATIONS = json.load(f)
     for loc in _LOCATIONS:
         loc["Location_id"] = int(loc["Location_id"])
+        loc["adjusted_load_profile"] = load_calculator.calculate_adjusted_load_profile(loc)
 
 ################################
 def get_all():
