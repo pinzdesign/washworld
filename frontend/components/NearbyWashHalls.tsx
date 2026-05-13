@@ -18,11 +18,11 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
     useEffect(() => {
         if (selectedLocationId === null) return;
         const card = cardRefs.current.get(selectedLocationId);
-        if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (card) card.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
     }, [selectedLocationId]);
 
     return (
-        <div className="bg-[#f7f7f7] px-6 py-8">
+        <div className="bg-[#e5e5e5] px-6 py-8">
             {!error && locations.length === 0 && (
                 <div className="bg-white font-extrabold grid place-items-center border border-black/20 rounded-lg w-fit space-y-2 mx-auto px-6 py-4 flex gap-2">
                     <h2>Vi skal bruge din lokation for at vise vaskehaller nær dig.</h2>
@@ -38,7 +38,7 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
                     <button onClick={onRequestLocation}>Brug min lokation</button>
                 </div>
             )}
-            <div className="grid grid-cols-5 gap-4 items-start">
+            <div className="flex gap-4 overflow-x-auto items-start p-4">
                 {locations.map((loc) => (
                     <div
                         key={loc.Location_id}
@@ -46,6 +46,7 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
                             if (el) cardRefs.current.set(loc.Location_id, el);
                             else cardRefs.current.delete(loc.Location_id);
                         }}
+                        className="flex-1 min-w-[260px]"
                     >
                         <WashHallCard
                             location={loc}

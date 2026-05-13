@@ -107,7 +107,7 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
         const nearestIds = new Set(nearestLocations.map((l) => l.Location_id));
         markersRef.current.forEach((el, id) => {
             el.style.filter = nearestIds.has(id)
-                ? "drop-shadow(0 0 4px #06C167) drop-shadow(0 0 4px #06C167)"
+                ? "drop-shadow(0px 2px 6px rgba(0,0,0,1))"
                 : "";
         });
     }, [nearestLocations, markersLoaded]);

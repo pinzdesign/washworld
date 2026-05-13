@@ -63,8 +63,8 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className={`rounded-lg overflow-hidden bg-white ${
-            isSelected ? "ring-4 ring-[#06C167]" : "border border-black/20"
+        <div className={`rounded-lg overflow-hidden ring-1 ring-black/20 ${
+            isSelected ? "bg-white shadow-[0px_2px_12px_rgba(0,0,0,0.6)]" : "bg-[#f7f7f7]"
         }`}>
             {location.image && (
                 <img src={location.image} alt={location.name} className="w-full h-40 object-cover" />
