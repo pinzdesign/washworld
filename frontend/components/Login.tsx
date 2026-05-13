@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Register from "./Register";
 import { useAuth } from "./AuthContext";
 
 export default function Login() {
@@ -11,7 +10,6 @@ export default function Login() {
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [showRegister, setShowRegister] = useState(false);
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 
@@ -46,24 +44,8 @@ export default function Login() {
 		}
 	};
 
-	// 🔒 login form only (no logout UI here anymore)
-	if (showRegister) {
-		return (
-			<div>
-				<Register />
-				<button onClick={() => setShowRegister(false)}>
-					Tilbage
-				</button>
-			</div>
-		);
-	}
-
-	if (isLoggedIn) {
-		return <p>You are already logged in</p>;
-	}
-
 	return (
-		<div>
+		<form onSubmit={(e) => { e.preventDefault(); handleLogin(); }} className="flex flex-col gap-3">
 			<input
 				type="email"
 				placeholder="Email"
@@ -78,13 +60,11 @@ export default function Login() {
 
 			<button
 				onClick={handleLogin}
+				type="submit"
 				disabled={loading}
+				className="border border-black/20 rounded"
 			>
 				{loading ? "Logger ind..." : "Logind"}
-			</button>
-
-			<button onClick={() => setShowRegister(true)}>
-				Ny bruger
 			</button>
 
 			{error && (
@@ -92,6 +72,6 @@ export default function Login() {
 					{error}
 				</p>
 			)}
-		</div>
+		</form>
 	);
 }

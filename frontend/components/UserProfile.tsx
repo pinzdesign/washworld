@@ -70,11 +70,6 @@ export default function UserProfile() {
 			<p>Email: {user.email}</p>
 			<p>Tlf: {user.phone}</p>
 			<p>WashCoins: {user.washcoins}</p>
-
-			{/* Logout button inside profile */}
-			<button onClick={logout}>
-				Logud
-			</button>
 		</div>
 	);
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Register() {
+export default function Signup() {
 	const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 	const [form, setForm] = useState({
@@ -60,8 +60,7 @@ export default function Register() {
 	};
 
 	return (
-		<div>
-			<h2>Register</h2>
+		<form onSubmit={(e) => { e.preventDefault(); handleSignup(); }} className="flex flex-col gap-3">
 
 			<input
 				name="user_email"
@@ -101,9 +100,13 @@ export default function Register() {
 				onChange={handleChange}
 			/>
 
-			<button onClick={handleSignup}>Sign up</button>
+			<button 
+				type="submit"
+				className="border border-black/20 rounded">
+				Sign up
+			</button>
 
 			<p>{message}</p>
-		</div>
+		</form>
 	);
 }
