@@ -4,8 +4,6 @@ import { useState } from "react";
 
 import { useAuth } from "@/components/AuthContext";
 
-import Login from "@/components/Login";
-import UserProfile from "@/components/UserProfile";
 import MembershipsController from "@/components/MembershipsController";
 import ServiceHistory from "@/components/ServiceHistory";
 import PlateScanner from "@/components/PlateScanner";
@@ -18,9 +16,7 @@ export default function Home() {
 
 	return (
 		<main className="space-y-8">
-			<h1 className="text-3xl font-bold">
-				Wash World
-			</h1>
+			
 
 			<LocationsExplorer />
 
@@ -30,16 +26,12 @@ export default function Home() {
 				}}
 			/>
 
-			{/* Auth-driven rendering */}
-			{!isLoggedIn ? (
-				<Login />
-			) : (
-				<>
-					<UserProfile />
-					<MembershipsController />
-					<ServiceHistory refreshKey={refreshKey} />
-				</>
-			)}
+			{isLoggedIn && (
+          <>
+              <MembershipsController />
+              <ServiceHistory refreshKey={refreshKey} />
+          </>
+      )}
 		</main>
 	);
 }
