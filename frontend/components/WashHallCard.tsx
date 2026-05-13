@@ -29,6 +29,7 @@ export type Location = {
 type Props = {
     location: Location;
     isSelected?: boolean;
+    hasGpsPosition?: boolean;
 };
 
 const FACILITY_LABELS: Record<string, string> = {
@@ -52,7 +53,7 @@ function loadColor(load: number) {
     return "#06C167";                     // grøn — roligt
 }
 
-export default function WashHallCard({ location, isSelected }: Props) {
+export default function WashHallCard({ location, isSelected, hasGpsPosition }: Props) {
     const [currentHour, setCurrentHour] = useState<number | null>(null);
 
     useEffect(() => {
@@ -62,7 +63,7 @@ export default function WashHallCard({ location, isSelected }: Props) {
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className={`rounded-lg overflow-hidden bg-[#f7f7f7] ${
+        <div className={`rounded-lg overflow-hidden bg-white ${
             isSelected ? "ring-4 ring-[#06C167]" : "border border-black/20"
         }`}>
             {location.image && (
@@ -77,13 +78,15 @@ export default function WashHallCard({ location, isSelected }: Props) {
                 
                 {/* Distance + Rutevejledning */}
                 {location.distance_km !== undefined && (
-                    <div className="flex items-center justify-between">
-                        <span className="font-extrabold text-[#06C167]">{location.distance_km} km</span>
+                    <div className="flex items-center">
+                        {hasGpsPosition && (
+                            <span className="font-extrabold text-[#06C167]">{location.distance_km} km</span>
+                        )}
                         <a
                             href={directionsUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-extrabold bg-[#06C167] text-white px-3 py-1 rounded flex items-center gap-1 text-sm"
+                            className="ml-auto font-extrabold bg-[#06C167] text-white px-3 py-1 rounded flex items-center gap-1 text-sm"
                         >
                             <ArrowTurnUpRightIcon className="w-4 h-4 font-extrabold" />
                             Rute

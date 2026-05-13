@@ -9,9 +9,10 @@ type Props = {
     userPosition: { lat: number; lng: number} | null;
     nearestLocations: Location[];
     onPositionChange: (lat: number, lng: number) => void;
+    onRequestLocation: () => void;
     onMarkerClick: (location: Location) => void;
 }
-export default function WashHallMap({ userPosition, nearestLocations, onPositionChange, onMarkerClick }: Props) {
+export default function WashHallMap({ userPosition, nearestLocations, onPositionChange, onRequestLocation, onMarkerClick }: Props) {
     const onMarkerClickRef = useRef(onMarkerClick);
     useEffect(() => {
         onMarkerClickRef.current = onMarkerClick;
@@ -132,25 +133,6 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
         }
     };
 
-    const centerOnUserLocation = () => {
-        if (!navigator.geolocation) {
-            alert("Din browser understter ikek location");
-            return
-        }
-
-        navigator.geolocation.getCurrentPosition(
-            (pos) => {
-                onPositionChange(pos.coords.latitude, pos.coords.longitude);
-            },
-            (err) => {
-                if (err.code === 1) {
-                    alert("Du har afvist adgang tiil din position. Tillad det i browser-instillinger for at bruge denne funktion.");
-                }else{
-                    alert("Kunne ikek finde din position")
-                }
-            }
-        );
-    }
 
     return (
         <div className="relative w-full h-96">
@@ -158,7 +140,7 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
             <div className="absolute top-4 left-4 right-4 z-10">
                 <div className="flex gap-2">
                     <button
-                        onClick={centerOnUserLocation}
+                        onClick={onRequestLocation}
                         className="bg-black text-white px-4 py-2 rounded"
                         aria-label="Find min position"
                     >
