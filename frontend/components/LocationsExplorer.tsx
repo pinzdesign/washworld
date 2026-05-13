@@ -6,14 +6,24 @@ import NearbyWashHalls from "./NearbyWashHalls";
 import type { Location } from "./WashHallCard";
 
 export default function LocationsExplorer() {
-    const [userPosition, setUserPosition] = useState<{ lat: number; lng: number} | null>(null)
+    const [userPosition, setUserPosition] = useState<{ lat: number; lng: number } | null>(null);
+    const [gpsPosition, setGpsPosition] = useState<{ lat: number; lng: number } | null>(null);
     const [nearestLocations, setNearestLocations] = useState<Location[]>([]);
     const [selectedLocationId, setSelectedLocationId] = useState<number | null>(null);
     const [error, setError] = useState("");
 
     useEffect(() => {
         if (!userPosition) return;
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/locations/nearby?lat=${userPosition.lat}&lng=${userPosition.lng}&limit=5`)
+        const params = new URLSearchParams({
+            lat: String(userPosition.lat),
+            lng: String(userPosition.lng),
+            limit: "5",
+        });
+        if (gpsPosition) {
+            params.set("gps_lat", String(gpsPosition.lat));
+            params.set("gps_lng", String(gpsPosition.lng));
+        }
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/locations/nearby?${params.toString()}`)
             .then(res => {
                 if (!res.ok) {
                     setError("Kunne ikke hente vaskehaller");
@@ -27,7 +37,7 @@ export default function LocationsExplorer() {
             .catch((err) => {
                 console.error(err);
             });
-    }, [userPosition]);
+    }, [userPosition, gpsPosition]);
 
     const requestLocation = () => {
         setError("");
@@ -36,17 +46,25 @@ export default function LocationsExplorer() {
             return;
         }
         navigator.geolocation.getCurrentPosition(
-            (pos) => setUserPosition({ lat: pos.coords.latitude, lng: pos.coords.longitude}),
+            (pos) => {
+                const coords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+                setUserPosition(coords);
+                setGpsPosition(coords);
+            },
             (err) => {
                 console.error("Geolocation error:", err.code, err.message);
-                setError("Vi skal bruge din lokation for at vise vaskehaller nør dig");
+                if (err.code === 1) {
+                    setError("Du har afvist adgang til din position. Tillad det i browser-indstillinger for at bruge denne funktion.");
+                } else {
+                    setError("Kunne ikke finde din position");
+                }
             }
         )
     };
 
     useEffect(() => {
         if ("permissions" in navigator) {
-            navigator.permissions.query({name: "geolocation" }).then((result) => {
+            navigator.permissions.query({ name: "geolocation" }).then((result) => {
                 if (result.state === "granted") requestLocation();
             })
         }
@@ -54,27 +72,31 @@ export default function LocationsExplorer() {
 
     return (
         <>
-            <WashHallMap
-                userPosition={userPosition}
-                nearestLocations={nearestLocations}
-                onPositionChange={(lat, lng) => setUserPosition({ lat, lng })}
-                onMarkerClick={(location) => {
-                    const isInList = nearestLocations.some(l => l.Location_id === location.Location_id);
-                    if (!isInList) {
-                        setUserPosition({
-                            lat: parseFloat(location.coordinates.lat),
-                            lng: parseFloat(location.coordinates.lng),
-                        });
-                    }
-                    setSelectedLocationId(location.Location_id);
-                }}
-            />
-            <NearbyWashHalls
-                locations={nearestLocations}
-                selectedLocationId={selectedLocationId}
-                error={error}
-                onRequestLocation={requestLocation}
-            />
+            <div className="space-y-0">
+                <WashHallMap
+                    userPosition={userPosition}
+                    nearestLocations={nearestLocations}
+                    onPositionChange={(lat, lng) => setUserPosition({ lat, lng })}
+                    onRequestLocation={requestLocation}
+                    onMarkerClick={(location) => {
+                        const isInList = nearestLocations.some(l => l.Location_id === location.Location_id);
+                        if (!isInList) {
+                            setUserPosition({
+                                lat: parseFloat(location.coordinates.lat),
+                                lng: parseFloat(location.coordinates.lng),
+                            });
+                        }
+                        setSelectedLocationId(location.Location_id);
+                    }}
+                />
+                <NearbyWashHalls
+                    locations={nearestLocations}
+                    selectedLocationId={selectedLocationId}
+                    hasGpsPosition={gpsPosition !== null}
+                    error={error}
+                    onRequestLocation={requestLocation}
+                />
+            </div>
         </>
     );
 }

@@ -574,7 +574,13 @@ def get_nearby_locations():
         lat = validators.validate_lat(request.args.get("lat"))
         lng = validators.validate_lng(request.args.get("lng"))
         limit = validators.validate_limit(request.args.get("limit"))
-        return jsonify(locations.get_nearest(lat, lng, limit))
+
+        gps_lat_raw = request.args.get("gps_lat")
+        gps_lng_raw = request.args.get("gps_lng")
+        gps_lat = validators.validate_lat(gps_lat_raw) if gps_lat_raw is not None else None
+        gps_lng = validators.validate_lng(gps_lng_raw) if gps_lng_raw is not None else None
+
+        return jsonify(locations.get_nearest(lat, lng, limit, gps_lat, gps_lng))
     except Exception as ex:
         msg = str(ex)
         if msg.startswith("company_exception"):
