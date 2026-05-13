@@ -135,7 +135,7 @@ def user_profile():
 
         connection, cursor = connector.db()
 
-        q = "SELECT user_first_name, user_last_name, user_email, user_verified_at FROM users WHERE user_pk = %s"
+        q = "SELECT user_first_name, user_last_name, user_email, user_verified_at, user_phone, user_washcoins, user_status FROM users WHERE user_pk = %s"
         cursor.execute(q, (user_pk,))
         user = cursor.fetchone()
 
@@ -152,7 +152,11 @@ def user_profile():
             "user": {
                 "first_name": user["user_first_name"],
                 "last_name": user["user_last_name"],
-                "email": user["user_email"]
+                "email": user["user_email"],
+                "phone": user["user_phone"],
+                "status": user["user_status"],
+                "washcoins": user["user_washcoins"],
+                "verified_at": user["user_verified_at"]
             }
         })
 
@@ -248,8 +252,117 @@ def delete_membership(membership_pk):
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
 
-# reworked scanner - will use functions for qr and plate scanner (needs to be changed manually, as we can't scan)
+@app.post("/memberships")
+def create_membership():
+    try:
+        user_pk = auth.verify_token()
 
+        membership_type_fk = request.form.get("membership_type_fk")
+        car_plate = request.form.get("car_plate")
+
+        if not membership_type_fk or not car_plate:
+            return "Missing fields", 400
+
+        created_at = int(time.time())
+        membership_start_at = created_at
+        membership_end_at = created_at + (30 * 24 * 60 * 60)  # approx 1 month...might need revision, because of uneven month etc.
+
+        connection, cursor = connector.db()
+
+        # -----------------------------------------
+        # 1. CHECK CAR PLATE UNIQUE RULE
+        # -----------------------------------------
+        q = """
+        SELECT membership_pk
+        FROM membership
+        WHERE car_plate = %s
+          AND deleted_at = 0
+          AND membership_status = 'active'
+        LIMIT 1
+        """
+        cursor.execute(q, (car_plate,))
+        existing = cursor.fetchone()
+
+        if existing:
+            return "Car plate already has an active membership", 409
+
+        # -----------------------------------------
+        # 2. INSERT MEMBERSHIP
+        # -----------------------------------------
+        q = """
+        INSERT INTO membership (
+            user_fk,
+            membership_type_fk,
+            primary_dep_ext_id,
+            car_plate,
+            access_all_dep,
+            membership_start_at,
+            membership_end_at,
+            membership_status,
+            created_at,
+            deleted_at
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+
+        cursor.execute(q, (
+            user_pk,
+            membership_type_fk,
+            0,
+            car_plate,
+            1,
+            membership_start_at,
+            membership_end_at,
+            "active",
+            created_at,
+            0
+        ))
+
+        connection.commit()
+
+        return jsonify({
+            "message": "Membership created"
+        }), 201
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
+@app.get("/membership-types")
+def get_membership_types():
+    try:
+        connection, cursor = connector.db()
+
+        q = """
+        SELECT
+            membership_type_pk,
+            membership_type_name,
+            membership_type_price,
+            membership_desc
+        FROM membership_type
+        ORDER BY membership_type_price ASC
+        """
+
+        cursor.execute(q)
+        rows = cursor.fetchall()
+
+        return jsonify({
+            "membership_types": rows
+        })
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
+# reworked scanner - will use hardcoded values for qr and plate scanner (needs to be changed manually, as we can't scan)
 @app.post("/simulate-scan")
 def simulate_scan():
     conn, cur = connector.db()
@@ -292,7 +405,7 @@ def simulate_scan():
             )
 
             # -----------------------------------------
-            # 3. SIMPLE MATCH (KEY FIX)
+            # 3. SIMPLE MATCH
             # -----------------------------------------
             matches_service = (
                 membership["membership_type_fk"] == SERVICE_ID
@@ -387,7 +500,11 @@ def get_history():
             sh.service_at,
             s.service_name,
             s.service_type,
-            mt.membership_type_name
+            mt.membership_type_name,
+
+            u.user_first_name,
+            u.user_last_name
+
         FROM service_history sh
 
         JOIN service s
@@ -399,13 +516,16 @@ def get_history():
         LEFT JOIN membership_type mt
             ON m.membership_type_fk = mt.membership_type_pk
 
+        LEFT JOIN users u
+            ON sh.user_fk = u.user_pk
+
         WHERE
             sh.user_fk = %s
             OR sh.membership_fk IN (
                 SELECT membership_pk
                 FROM membership
                 WHERE user_fk = %s
-                  AND deleted_at = 0
+                AND deleted_at = 0
             )
 
         ORDER BY sh.service_at DESC

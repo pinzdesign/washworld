@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useAuth } from "./AuthContext";
 import MembershipCard from "./MembershipCard";
+import CreateMembershipForm from "./CreateMembershipForm";
 
 type Membership = {
 	membership_pk: number;
@@ -15,75 +17,107 @@ type Membership = {
 };
 
 export default function MembershipsController() {
+	const { isLoggedIn, token } = useAuth();
 	const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 	const [memberships, setMemberships] = useState<Membership[]>([]);
-	
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState("");
 
-	const fetchMemberships = async () => {
-		const token = localStorage.getItem("token");
-
-		const res = await fetch(`${baseURL}/memberships`, {
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		});
-
-		const data = await res.json();
-		setMemberships(data.memberships);
-		setLoading(false);
-	};
-
-	useEffect(() => {
-		fetchMemberships();
-	}, []);
-
-	const handleDelete = async (membership_pk: number) => {
-		const token = localStorage.getItem("token");
+	// -------------------------
+	// FETCH memberships
+	// -------------------------
+	const fetchMemberships = useCallback(async () => {
+		if (!token) return;
 
 		try {
+			setLoading(true);
+			setError("");
+
+			const res = await fetch(`${baseURL}/memberships`, {
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+			});
+
+			if (!res.ok) {
+				throw new Error("Failed to fetch memberships");
+			}
+
+			const data = await res.json();
+			setMemberships(data.memberships || []);
+		} catch (err) {
+			console.error(err);
+			setError("Kunne ikke hente medlemskaber");
+		} finally {
+			setLoading(false);
+		}
+	}, [token, baseURL]);
+
+	useEffect(() => {
+		if (!isLoggedIn || !token) return;
+		fetchMemberships();
+	}, [isLoggedIn, token, fetchMemberships]);
+
+	// -------------------------
+	// DELETE (soft cancel, doesn't really delete membership, but edits it, hence a patch method)
+	// -------------------------
+	const handleDelete = async (membership_pk: number) => {
+		try {
+			if (!token) return;
+
 			const res = await fetch(
 				`${baseURL}/memberships/${membership_pk}`,
 				{
-					method: "DELETE",
+					method: "PATCH",
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
 				}
 			);
 
-			const text = await res.text();
-
 			if (!res.ok) {
+				const text = await res.text();
 				alert(text);
 				return;
 			}
 
-			// remove from UI without refetch
-			setMemberships((prev: any[]) =>
-				prev.filter((m) => m.membership_pk !== membership_pk)
+			// optimistic update
+			setMemberships((prev) =>
+				prev.filter(
+					(m) => m.membership_pk !== membership_pk
+				)
 			);
-
 		} catch (err) {
 			console.error(err);
-			alert("Error deleting membership");
+			alert("Fejl, kunne ikke slette medlemskab");
 		}
 	};
 
-	if (loading) return <p>Loading...</p>;
+	if (!isLoggedIn) return null;
+
+	if (loading) return <p>Henter medlemskaber...</p>;
+	if (error) return <p>{error}</p>;
 
 	return (
 		<div>
-			<h2>Your memberships</h2>
+			<h2>Medlemskaber</h2>
 
-			{memberships.map((m: any) => (
-				<MembershipCard
-					key={m.membership_pk}
-					membership={m}
-					onDelete={handleDelete}
-				/>
-			))}
+			{memberships.length === 0 ? (
+				<p>Ingen medlemskaber fundet.</p>
+			) : (
+				memberships.map((m) => (
+					<MembershipCard
+						key={m.membership_pk}
+						membership={m}
+						onDelete={handleDelete}
+					/>
+				))
+			)}
+
+			<CreateMembershipForm
+				onCreated={fetchMemberships}
+			/>
 		</div>
 	);
 }

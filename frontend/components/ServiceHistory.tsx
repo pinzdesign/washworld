@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useAuth } from "./AuthContext";
 
 type ServiceHistoryItem = {
 	service_history_pk: number;
@@ -15,6 +16,8 @@ type ServiceHistoryItem = {
 	service_type: string;
 	car_plate: string | null;
 	membership_type_name: string | null;
+	user_first_name: string | null;
+	user_last_name: string | null;
 };
 
 export default function ServiceHistory({
@@ -22,69 +25,89 @@ export default function ServiceHistory({
 }: {
 	refreshKey: number;
 }) {
-	const [history, setHistory] = useState<ServiceHistoryItem[]>([]);
-	const [loading, setLoading] = useState(true);
+	const { isLoggedIn, token } = useAuth();
+
+	const [history, setHistory] = useState<
+		ServiceHistoryItem[]
+	>([]);
+	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState("");
 
 	const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-	const fetchHistory = async () => {
-		try {
-			setLoading(true);
-			setError("");
-
-			const token = localStorage.getItem("token");
-
-			const res = await fetch(`${API_URL}/history`, {
-				headers: {
-					...(token ? { Authorization: `Bearer ${token}` } : {}),
-				},
-			});
-
-			if (!res.ok) throw new Error("Failed to fetch history");
-
-			const data = await res.json();
-			setHistory(data.history || []);
-		} catch (e) {
-			setError("Could not load service history");
-		} finally {
-			setLoading(false);
-		}
-	};
-
 	useEffect(() => {
-		fetchHistory();
-	}, [refreshKey]);
+		if (!isLoggedIn || !token) return;
 
-	if (loading) return <p>Loading service history...</p>;
+		const fetchHistory = async () => {
+			try {
+				setLoading(true);
+				setError("");
+
+				const res = await fetch(`${API_URL}/history`, {
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				});
+
+				if (!res.ok) {
+					throw new Error("Failed to fetch history");
+				}
+
+				const data = await res.json();
+				setHistory(data.history || []);
+			} catch (err) {
+				console.error(err);
+				setError("Could not load service history");
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchHistory();
+	}, [refreshKey, isLoggedIn, token, API_URL]);
+
+	// auth guard
+	if (!isLoggedIn) return null;
+
+	if (loading) return <p>Henter historik...</p>;
 	if (error) return <p>{error}</p>;
-	if (!history.length) return <p>No service history found.</p>;
+	if (!history.length)
+		return <p>Kunne ikke hente historik.</p>;
 
 	return (
 		<div className="space-y-4">
-			<h2 className="text-2xl font-bold">Service History</h2>
+			<h2 className="text-2xl font-bold">
+				Vaske Historik
+			</h2>
 
 			{history.map((item) => (
-				<div key={item.service_history_pk} className="border rounded-xl p-4 space-y-2">
-					<div className="flex justify-between">
-						<div>
-							<h3 className="font-semibold">{item.service_name}</h3>
-							<p className="text-sm text-gray-500">
-								{item.service_type.toUpperCase()} wash
-							</p>
-						</div>
+				<div
+					key={item.service_history_pk}
+					className="border rounded-xl p-4 space-y-2"
+				>
+					<div>
+						<h3 className="font-semibold">
+							{item.service_name}
+						</h3>
 
-						<div className="text-right">
-							<p className="text-sm text-gray-500">
-								{new Date(item.service_at * 1000).toLocaleString()}
-							</p>
+						<p className="text-sm text-gray-500">
+							{item.service_type.toUpperCase()} vask
+						</p>
 
-							<p className="font-bold">
-								{item.covered_by_membership
-									? "FREE"
-									: `${item.final_price} DKK`}
-							</p>
-						</div>
+						<p className="text-sm">
+							Nummerplade: {item.car_plate || "Unknown"}
+						</p>
+
+						<p className="text-sm">
+							Afdeling: {item.department_ext_id}
+						</p>
+
+						<p className="text-sm">
+							Vasket af:{" "}
+							{item.user_first_name
+								? `${item.user_first_name} ${item.user_last_name ?? ""}`
+								: "Unknown"}
+						</p>
 					</div>
 				</div>
 			))}

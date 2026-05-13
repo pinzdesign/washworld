@@ -2,21 +2,28 @@
 
 import { useState } from "react";
 import Register from "./Register";
+import { useAuth } from "./AuthContext";
 
 export default function Login() {
 	const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
-	const [user_email, setEmail] = useState("");
-	const [user_password, setPassword] = useState("");
-	const [message, setMessage] = useState("");
+	const { isLoggedIn, login } = useAuth();
+
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	const [showRegister, setShowRegister] = useState(false);
+	const [error, setError] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	const handleLogin = async () => {
-		const formData = new FormData();
-		formData.append("user_email", user_email);
-		formData.append("user_password", user_password);
+		setError("");
+		setLoading(true);
 
 		try {
+			const formData = new FormData();
+			formData.append("user_email", email);
+			formData.append("user_password", password);
+
 			const res = await fetch(`${baseURL}/login`, {
 				method: "POST",
 				body: formData,
@@ -24,20 +31,22 @@ export default function Login() {
 
 			if (!res.ok) {
 				const text = await res.text();
-				setMessage(text);
+				setError(text || "Login failed");
 				return;
 			}
 
 			const data = await res.json();
-			localStorage.setItem("token", data.token);
 
-			setMessage("Logged in!");
+			login(data.token); // 🔥 triggers global state update
 		} catch (err) {
 			console.error(err);
-			setMessage("Error logging in");
+			setError("Something went wrong");
+		} finally {
+			setLoading(false);
 		}
 	};
 
+	// 🔒 login form only (no logout UI here anymore)
 	if (showRegister) {
 		return (
 			<div>
@@ -49,10 +58,12 @@ export default function Login() {
 		);
 	}
 
+	if (isLoggedIn) {
+		return <p>You are already logged in</p>;
+	}
+
 	return (
 		<div>
-			<h2>Login</h2>
-
 			<input
 				type="email"
 				placeholder="Email"
@@ -65,13 +76,22 @@ export default function Login() {
 				onChange={(e) => setPassword(e.target.value)}
 			/>
 
-			<button onClick={handleLogin}>Login</button>
-
-			<button onClick={() => setShowRegister(true)}>
-				Ny Bruger
+			<button
+				onClick={handleLogin}
+				disabled={loading}
+			>
+				{loading ? "Logger ind..." : "Logind"}
 			</button>
 
-			<p>{message}</p>
+			<button onClick={() => setShowRegister(true)}>
+				Ny bruger
+			</button>
+
+			{error && (
+				<p style={{ color: "red" }}>
+					{error}
+				</p>
+			)}
 		</div>
 	);
 }
