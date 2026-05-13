@@ -120,6 +120,10 @@ def login():
         })
 
     except Exception as ex:
+        msg = str(ex)
+        if msg.startswith("company_exception"):
+            field = msg.replace("company_exception ", "")
+            return f"Invalid {field}", 400
         ic(ex)
         return "Internal error", 500
     finally:
