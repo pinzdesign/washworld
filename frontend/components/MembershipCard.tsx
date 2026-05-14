@@ -32,9 +32,7 @@ export default function MembershipCard({
 	onCancel,
 	onReactivate,
 }: Props) {
-	const isActive =
-		membership.membership_status === "cancelled";
-		const isActive = membership.membership_status === "active";
+	const isActive = membership.membership_status === "active";
 
 	return (
 		<div className="border border-gray-10 mb-4 hover:shadow-md transition-shadow duration-200">
