@@ -60,16 +60,16 @@ export default function MembershipsController() {
 	}, [isLoggedIn, token, fetchMemberships]);
 
 	// -------------------------
-	// DELETE (soft cancel, doesn't really delete membership, but edits it, hence a patch method)
+	// Cancel Membership
 	// -------------------------
-	const handleDelete = async (membership_pk: number) => {
+	const handleCancel = async (membership_pk: number) => {
 		try {
 			if (!token) return;
 
 			const res = await fetch(
-				`${baseURL}/memberships/${membership_pk}`,
+				`${baseURL}/memberships/${membership_pk}/cancel`,
 				{
-					method: "PATCH",
+					method: "POST",
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
@@ -84,13 +84,41 @@ export default function MembershipsController() {
 
 			// optimistic update
 			setMemberships((prev) =>
-				prev.filter(
-					(m) => m.membership_pk !== membership_pk
+				prev.map((m) =>
+					m.membership_pk === membership_pk
+						? { ...m, membership_status: "cancelled" }
+						: m
 				)
 			);
 		} catch (err) {
 			console.error(err);
-			alert("Fejl, kunne ikke slette medlemskab");
+			alert("Fejl, kunne ikke opsige medlemskab");
+		}
+	};
+
+	const handleReactivate = async (membership_pk: number) => {
+		try {
+			if (!token) return;
+
+			const res = await fetch(
+				`${baseURL}/memberships/${membership_pk}/reactivate`,
+				{
+					method: "POST",
+					headers: { Authorization: `Bearer ${token}` },
+				}
+			);
+
+			if (!res.ok) {
+				const text = await res.text();
+				alert(text);
+				return;
+			}
+
+			// Refetch så vi får evt. nye dates fra backend
+			await fetchMemberships();
+		} catch (err) {
+			console.error(err);
+			alert("Fejl, kunne ikke reaktivere medlemskab");
 		}
 	};
 
@@ -109,7 +137,8 @@ export default function MembershipsController() {
 					<MembershipCard
 						key={m.membership_pk}
 						membership={m}
-						onDelete={handleDelete}
+						onCancel={handleCancel}
+						onReactivate={handleReactivate}
 					/>
 				))
 			)}
