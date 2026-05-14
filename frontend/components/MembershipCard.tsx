@@ -11,15 +11,30 @@ type Membership = {
 
 type Props = {
 	membership: Membership;
-	onDelete: (id: number) => Promise<void> | void;
+	onCancel: (id: number) => Promise<void> | void;
+	onReactivate: (id: number) => Promise<void> | void;
+};
+
+const END_LABEL: Record<string, string> = {
+    active: "Næste betaling",
+    cancelled: "Adgang udløber",
+    inactive: "Udløbet",
+};
+
+const STATUS_STYLE: Record<string, string> = {
+    active: "bg-green-100 text-green-600",
+    cancelled: "bg-splash/10 text-splash",
+    inactive: "bg-red-100 text-red-600",
 };
 
 export default function MembershipCard({
 	membership,
-	onDelete,
+	onCancel,
+	onReactivate,
 }: Props) {
-	const isCancelled =
+	const isActive =
 		membership.membership_status === "cancelled";
+		const isActive = membership.membership_status === "active";
 
 	return (
 		<div className="border border-gray-10 mb-4 hover:shadow-md transition-shadow duration-200">
@@ -32,9 +47,7 @@ export default function MembershipCard({
 
 				<span
 					className={`text-xs px-2 py-1 ${
-						isCancelled
-							? "bg-red-100 text-red-600"
-							: "bg-green-100 text-green-600"
+						STATUS_STYLE[membership.membership_status] ?? "bg-gray-100 text-gray-600"
 					}`}
 				>
 					{membership.membership_status}
@@ -58,7 +71,7 @@ export default function MembershipCard({
 
 				{membership.membership_end_at && (
 					<p>
-						Næste betaling:{" "}
+						{END_LABEL[membership.membership_status] ?? "Udløbsdato"}:{" "}
 						{new Date(
 							membership.membership_end_at * 1000
 						).toLocaleDateString()}
@@ -67,19 +80,23 @@ export default function MembershipCard({
 			</div>
 
 			{/* FOOTER */}
-			{!isCancelled && (
-				<div className="px-4 py-3 bg-gray-5 border-t border-gray-10 flex justify-end">
+			<div className="px-4 py-3 bg-gray-5 border-t border-gray-10 flex justify-end">
+				{isActive ? (
 					<button
-						onClick={() =>
-							onDelete(membership.membership_pk)
-						}
+						onClick={() => onCancel(membership.membership_pk)}
 						className="bg-red-500 hover:bg-red-600 transition-colors text-white text-sm px-3 py-1"
 					>
 						Opsig medlemskab
 					</button>
-				</div>
-			)}
-
+				) : (
+					<button
+						onClick={() => onReactivate(membership.membership_pk)}
+						className="bg-green-500 hover:bg-green-600 transition-colors text-white text-sm px-3 py-1"
+					>
+						Reaktivér
+					</button>
+				)}
+			</div>
 		</div>
 	);
 }

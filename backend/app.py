@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from icecream import ic
 from werkzeug.security import generate_password_hash, check_password_hash
-from helpers import validators, connector, auth, email_service, locations, mapbox, washcoins
+from helpers import validators, connector, auth, email_service, locations, mapbox, washcoins, memberships
 import uuid
 import mysql.connector
 import jwt
@@ -215,9 +215,9 @@ def get_memberships():
         if "connection" in locals(): connection.close()
 
 #############################
-# PASSWORD PROTECTED: Soft delete membership
-@app.patch("/memberships/<int:membership_pk>")
-def delete_membership(membership_pk):
+# PASSWORD PROTECTED: Cancel membership
+@app.post("/memberships/<int:membership_pk>/cancel")
+def cancel_membership(membership_pk):
     try:
         user_pk = auth.verify_token()
 
@@ -237,17 +237,16 @@ def delete_membership(membership_pk):
         if not membership:
             return "Membership not found", 404
 
-        # Soft delete
+        # Cancel Membership
         q = """
         UPDATE membership
-        SET deleted_at = %s,
-            membership_status = 'cancelled'
+        SET membership_status = 'cancelled'
         WHERE membership_pk = %s
         """
-        cursor.execute(q, (int(time.time()), membership_pk))
+        cursor.execute(q, (membership_pk,))
         connection.commit()
 
-        return "Membership removed"
+        return "Membership has been cancelled and will be deactivated when the membership period ends"
 
     except Exception as ex:
         ic(ex)
@@ -255,6 +254,63 @@ def delete_membership(membership_pk):
     finally:
         if "cursor" in locals(): cursor.close()
         if "connection" in locals(): connection.close()
+
+############################
+# PASSWORD PROTECTED: Reactivate membership
+@app.post("/memberships/<int:membership_pk>/reactivate")
+def reactivate_membership(membership_pk):
+    try:
+        user_pk = auth.verify_token()
+
+        connection, cursor = connector.db()
+
+        # Check ownership
+        q = """
+        SELECT membership_pk, membership_end_at 
+        FROM membership 
+        WHERE membership_pk = %s 
+        AND user_fk = %s 
+        AND deleted_at = 0
+        """
+        cursor.execute(q, (membership_pk, user_pk))
+        membership = cursor.fetchone()
+
+        if not membership:
+            return "Membership not found", 404
+        
+        # Reactivate Membership
+        now = int(time.time())
+
+        if membership["membership_end_at"] > now:
+            q = """
+            UPDATE membership
+            SET membership_status = 'active'
+            WHERE membership_pk = %s
+            """
+            cursor.execute(q, (membership_pk,))
+            connection.commit()
+        else:
+            new_end = memberships.add_one_month_capped(now)
+            q = """
+            UPDATE membership
+            SET membership_status = 'active',
+                membership_start_at = %s,
+                membership_end_at = %s
+            WHERE membership_pk = %s
+            """
+            cursor.execute(q, (now, new_end, membership_pk))
+            connection.commit()
+
+
+        return "Membership has been reactivated"
+
+    except Exception as ex:
+        ic(ex)
+        return "Internal error", 500
+    finally:
+        if "cursor" in locals(): cursor.close()
+        if "connection" in locals(): connection.close()
+
 
 @app.post("/memberships")
 def create_membership():
