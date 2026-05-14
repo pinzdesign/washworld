@@ -24,16 +24,10 @@ export default function CreateMembershipForm({
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState("");
 
-	// -------------------------
-	// fetch membership types
-	// -------------------------
 	useEffect(() => {
 		const fetchTypes = async () => {
 			try {
-				const res = await fetch(
-					`${API_URL}/membership-types`
-				);
-
+				const res = await fetch(`${API_URL}/membership-types`);
 				const data = await res.json();
 				setTypes(data.membership_types || []);
 			} catch (err) {
@@ -44,31 +38,22 @@ export default function CreateMembershipForm({
 		fetchTypes();
 	}, [API_URL]);
 
-	// -------------------------
-	// submit membership
-	// -------------------------
 	const handleSubmit = async () => {
 		setError("");
 		setLoading(true);
 
 		try {
 			const formData = new FormData();
-			formData.append(
-				"membership_type_fk",
-				String(selectedType)
-			);
+			formData.append("membership_type_fk", String(selectedType));
 			formData.append("car_plate", carPlate);
 
-			const res = await fetch(
-				`${API_URL}/memberships`,
-				{
-					method: "POST",
-					headers: {
-						Authorization: `Bearer ${token}`,
-					},
-					body: formData,
-				}
-			);
+			const res = await fetch(`${API_URL}/memberships`, {
+				method: "POST",
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+				body: formData,
+			});
 
 			if (!res.ok) {
 				const text = await res.text();
@@ -79,9 +64,8 @@ export default function CreateMembershipForm({
 			setCarPlate("");
 			setSelectedType("");
 
-			onCreated?.(); // refresh parent list
+			onCreated?.();
 		} catch (err) {
-			console.error(err);
 			setError("Something went wrong");
 		} finally {
 			setLoading(false);
@@ -89,12 +73,13 @@ export default function CreateMembershipForm({
 	};
 
 	return (
-		<div className="space-y-4 border p-4 rounded-xl">
-			<h2 className="text-xl font-bold">
+		<div className="space-y-4">
+
+			<h2 className="text-lg font-semibold text-gray-80">
 				Ny abonnement
 			</h2>
 
-			{/* car plate */}
+			{/* CAR PLATE */}
 			<input
 				type="text"
 				placeholder="Nummerplade"
@@ -102,16 +87,16 @@ export default function CreateMembershipForm({
 				onChange={(e) =>
 					setCarPlate(e.target.value.toUpperCase())
 				}
-				className="border p-2 rounded w-full"
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
-			{/* selector */}
+			{/* SELECT */}
 			<select
 				value={selectedType}
 				onChange={(e) =>
 					setSelectedType(Number(e.target.value))
 				}
-				className="border p-2 rounded w-full"
+				className="w-full border border-gray-10 px-3 py-2 bg-white focus:outline-none focus:border-brand-green"
 			>
 				<option value="">Vælg Abonnement</option>
 
@@ -120,23 +105,25 @@ export default function CreateMembershipForm({
 						key={t.membership_type_pk}
 						value={t.membership_type_pk}
 					>
-						{t.membership_type_name} —{" "}
-						{t.membership_type_price} DKK
+						{t.membership_type_name} — {t.membership_type_price} DKK
 					</option>
 				))}
 			</select>
 
-			{/* submit */}
+			{/* BUTTON */}
 			<button
 				onClick={handleSubmit}
 				disabled={loading}
-				className="bg-black text-white px-4 py-2 rounded"
+				className="w-full bg-brand-green text-white px-4 py-2 hover:bg-brand-green-alt transition-colors shadow-sm hover:shadow-md"
 			>
 				{loading ? "Sender..." : "Tilmeld"}
 			</button>
 
+			{/* ERROR */}
 			{error && (
-				<p className="text-red-500">{error}</p>
+				<p className="text-sm text-red-500">
+					{error}
+				</p>
 			)}
 		</div>
 	);

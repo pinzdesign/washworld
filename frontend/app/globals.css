@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-green: #06c167;
+  --color-brand-green-alt: #0ce578;
+  --color-splash: #ff6b06;
+
+  --color-gray-80: #333333;
+  --color-gray-60: #666666;
+  --color-gray-10: #e5e5e5;
+  --color-gray-5: #f7f7f7;
+
+  /* semantic */
+  --color-primary: var(--color-brand-green);
+  --color-primary-hover: var(--color-brand-green-alt);
+
+  --color-text: var(--color-gray-80);
+  --color-text-muted: var(--color-gray-60);
+
+  --color-border: var(--color-gray-10);
+  --color-surface: var(--color-gray-5);
+
+  /* font */
+  --font-sans: var(--font-gilroy);
+
+  /* font sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 32px;
+  --text-2xl: 48px;
+
+  /* containers */
+  --container-wide: 1440px;
+  --container-narrow: 1200px;
+
+  /* gutters */
+  --spacing-gutter-mobile: 16px;
+  --spacing-gutter-tablet: 32px;
+  --spacing-gutter-desktop: 64px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply font-sans text-gray-80 bg-white;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    letter-spacing: 1px;
+    line-height: 25px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+@utility container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter-mobile);
+}
+
+@utility container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter-mobile);
+}
+
+@media (width >= 768px) {
+  .container-wide,
+  .container-narrow {
+    padding-inline: var(--spacing-gutter-tablet);
+  }
+}
+
+@media (width >= 1280px) {
+  .container-wide,
+  .container-narrow {
+    padding-inline: var(--spacing-gutter-desktop);
+  }
 }

@@ -22,14 +22,16 @@ export default function MembershipCard({
 		membership.membership_status === "cancelled";
 
 	return (
-		<div className="border rounded-xl p-4 space-y-2">
-			<div className="flex justify-between items-start">
-				<h3 className="text-lg font-bold">
+		<div className="border border-gray-10 mb-4 hover:shadow-md transition-shadow duration-200">
+
+			{/* HEADER */}
+			<div className="flex items-start justify-between p-4 pb-3">
+				<h3 className="text-base font-semibold text-gray-80">
 					{membership.membership_type_name}
 				</h3>
 
 				<span
-					className={`text-sm px-2 py-1 rounded ${
+					className={`text-xs px-2 py-1 ${
 						isCancelled
 							? "bg-red-100 text-red-600"
 							: "bg-green-100 text-green-600"
@@ -39,48 +41,45 @@ export default function MembershipCard({
 				</span>
 			</div>
 
-			<p>
-				<strong>Nummerplade:</strong>{" "}
-				{membership.car_plate}
-			</p>
+			{/* BODY */}
+			<div className="px-4 pb-4 text-sm text-gray-60 space-y-1">
+				<p>Nummerplade: {membership.car_plate}</p>
 
-			<p>
-				<strong>Pris:</strong>{" "}
-				{membership.membership_type_price} DKK
-			</p>
+				<p>Pris: {membership.membership_type_price} DKK</p>
 
-			<p>
-				<strong>Beskrivelse:</strong>{" "}
-				{membership.membership_desc}
-			</p>
+				<p>Beskrivelse: {membership.membership_desc}</p>
 
-			<p>
-				<strong>Start:</strong>{" "}
-				{new Date(
-					membership.membership_start_at * 1000
-				).toLocaleDateString()}
-			</p>
-
-			{membership.membership_end_at && (
 				<p>
-					<strong>Slut:</strong>{" "}
+					Start:{" "}
 					{new Date(
-						membership.membership_end_at * 1000
+						membership.membership_start_at * 1000
 					).toLocaleDateString()}
 				</p>
+
+				{membership.membership_end_at && (
+					<p>
+						Næste betaling:{" "}
+						{new Date(
+							membership.membership_end_at * 1000
+						).toLocaleDateString()}
+					</p>
+				)}
+			</div>
+
+			{/* FOOTER */}
+			{!isCancelled && (
+				<div className="px-4 py-3 bg-gray-5 border-t border-gray-10 flex justify-end">
+					<button
+						onClick={() =>
+							onDelete(membership.membership_pk)
+						}
+						className="bg-red-500 hover:bg-red-600 transition-colors text-white text-sm px-3 py-1"
+					>
+						Opsig medlemskab
+					</button>
+				</div>
 			)}
 
-			{/* only show delete if active */}
-			{!isCancelled && (
-				<button
-					onClick={() =>
-						onDelete(membership.membership_pk)
-					}
-					className="bg-red-500 text-white px-3 py-1 rounded"
-				>
-					Opsig medlemskab
-				</button>
-			)}
 		</div>
 	);
 }

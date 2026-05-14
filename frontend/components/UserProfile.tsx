@@ -3,6 +3,14 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "./AuthContext";
 
+import {
+	UserIcon,
+	EnvelopeIcon,
+	PhoneIcon,
+	CurrencyDollarIcon,
+	TagIcon,
+} from "@heroicons/react/24/outline";
+
 type User = {
 	first_name: string;
 	last_name: string;
@@ -14,7 +22,7 @@ type User = {
 };
 
 export default function UserProfile() {
-	const { isLoggedIn, token, logout } = useAuth();
+	const { isLoggedIn, token } = useAuth();
 
 	const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -42,9 +50,8 @@ export default function UserProfile() {
 
 				const data = await res.json();
 				setUser(data.user);
-			} catch (err) {
-				console.error(err);
-				setError("Could not load user profile");
+			} catch {
+				setError("Could not load profile");
 			} finally {
 				setLoading(false);
 			}
@@ -53,23 +60,70 @@ export default function UserProfile() {
 		fetchUser();
 	}, [isLoggedIn, token, baseURL]);
 
-	// auth guard
 	if (!isLoggedIn) return null;
 
-	if (loading) return <p>Henter profil info...</p>;
-	if (error) return <p>{error}</p>;
-	if (!user) return <p>Bruger findes ikke.</p>;
+	if (loading) {
+		return (
+			<div className="border border-gray-10 p-4 text-sm text-gray-60">
+				Henter profil...
+			</div>
+		);
+	}
+
+	if (error) {
+		return (
+			<div className="border border-gray-10 p-4 text-sm text-red-500">
+				{error}
+			</div>
+		);
+	}
+
+	if (!user) {
+		return (
+			<div className="border border-gray-10 p-4 text-sm text-gray-60">
+				Bruger findes ikke.
+			</div>
+		);
+	}
 
 	return (
-		<div>
-			<h2>Profil Info</h2>
+		<div className="">
 
-			<p>{user.status}</p>
-			<p>Navn: {user.first_name}</p>
-			<p>Efternavn: {user.last_name}</p>
-			<p>Email: {user.email}</p>
-			<p>Tlf: {user.phone}</p>
-			<p>WashCoins: {user.washcoins}</p>
+			{/* HEADER */}
+			<div className="flex items-center justify-between mb-8">
+				<div className="flex items-center gap-3">
+					<div>
+						<h2 className="text-xl font-semibold text-gray-80">
+							{user.first_name} {user.last_name}
+						</h2>
+
+						<p className="text-base text-gray-60">
+							{user.status}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* INFO GRID */}
+			<div className="space-y-4 text-base leading-relaxed text-gray-60">
+
+				<div className="flex items-center gap-3">
+					<EnvelopeIcon className="w-5 h-5 text-gray-60" />
+					<span className="text-lg">{user.email}</span>
+				</div>
+
+				<div className="flex items-center gap-3">
+					<PhoneIcon className="w-5 h-5 text-gray-60" />
+					<span className="text-lg">{user.phone}</span>
+				</div>
+
+				<div className="flex items-center gap-3">
+					<CurrencyDollarIcon className="w-5 h-5 text-gray-60" />
+					<span className="text-lg">{user.washcoins} WashCoins</span>
+				</div>
+
+			</div>
+
 		</div>
 	);
 }

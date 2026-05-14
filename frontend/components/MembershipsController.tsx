@@ -101,7 +101,6 @@ export default function MembershipsController() {
 
 	return (
 		<div>
-			<h2>Medlemskaber</h2>
 
 			{memberships.length === 0 ? (
 				<p>Ingen medlemskaber fundet.</p>

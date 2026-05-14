@@ -489,6 +489,9 @@ def get_history():
     try:
         user_fk = auth.verify_token()
 
+        limit = request.args.get("limit", default=10, type=int)
+        offset = request.args.get("offset", default=0, type=int)
+
         connection, cursor = connector.db()
 
         query = """
@@ -505,24 +508,17 @@ def get_history():
             s.service_name,
             s.service_type,
             mt.membership_type_name,
-
             u.user_first_name,
             u.user_last_name
-
         FROM service_history sh
-
         JOIN service s
             ON sh.service_fk = s.service_pk
-
         LEFT JOIN membership m
             ON sh.membership_fk = m.membership_pk
-
         LEFT JOIN membership_type mt
             ON m.membership_type_fk = mt.membership_type_pk
-
         LEFT JOIN users u
             ON sh.user_fk = u.user_pk
-
         WHERE
             sh.user_fk = %s
             OR sh.membership_fk IN (
@@ -531,11 +527,11 @@ def get_history():
                 WHERE user_fk = %s
                 AND deleted_at = 0
             )
-
         ORDER BY sh.service_at DESC
+        LIMIT %s OFFSET %s
         """
 
-        cursor.execute(query, (user_fk, user_fk))
+        cursor.execute(query, (user_fk, user_fk, limit, offset))
         rows = cursor.fetchall()
 
         return jsonify({
