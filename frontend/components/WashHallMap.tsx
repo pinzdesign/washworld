@@ -106,7 +106,11 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
         if (!markersLoaded) return;
         const nearestIds = new Set(nearestLocations.map((l) => l.Location_id));
         markersRef.current.forEach((el, id) => {
-            el.style.filter = nearestIds.has(id)
+            const isNearest = nearestIds.has(id);
+            el.style.backgroundImage = isNearest
+                ? "url(/washworld-marker-nearest.svg)"
+                : "url(/washworld-marker.svg)";
+            el.style.filter = isNearest
                 ? "drop-shadow(0px 2px 6px rgba(0,0,0,1))"
                 : "";
         });
