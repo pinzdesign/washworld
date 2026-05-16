@@ -39,7 +39,7 @@ export default function Home() {
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
 						{/* LEFT COLUMN */}
-						<div className="lg:col-span-6 space-y-8 px-9 py-12 border border-black/10 bg-white">
+						<div className="lg:col-span-6 space-y-8 px-4 py-6 lg:px-9 lg:py-12 border border-black/10 bg-white">
 
 							<UserProfile />
 
@@ -56,7 +56,7 @@ export default function Home() {
 						</div>
 
 						{/* RIGHT COLUMN */}
-						<div className="lg:col-span-6 px-9 py-12 border border-black/10 bg-white">
+						<div className="lg:col-span-6 px-4 py-6 lg:px-9 lg:py-12 border border-black/10 bg-white">
 							<ServiceHistory refreshKey={refreshKey} />
 							<Link
 								href="/history"
