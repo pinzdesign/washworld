@@ -50,19 +50,20 @@ export default function Login() {
 				type="email"
 				placeholder="Email"
 				onChange={(e) => setEmail(e.target.value)}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
 				type="password"
 				placeholder="Password"
 				onChange={(e) => setPassword(e.target.value)}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<button
-				onClick={handleLogin}
 				type="submit"
 				disabled={loading}
-				className="border border-black/20 rounded"
+				className="w-full bg-brand-green text-white px-4 py-2 hover:bg-brand-green-alt transition-colors shadow-sm hover:shadow-md"
 			>
 				{loading ? "Logger ind..." : "Logind"}
 			</button>

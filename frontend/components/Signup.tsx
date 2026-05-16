@@ -66,6 +66,7 @@ export default function Signup() {
 				name="user_email"
 				placeholder="Email"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
@@ -73,6 +74,7 @@ export default function Signup() {
 				type="password"
 				placeholder="Password"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
@@ -80,29 +82,34 @@ export default function Signup() {
 				type="password"
 				placeholder="Confirm Password"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
 				name="user_first_name"
 				placeholder="First Name"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
 				name="user_last_name"
 				placeholder="Last Name"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
 			<input
 				name="user_phone"
 				placeholder="Phone (8 digits)"
 				onChange={handleChange}
+				className="w-full border border-gray-10 px-3 py-2 focus:outline-none focus:border-brand-green"
 			/>
 
-			<button 
+			<button
 				type="submit"
-				className="border border-black/20 rounded">
+				className="w-full bg-brand-green text-white px-4 py-2 hover:bg-brand-green-alt transition-colors shadow-sm hover:shadow-md"
+			>
 				Sign up
 			</button>
 

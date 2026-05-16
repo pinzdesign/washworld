@@ -63,7 +63,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className={`rounded-lg overflow-hidden ring-1 ring-black/20 ${
+        <div className={`overflow-hidden ring-1 ring-black/20 ${
             isSelected ? "bg-white shadow-[0px_2px_12px_rgba(0,0,0,0.6)]" : "bg-[#f7f7f7]"
         }`}>
             {location.image && (
@@ -86,7 +86,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                             href={directionsUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="ml-auto font-extrabold bg-[#06C167] text-white px-3 py-1 rounded flex items-center gap-1 text-sm"
+                            className="ml-auto font-extrabold bg-[#06C167] text-white px-3 py-1 flex items-center gap-1 text-sm"
                         >
                             <ArrowTurnUpRightIcon className="w-4 h-4 font-extrabold" />
                             Rute
@@ -110,7 +110,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
 
                 {/* Drifts-besked (kun hvis der er en) */}
                 {location.operational_message && (
-                    <p className="text-sm text-orange-700 bg-orange-50 rounded p-2">
+                    <p className="text-sm text-orange-700 bg-orange-50 p-2">
                         {location.operational_message}
                     </p>
                 )}
@@ -125,7 +125,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                                 return (
                                     <div
                                         key={time}
-                                        className={`flex-1 rounded ${isNow ? "ring-2 ring-black" : ""}`}
+                                        className={`flex-1 ${isNow ? "border" : ""}`}
                                         style={{
                                             height: `${loadHeight(load)}%`,
                                             backgroundColor: loadColor(load),

@@ -38,7 +38,7 @@ export default function RootLayout({
 			lang="en"
 			className={gilroy.variable}
 		>
-			<body className="min-h-full flex flex-col">
+			<body className="min-h-full flex flex-col pt-16 bg-surface">
 				<AuthProvider>
 					<Navbar />
 					{children}
