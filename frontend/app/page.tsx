@@ -39,18 +39,24 @@ export default function Home() {
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
 						{/* LEFT COLUMN */}
-						<div className="lg:col-span-6 space-y-8">
+						<div className="lg:col-span-6 space-y-8 px-9 py-12 border border-black/10 bg-white">
 
 							<UserProfile />
 
 							<div className="border-t border-gray-10 pt-6">
-								<MembershipsController />
+								<MembershipsController mode="dashboard" />
+								<Link
+									href="/subscriptions"
+									className="text-sm text-brand-green hover:underline"
+								>
+									Vis alle abonnementer
+								</Link>
 							</div>
 
 						</div>
 
 						{/* RIGHT COLUMN */}
-						<div className="lg:col-span-6">
+						<div className="lg:col-span-6 px-9 py-12 border border-black/10 bg-white">
 							<ServiceHistory refreshKey={refreshKey} />
 							<Link
 								href="/history"

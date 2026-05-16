@@ -16,7 +16,11 @@ type Membership = {
 	membership_desc: string;
 };
 
-export default function MembershipsController() {
+export default function MembershipsController({
+	mode = "dashboard",
+}: {
+	mode?: "dashboard" | "full";
+}) {
 	const { isLoggedIn, token } = useAuth();
 	const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -127,13 +131,15 @@ export default function MembershipsController() {
 	if (loading) return <p>Henter medlemskaber...</p>;
 	if (error) return <p>{error}</p>;
 
+	const displayed = mode === "dashboard" ? memberships.slice(0, 3) : memberships;
+
 	return (
 		<div>
 
-			{memberships.length === 0 ? (
+			{displayed.length === 0 ? (
 				<p>Ingen medlemskaber fundet.</p>
 			) : (
-				memberships.map((m) => (
+				displayed.map((m) => (
 					<MembershipCard
 						key={m.membership_pk}
 						membership={m}
