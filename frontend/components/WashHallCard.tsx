@@ -63,8 +63,8 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className={`overflow-hidden ring-1 ring-black/20 ${
-            isSelected ? "bg-white shadow-[0px_2px_12px_rgba(0,0,0,0.6)]" : "bg-[#f7f7f7]"
+        <div className={`overflow-hidden ring-1 ring-black/10 ${
+            isSelected ? "bg-white shadow-[0px_2px_12px_rgba(0,0,0,0.6)]" : "bg-gray-5"
         }`}>
             {location.image && (
                 <img src={location.image} alt={location.name} className="w-full h-40 object-cover" />
@@ -80,15 +80,15 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                 {location.distance_km !== undefined && (
                     <div className="flex items-center">
                         {hasGpsPosition && (
-                            <span className="font-extrabold text-[#06C167]">{location.distance_km} km</span>
+                            <span className="font-extrabold text-brand-green">{location.distance_km} km</span>
                         )}
                         <a
                             href={directionsUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="ml-auto font-extrabold bg-[#06C167] text-white px-3 py-1 flex items-center gap-1 text-sm"
+                            className="ml-auto font-light bg-brand-green text-white px-3 py-1 flex items-center gap-1 text-sm w-1/2 justify-center"
                         >
-                            <ArrowTurnUpRightIcon className="w-4 h-4 font-extrabold" />
+                            <ArrowTurnUpRightIcon className="w-4 h-4 font-light" />
                             Rute
                         </a>
                     </div>

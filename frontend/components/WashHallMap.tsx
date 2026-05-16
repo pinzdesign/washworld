@@ -145,7 +145,7 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
                 <div className="flex gap-2">
                     <button
                         onClick={onRequestLocation}
-                        className="bg-black text-white px-4 py-2 rounded"
+                        className="bg-black text-white px-4 py-2"
                         aria-label="Find min position"
                     >
                         <MapPinIcon className="w-5 h-5" />
@@ -156,16 +156,10 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
                         onChange={(e) => setSearchTerm(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                         placeholder="Indtast adresse..."
-                        className="border rounded px-3 py-2 flex-1 bg-white"
+                        className="border px-3 py-2 flex-1 bg-white"
                     />
-                    <button
-                        onClick={handleSearch}
-                        className="bg-black text-white px-4 py-2 rounded"
-                    >
-                        Søg
-                    </button>
                 </div>
-                {error && <p className="text-red-600 mt-2 bg-white px-2 py-1 rounded">{error}</p>}
+                {error && <p className="text-red-600 mt-2 bg-white px-2 py-1">{error}</p>}
             </div>
         </div>
     );
