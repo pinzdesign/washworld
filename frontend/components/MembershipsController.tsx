@@ -131,7 +131,7 @@ export default function MembershipsController({
 	if (loading) return <p>Henter medlemskaber...</p>;
 	if (error) return <p>{error}</p>;
 
-	const displayed = mode === "dashboard" ? memberships.slice(0, 3) : memberships;
+	const displayed = mode === "dashboard" ? memberships.slice(0, 2) : memberships;
 
 	return (
 		<div>
