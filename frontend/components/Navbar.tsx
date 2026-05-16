@@ -14,11 +14,11 @@ export function Navbar() {
 	const { isLoggedIn, logout } = useAuth();
 	const router = useRouter();
 
-	// ✅ separate states
+	// separate states
 	const [userMenuOpen, setUserMenuOpen] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-	// ✅ separate refs
+	// separate refs
 	const userMenuRef = useRef<HTMLDivElement>(null);
 	const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +67,7 @@ export function Navbar() {
 	);
 
 	return (
-		<nav className="bg-brand-green flex items-center justify-between px-6 py-3 text-white font-extrabold">
+		<nav className="fixed top-0 left-0 z-50 w-full bg-brand-green/95 backdrop-blur-sm flex items-center justify-between px-6 py-3 text-white font-extrabold shadow-md">
 
 			{/* LOGO */}
 			<Link href="/">

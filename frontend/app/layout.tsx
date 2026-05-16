@@ -4,6 +4,7 @@ import "./globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { AuthProvider } from "@/components/AuthContext";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const gilroy = localFont({
   src: [
@@ -41,6 +42,7 @@ export default function RootLayout({
 				<AuthProvider>
 					<Navbar />
 					{children}
+					<Footer />
 				</AuthProvider>
 			</body>
 		</html>
