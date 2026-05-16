@@ -22,11 +22,11 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
     }, [selectedLocationId]);
 
     return (
-        <div className="bg-[#e5e5e5] px-6 py-8">
+        <div className="bg-gray-10 py-8">
             {!error && locations.length === 0 && (
-                <div className="bg-white font-extrabold grid place-items-center border border-black/20 rounded-lg w-fit space-y-2 mx-auto px-6 py-4 flex gap-2">
+                <div className="bg-white font-extrabold grid place-items-center border border-black/10 w-fit space-y-2 mx-auto px-6 py-4 flex gap-2">
                     <h2>Vi skal bruge din lokation for at vise vaskehaller nær dig.</h2>
-                    <button className="bg-[#06C167] hover:bg-[#05a557] text-white font-extrabold px-4 py-2 rounded flex items-center gap-2" onClick={onRequestLocation}>
+                    <button className="bg-brand-green hover:bg-brand-green-alt text-white font-extrabold px-4 py-2 flex items-center gap-2" onClick={onRequestLocation}>
                         <MapPinIcon className="w-5 h-5" />
                         Brug min lokation
                     </button>
@@ -35,10 +35,10 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
             {error && (
                 <div>
                     <p>{error}</p>
-                    <button onClick={onRequestLocation}>Brug min lokation</button>
+                    <button onClick={onRequestLocation} className="w-full justify_center">Brug min lokation</button>
                 </div>
             )}
-            <div className="flex gap-4 overflow-x-auto items-start p-4">
+            <div className="flex gap-4 overflow-x-auto items-start py-4 px-6">
                 {locations.map((loc) => (
                     <div
                         key={loc.Location_id}
