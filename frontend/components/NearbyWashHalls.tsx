@@ -22,7 +22,7 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
     }, [selectedLocationId]);
 
     return (
-        <div className="bg-gray-10 py-8">
+        <div className="bg-gray-10 py-6">
             {!error && locations.length === 0 && (
                 <div className="bg-white font-extrabold grid place-items-center border border-black/10 w-fit space-y-2 mx-auto px-6 py-4 flex gap-2">
                     <h2>Vi skal bruge din lokation for at vise vaskehaller nær dig.</h2>
@@ -38,7 +38,7 @@ export default function NearbyWashHalls({ locations, selectedLocationId, hasGpsP
                     <button onClick={onRequestLocation} className="w-full justify_center">Brug min lokation</button>
                 </div>
             )}
-            <div className="flex gap-4 overflow-x-auto items-start py-4 px-6">
+            <div className="flex gap-4 overflow-x-auto items-stretch py-4 px-6">
                 {locations.map((loc) => (
                     <div
                         key={loc.Location_id}

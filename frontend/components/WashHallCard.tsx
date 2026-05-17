@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArrowTurnUpRightIcon } from "@heroicons/react/24/solid";
+import { ArrowTurnUpRightIcon, ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 
 
 type ServiceUnit = {
     total_count: number;
+    out_of_service: number;
+    out_of_service_note: string;
 };
 
 export type Location = {
@@ -23,7 +25,6 @@ export type Location = {
     adjusted_load_profile?: Record<string, number>;
     distance_km?: number;
     duration_min?: number;
-    operational_message?: string;
 }
 
 type Props = {
@@ -63,13 +64,13 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
 
     return (
-        <div className={`overflow-hidden ring-1 ring-black/10 ${
+        <div className={`h-full flex flex-col overflow-hidden ring-1 ring-black/10 ${
             isSelected ? "bg-white shadow-[0px_2px_12px_rgba(0,0,0,0.6)]" : "bg-gray-5"
         }`}>
             {location.image && (
                 <img src={location.image} alt={location.name} className="w-full h-40 object-cover" />
             )}
-            <div className="p-4 space-y-3">
+            <div className="p-4 flex flex-col gap-3 flex-1">
                 <h3 className="font-extrabold text-lg truncate">{location.name}</h3>
                 <div className="min-h-12">
                     <p className="font-light text-sm text-gray-600 ">{location.address}</p>
@@ -95,29 +96,40 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                 )}
 
                 {/* Faciliteter */}
-                <div className="grid grid-cols-2 gap-1 text-sm min-h-12">
+                <div className="flex flex-col gap-1 text-sm">
                     {Object.entries(FACILITY_LABELS).map(([key, label]) => {
-                        const count = location.service_units[key as keyof typeof location.service_units]?.total_count ?? 0;
+                        const unit = location.service_units[key as keyof typeof location.service_units];
+                        const count = unit?.total_count ?? 0;
                         if (count === 0) return null;
+                        const outOfService = unit?.out_of_service ?? 0;
+                        const note = unit?.out_of_service_note ?? "";
+                        const allOutOfService = outOfService >= count;
+
                         return (
-                            <div className="font-extrabold" key={key}>
-                                {label}: {count}
+                            <div
+                                key={key}
+                                className="flex items-center justify-between gap-2 font-light"
+                            >
+                                <span className={allOutOfService ? "line-through" : ""}>
+                                    {label}: {count}
+                                </span>
+                                {outOfService > 0 && (
+                                    <span
+                                        className="inline-flex items-center gap-1 bg-splash/10 text-splash px-2 py-0.5 text-xs font-extrabold"
+                                        title={note}
+                                    >
+                                        <ExclamationTriangleIcon className="w-3.5 h-3.5" />
+                                        {outOfService}
+                                    </span>
+                                )}
                             </div>
                         );
                     })}
                 </div>
 
-
-                {/* Drifts-besked (kun hvis der er en) */}
-                {location.operational_message && (
-                    <p className="text-sm text-orange-700 bg-orange-50 p-2">
-                        {location.operational_message}
-                    </p>
-                )}
-
                 {/* Travlhed-graf */}
                 {location.adjusted_load_profile && (
-                    <div>
+                    <div className="mt-auto">
                         <div className="flex items-end gap-1 h-16 border-b border-gray-200">
                             {Object.entries(location.adjusted_load_profile).map(([time, load]) => {
                                 const hour = parseInt(time);
