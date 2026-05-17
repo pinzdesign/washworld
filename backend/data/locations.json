@@ -24,7 +24,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 1,
@@ -34,19 +36,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens607e78606297c",
@@ -77,8 +87,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916187cd75",
@@ -105,23 +114,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13520402fc5",
@@ -152,8 +171,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915fcd689f",
@@ -180,23 +198,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351f87de01",
@@ -227,8 +255,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5eaae8872dd50",
@@ -255,7 +282,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Hal 1 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 2,
@@ -270,11 +299,15 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ SKIP - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -289,11 +322,15 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Nilfisk Vacuum"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5efc36ec2830b",
@@ -324,8 +361,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5d84c6994bed4",
@@ -352,23 +388,33 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d887018329af",
@@ -399,8 +445,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5da06f74e0475",
@@ -427,15 +472,21 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -450,7 +501,9 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 2,
@@ -465,7 +518,9 @@
             "name": "Prewash 1",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5e204f6d367e7",
@@ -496,8 +551,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916270081c",
@@ -524,23 +578,33 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "4"
+        "machine_type": "4",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13520e43942",
@@ -571,8 +635,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5c47170bac41e",
@@ -599,23 +662,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352d507068",
@@ -646,8 +719,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b684c660541d",
@@ -674,7 +746,9 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 3,
@@ -694,11 +768,15 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Compact - 4 hoses + vacuum"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -713,11 +791,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d134b970b6d0",
@@ -748,8 +830,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b891640bb970",
@@ -776,15 +857,21 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -799,11 +886,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135219378d9",
@@ -834,8 +925,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations62b02cef22bb4",
@@ -862,23 +952,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens62b02d1726965",
@@ -909,8 +1009,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations6059ee387a20a",
@@ -937,7 +1036,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -952,19 +1053,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens60c0bde70c087",
@@ -995,8 +1104,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915adc3e81",
@@ -1023,23 +1131,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d134c5624f25",
@@ -1070,8 +1188,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915b163c12",
@@ -1098,23 +1215,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d134c7f09f5b",
@@ -1145,8 +1272,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations6059eab0d16d4",
@@ -1173,7 +1299,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -1188,19 +1316,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens6092a05eabfa8",
@@ -1231,8 +1367,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations60b0f1337310b",
@@ -1259,7 +1394,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -1274,19 +1411,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens6116711816b1f",
@@ -1317,8 +1462,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5f7461d580f8a",
@@ -1345,7 +1489,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Hal 1 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 2,
@@ -1360,19 +1506,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5f7461f8f3cb9",
@@ -1403,8 +1557,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5eaaea162e200",
@@ -1431,7 +1584,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 2,
@@ -1446,19 +1601,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ SKIP - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5f27a3891831a",
@@ -1489,8 +1652,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5cb5e32a39c19",
@@ -1517,23 +1679,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d25ef09570d0",
@@ -1564,8 +1736,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations6127e5427f263",
@@ -1592,7 +1763,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 1,
@@ -1602,19 +1775,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens617934d7b1a23",
@@ -1645,8 +1826,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations61b263848b56e",
@@ -1673,7 +1853,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -1688,19 +1870,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens61c448746b30d",
@@ -1731,8 +1921,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916502d557",
@@ -1759,23 +1948,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135224925a2",
@@ -1806,8 +2005,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915ba48ae4",
@@ -1834,7 +2032,9 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 2,
@@ -1849,11 +2049,15 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -1868,11 +2072,15 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135156cdeb2",
@@ -1903,8 +2111,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5cb09534932c65",
@@ -1931,23 +2138,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135305cce36",
@@ -1978,8 +2195,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5f8562dc53802",
@@ -2006,7 +2222,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -2021,19 +2239,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5f9a7e1dee8b1",
@@ -2064,8 +2290,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations610a74677bc09",
@@ -2092,23 +2317,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens6116717f0bc75",
@@ -2139,8 +2374,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5f856453c9add",
@@ -2167,7 +2401,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -2182,19 +2418,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5fa2a998ea75f",
@@ -2225,8 +2469,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations6059eb8562cb4",
@@ -2253,7 +2496,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -2268,19 +2513,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 2,
+        "out_of_service_note": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens60c0bd119c3f2",
@@ -2311,8 +2564,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5fa3bd20928d3",
@@ -2339,7 +2591,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 1,
@@ -2349,19 +2603,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5fa3c222a40c1",
@@ -2392,8 +2654,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5b89165b6e6b9",
@@ -2420,23 +2681,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens60866ad57aa57",
@@ -2467,8 +2738,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations600ed7d679b72",
@@ -2495,7 +2765,9 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -2510,11 +2782,15 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 2,
+        "out_of_service_note": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -2529,11 +2805,15 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens602395a13b896",
@@ -2564,8 +2844,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": "Bås 1 og 2 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations600ed8154c21f",
@@ -2592,15 +2871,21 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -2615,11 +2900,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens602395f86afc9",
@@ -2650,8 +2939,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5e709e4151e7f",
@@ -2678,19 +2966,27 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 2,
@@ -2705,7 +3001,9 @@
             "name": "Prewash 2",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5e70ace530ea1",
@@ -2736,8 +3034,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916e25ea50",
@@ -2764,23 +3061,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 1,
+        "out_of_service_note": "Hal 2 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135291983fd",
@@ -2811,8 +3118,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": "Hal 2 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations618ced3ae2606",
@@ -2839,7 +3145,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -2854,19 +3162,27 @@
             "name": "Bås 2",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens61c448d264d1e",
@@ -2897,8 +3213,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916f45cfcc",
@@ -2925,19 +3240,27 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 1,
@@ -2947,7 +3270,9 @@
             "name": "Prewash 1",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13529bd134e",
@@ -2978,8 +3303,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915c06d0ba",
@@ -3006,23 +3330,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13516347414",
@@ -3053,8 +3387,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915c5dbab3",
@@ -3081,7 +3414,9 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 1,
@@ -3091,19 +3426,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ SKIP - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13516e2bfb0-Infoscreen5d13517c35935",
@@ -3134,8 +3477,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915ca07ed4",
@@ -3162,23 +3504,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13518725cbc",
@@ -3209,8 +3561,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations60812fc2682c5",
@@ -3237,7 +3588,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 2,
@@ -3252,11 +3605,15 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -3271,11 +3628,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens60c0be7d34988",
@@ -3306,8 +3667,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": "Vi rengør Hal 1, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5b89170b0408d",
@@ -3334,23 +3694,33 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352b2a1e6d",
@@ -3381,8 +3751,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations628b76056484d",
@@ -3409,23 +3778,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens628b8b2a91082",
@@ -3456,8 +3835,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916fdcc802",
@@ -3484,7 +3862,9 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 2,
@@ -3499,11 +3879,15 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -3518,11 +3902,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352a6ccc82",
@@ -3553,8 +3941,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": "Vi udfører service i hal 3, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5b89166b35380",
@@ -3581,15 +3968,21 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -3604,11 +3997,15 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135246164ff",
@@ -3639,8 +4036,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916653fb36",
@@ -3667,23 +4063,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13523be48b5",
@@ -3714,8 +4120,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5fa3bd89ae014",
@@ -3742,7 +4147,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -3757,19 +4164,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5fa3c2720fb0c",
@@ -3800,8 +4215,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915cde35cc",
@@ -3828,19 +4242,27 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 1,
@@ -3850,7 +4272,9 @@
             "name": "Prewash 1",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13519d0627c",
@@ -3881,8 +4305,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915d313338",
@@ -3909,23 +4332,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351a805896",
@@ -3956,8 +4389,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5eaae3b421d0e",
@@ -3984,23 +4416,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5ee1cc2203690",
@@ -4031,8 +4473,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915d7c6b84",
@@ -4059,19 +4500,27 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "4"
+        "machine_type": "4",
+        "out_of_service": 1,
+        "out_of_service_note": "Hal 1 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 1,
@@ -4081,7 +4530,9 @@
             "name": "Prewash 1",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351b5d5a39",
@@ -4112,8 +4563,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Hal 1 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5b8915dbc1b44",
@@ -4140,23 +4590,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351c1aabf7",
@@ -4187,8 +4647,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b89168581477",
@@ -4215,15 +4674,21 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -4238,11 +4703,15 @@
             "name": "Støvsuger 2",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352503491e",
@@ -4273,8 +4742,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations628b70fb64f7e",
@@ -4301,15 +4769,21 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 2,
@@ -4324,11 +4798,15 @@
             "name": "Støvsuger 1",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens628b8a8fc78e6",
@@ -4359,8 +4837,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915e1609d9",
@@ -4387,23 +4864,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Undervogsskyld i Hal 1, er ude af drift og kan ikke benyttes."
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351cc028d1",
@@ -4434,8 +4921,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Undervogsskyld i Hal 1, er ude af drift og kan ikke benyttes. "
+    }
   },
   {
     "uid": "Locations5b8915e513c14",
@@ -4462,23 +4948,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351d584459",
@@ -4509,8 +5005,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915e8a502f",
@@ -4537,23 +5032,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351dfd4019",
@@ -4584,8 +5089,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations628b74bd93aec",
@@ -4612,23 +5116,33 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens628b8ae4dc42b",
@@ -4659,8 +5173,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8917189763d",
@@ -4687,23 +5200,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "4"
+        "machine_type": "4",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352bd51570",
@@ -4734,8 +5257,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b891723e12b2",
@@ -4762,23 +5284,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352ca16cc8",
@@ -4809,8 +5341,7 @@
       "19:00": 0.495,
       "20:00": 0.165,
       "21:00": 0.165
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8915b64748b",
@@ -4837,7 +5368,9 @@
     "service_units": {
       "hall": {
         "total_count": 4,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 3,
+        "out_of_service_note": "Hal 2, 3 og 4 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 3,
@@ -4857,11 +5390,15 @@
             "name": "Bås 3",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 6,
@@ -4896,11 +5433,15 @@
             "name": "Støvsuger 6",
             "service_unit_model_name": "Nilfisk Vacuum"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5ef8707fc0221-Infoscreens5ef870e125b30-Infoscreens5f44d175283a3",
@@ -4931,8 +5472,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": "Hal 2, 3 og 4 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5b891691e291f",
@@ -4959,23 +5499,33 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "4"
+        "machine_type": "4",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13525a845e7",
@@ -5006,8 +5556,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations628b6beb5032f",
@@ -5034,15 +5583,21 @@
     "service_units": {
       "hall": {
         "total_count": 3,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 4,
@@ -5067,11 +5622,15 @@
             "name": "Støvsuger 3",
             "service_unit_model_name": "Christ Duo Orbit - 2 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens628b8a1948213",
@@ -5102,8 +5661,7 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5f5b1d7040c4a",
@@ -5130,7 +5688,9 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 2,
@@ -5145,19 +5705,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5f5b1e17eb49e",
@@ -5188,8 +5756,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5d47fb08cd3e6",
@@ -5216,23 +5783,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d64df0284e78",
@@ -5263,8 +5840,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b89169e67974",
@@ -5291,23 +5867,33 @@
     "service_units": {
       "hall": {
         "total_count": 1,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d135264d7f78",
@@ -5338,8 +5924,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916aba77ac",
@@ -5366,23 +5951,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "3"
+        "machine_type": "3",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352703ad27",
@@ -5413,8 +6008,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916b710ec9",
@@ -5441,23 +6035,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d13527cafe84",
@@ -5488,8 +6092,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5d886a79cce9a",
@@ -5516,19 +6119,27 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 1,
@@ -5538,7 +6149,9 @@
             "name": "Prewash 1",
             "service_unit_model_name": "High Presure Prewash"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d8870542c4a5",
@@ -5569,8 +6182,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": ""
+    }
   },
   {
     "uid": "Locations5b8916c327873",
@@ -5597,23 +6209,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "6"
+        "machine_type": "6",
+        "out_of_service": 1,
+        "out_of_service_note": "Hal 2 er ude af drift. Tekniker er tilkaldt."
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1352873d05e",
@@ -5644,8 +6266,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": "Hal 2 er ude af drift. Tekniker er tilkaldt."
+    }
   },
   {
     "uid": "Locations5eaae937a552e",
@@ -5672,7 +6293,9 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 1,
+        "out_of_service_note": "Vi udfører service i hal 2, så du får en bedre vaskeoplevelse."
       },
       "self_wash": {
         "total_count": 1,
@@ -5682,19 +6305,27 @@
             "name": "Bås 1",
             "service_unit_model_name": "Christ Tombstone - 4 hoses"
           }
-        ]
+        ],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreens5f2bb41fe5443",
@@ -5725,8 +6356,7 @@
       "19:00": 0.45,
       "20:00": 0.15,
       "21:00": 0.15
-    },
-    "operational_message": "Vi udfører service i hal 2, så du får en bedre vaskeoplevelse."
+    }
   },
   {
     "uid": "Locations5b8915ed201c5",
@@ -5753,23 +6383,33 @@
     "service_units": {
       "hall": {
         "total_count": 2,
-        "machine_type": "2"
+        "machine_type": "2",
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "self_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "mat_cleaner": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "vacuum": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       },
       "pre_wash": {
         "total_count": 0,
-        "details": []
+        "details": [],
+        "out_of_service": 0,
+        "out_of_service_note": ""
       }
     },
     "infoscreen": "Infoscreen5d1351eabc98b",
@@ -5800,7 +6440,6 @@
       "19:00": 0.585,
       "20:00": 0.195,
       "21:00": 0.195
-    },
-    "operational_message": ""
+    }
   }
 ]
