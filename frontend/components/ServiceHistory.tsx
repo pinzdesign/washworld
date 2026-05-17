@@ -86,16 +86,6 @@ export default function ServiceHistory({
 				<h2 className="text-xl font-semibold text-gray-80">
 					Vaske Historik
 				</h2>
-
-				{/* DASHBOARD CTA */}
-				{mode === "dashboard" && (
-					<Link
-						href="/history"
-						className="text-sm text-brand-green hover:underline"
-					>
-						Show all
-					</Link>
-				)}
 			</div>
 
 			{/* LIST */}

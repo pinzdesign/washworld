@@ -162,7 +162,7 @@ export function Navbar() {
 
 			{/* NOT LOGGED IN */}
 			{!isLoggedIn && (
-				<div className="hidden lg:flex items-center gap-6 text-white">
+				<div className="flex items-center gap-3 text-white text-sm lg:gap-6 lg:text-base">
 					<Link href="/login">Log ind</Link>
 					<Link href="/signup">Opret bruger</Link>
 				</div>
