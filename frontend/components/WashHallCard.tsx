@@ -130,7 +130,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                 {/* Travlhed-graf */}
                 {location.adjusted_load_profile && (
                     <div className="mt-auto">
-                        <div className="flex items-end gap-1 h-16 border-b border-gray-200">
+                        <div className="flex items-end gap-1 h-12 border-b border-gray-200">
                             {Object.entries(location.adjusted_load_profile).map(([time, load]) => {
                                 const hour = parseInt(time);
                                 const isNow = hour === currentHour;
