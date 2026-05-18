@@ -103,7 +103,7 @@ export function Navbar() {
 	);
 
 	return (
-		<nav className={`${isPwa ? "" : "fixed top-0 left-0 z-50 w-full"} bg-brand-green/95 backdrop-blur-sm flex items-center justify-between px-6 py-3 text-white font-extrabold shadow-md`}>
+		<nav className={`${isPwa ? "relative z-50" : "fixed top-0 left-0 z-50 w-full"} bg-brand-green/95 backdrop-blur-sm flex items-center justify-between px-6 py-3 text-white font-extrabold shadow-md`}>
 
 			{/* LOGO */}
 			<Link href="/">
