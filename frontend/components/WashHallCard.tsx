@@ -61,7 +61,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
         setCurrentHour(new Date().getHours());
     }, []);
 
-    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent("Wash World " + location.address)}`;
 
     return (
         <div className={`h-full flex flex-col overflow-hidden ring-1 ring-black/10 ${
@@ -146,9 +146,19 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                                 );
                             })}
                         </div>
-                        <div className="flex justify-between text-xs text-gray-500 mt-1">
-                            <span>{Object.keys(location.adjusted_load_profile)[0]}</span>
-                            <span>{Object.keys(location.adjusted_load_profile).slice(-1)[0]}</span>
+                        <div className="flex gap-1 text-[10px] text-gray-500 mt-1">
+                            {Object.keys(location.adjusted_load_profile).map((time, idx) => {
+                                const showLabel = idx === 0 || idx === 5 || idx === 9 || idx === 14;
+                                return (
+                                    <div key={time} className="flex-1 flex justify-center items-center">
+                                        {showLabel ? (
+                                            <span>{time.substring(0, 2)}</span>
+                                        ) : (
+                                            <span className="w-1 h-1 rounded-full bg-gray-500" />
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 )}

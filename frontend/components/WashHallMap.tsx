@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import { MapPinIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import type { Location } from "./WashHallCard";
 
 type Props = {
@@ -61,7 +61,10 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
                     el.style.width = "32px";
                     el.style.height = "40px";
                     el.style.cursor = "pointer";
-                    el.addEventListener("click", () => onMarkerClickRef.current(loc));
+                    el.addEventListener("click", () => {
+                        setSearchTerm("");
+                        onMarkerClickRef.current(loc);
+                    });
 
                     markersRef.current.set(loc.Location_id, el);
 
@@ -144,20 +147,23 @@ export default function WashHallMap({ userPosition, nearestLocations, onPosition
             <div className="absolute top-4 left-4 right-4 z-10">
                 <div className="flex gap-2">
                     <button
-                        onClick={onRequestLocation}
+                        onClick={() => { setSearchTerm(""); onRequestLocation(); }}
                         className="bg-black text-white px-4 py-2"
                         aria-label="Find min position"
                     >
                         <MapPinIcon className="w-5 h-5" />
                     </button>
-                    <input
-                        type="text"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                        placeholder="Indtast adresse..."
-                        className="border px-3 py-2 flex-1 bg-white"
-                    />
+                    <div className="relative flex-1">
+                        <MagnifyingGlassIcon className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-60 pointer-events-none" />
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                            placeholder="Indtast adresse..."
+                            className="border pl-9 pr-3 py-2 w-full bg-white"
+                        />
+                    </div>
                 </div>
                 {error && <p className="text-red-600 mt-2 bg-white px-2 py-1">{error}</p>}
             </div>
