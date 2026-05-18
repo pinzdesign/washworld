@@ -148,7 +148,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                         </div>
                         <div className="flex gap-1 text-[10px] text-gray-500 mt-1">
                             {Object.keys(location.adjusted_load_profile).map((time, idx) => {
-                                const showLabel = idx === 0 || idx === 5 || idx === 9 || idx === 14;
+                                const showLabel = idx === 0 || idx === 4 || idx === 7 || idx === 10 || idx === 14;
                                 return (
                                     <div key={time} className="flex-1 flex justify-center items-center">
                                         {showLabel ? (
