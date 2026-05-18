@@ -11,9 +11,15 @@ import time
 
 app = Flask(__name__)
 
-CORS(app, origins="*")
+FRONTEND_URL = os.environ.get("FRONTEND_URL")
+if not FRONTEND_URL:
+    raise RuntimeError("FRONTEND_URL is missing")
+CORS(app, origins=[FRONTEND_URL])
 
-SECRET_KEY = os.environ.get("SECRET_KEY", None)
+SECRET_KEY = os.environ.get("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY is missing")
+
 SERVICE_ID = 2
 BASE_PRICE = 59
 CAR_PLATE = "ZZ12345"
@@ -39,7 +45,7 @@ def signup():
         cursor.execute(q, (user_email, user_password, user_first_name, user_last_name, user_phone, user_verification_key, user_verified_at, created_at))
         connection.commit()
 
-        base_url = os.environ.get("FRONTEND_URL", "http://127.0.0.1:3000")
+        base_url = FRONTEND_URL
         html = render_template("email_welcome.html", user_verification_key=user_verification_key, base_url=base_url)
 
         email_service.send_email(html, user_email)
@@ -428,7 +434,7 @@ def simulate_scan():
     conn, cur = connector.db()
 
     try:
-        user_fk = validators.get_user_id_from_jwt()
+        user_fk = auth.get_user_id_from_jwt()
         now = int(time.time())
 
         # -----------------------------------------
