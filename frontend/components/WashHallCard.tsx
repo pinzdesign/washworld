@@ -146,7 +146,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                                 );
                             })}
                         </div>
-                        <div className="flex gap-1 text-[10px] text-gray-500 mt-1">
+                        <div className="flex gap-1 text-[10px] text-gray-80 mt-1">
                             {Object.keys(location.adjusted_load_profile).map((time, idx) => {
                                 const showLabel = idx === 0 || idx === 4 || idx === 7 || idx === 10 || idx === 14;
                                 return (
@@ -154,7 +154,7 @@ export default function WashHallCard({ location, isSelected, hasGpsPosition }: P
                                         {showLabel ? (
                                             <span>{time.substring(0, 2)}</span>
                                         ) : (
-                                            <span className="w-1 h-1 rounded-full bg-gray-500" />
+                                            <span className="w-[3px] h-[3px] rounded-full bg-gray-500" />
                                         )}
                                     </div>
                                 );
