@@ -48,6 +48,17 @@
     letter-spacing: 1px;
     line-height: 25px;
   }
+
+  /* In PWA mode the navbar is non-fixed, so body shouldn't reserve top padding
+     and page main elements shouldn't keep the mt-12 navbar offset */
+  @media (display-mode: standalone) {
+    body {
+      padding-top: 0 !important;
+    }
+    main {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 @utility container-wide {

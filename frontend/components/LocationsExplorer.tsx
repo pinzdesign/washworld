@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WashHallMap from "./WashHallMap";
 import NearbyWashHalls from "./NearbyWashHalls";
 import type { Location } from "./WashHallCard";
+import { useIsPwa } from "./useIsPwa";
 
 export default function LocationsExplorer() {
     const [userPosition, setUserPosition] = useState<{ lat: number; lng: number } | null>(null);
@@ -11,6 +12,7 @@ export default function LocationsExplorer() {
     const [nearestLocations, setNearestLocations] = useState<Location[]>([]);
     const [selectedLocationId, setSelectedLocationId] = useState<number | null>(null);
     const [error, setError] = useState("");
+    const isPwa = useIsPwa();
 
     useEffect(() => {
         if (!userPosition) return;
@@ -63,12 +65,17 @@ export default function LocationsExplorer() {
     };
 
     useEffect(() => {
+        if (isPwa) {
+            // In PWA mode: always prompt for location on mount (browser handles dedup)
+            requestLocation();
+            return;
+        }
         if ("permissions" in navigator) {
             navigator.permissions.query({ name: "geolocation" }).then((result) => {
                 if (result.state === "granted") requestLocation();
             })
         }
-    }, []);
+    }, [isPwa]);
 
     return (
         <>

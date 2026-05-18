@@ -1,0 +1,17 @@
+{
+    "name": "Wash World",
+    "short_name": "WashWorld",
+    "description": "Find nærmeste vaskehal, se status og åbningstider",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#06c167",
+    "icons": [
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
