@@ -9,10 +9,12 @@ import {
 	XMarkIcon,
 } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
+import { useIsPwa } from "./useIsPwa";
 
 export function Navbar() {
 	const { isLoggedIn, logout } = useAuth();
 	const router = useRouter();
+	const isPwa = useIsPwa();
 
 	// separate states
 	const [userMenuOpen, setUserMenuOpen] = useState(false);
@@ -66,60 +68,67 @@ export function Navbar() {
 		</div>
 	);
 
+	const UserDropdown = () => (
+		<div className="relative" ref={userMenuRef}>
+			<button
+				onClick={() => setUserMenuOpen(!userMenuOpen)}
+				aria-label="Bruger menu"
+			>
+				<UserCircleIcon className="w-8 h-8" />
+			</button>
+
+			{userMenuOpen && (
+				<div className="absolute right-0 mt-2 bg-white text-black py-1 min-w-[160px] z-20">
+					<Link
+						href="/user"
+						className="block px-4 py-2 hover:bg-gray-100"
+						onClick={() => setUserMenuOpen(false)}
+					>
+						Min konto
+					</Link>
+
+					<button
+						onClick={() => {
+							logout();
+							setUserMenuOpen(false);
+							router.push("/");
+						}}
+						className="w-full text-left px-4 py-2 hover:bg-gray-100"
+					>
+						Log ud
+					</button>
+				</div>
+			)}
+		</div>
+	);
+
 	return (
-		<nav className="fixed top-0 left-0 z-50 w-full bg-brand-green/95 backdrop-blur-sm flex items-center justify-between px-6 py-3 text-white font-extrabold shadow-md">
+		<nav className={`${isPwa ? "" : "fixed top-0 left-0 z-50 w-full"} bg-brand-green/95 backdrop-blur-sm flex items-center justify-between px-6 py-3 text-white font-extrabold shadow-md`}>
 
 			{/* LOGO */}
 			<Link href="/">
 				<img
-					src="https://washworld.dk/assets/brand/logo.svg"
+					src={isPwa ? "/apple-touch-icon.png" : "https://washworld.dk/assets/brand/logo.svg"}
 					alt="WashWorld logo"
-					className="h-10"
+					className={isPwa ? "h-15" : "h-10"}
 				/>
 			</Link>
 
-			{/* DESKTOP */}
-			{isLoggedIn && (
+			{/* PWA MODE (alle skærmstr.) — kun user dropdown, nav-links er i BottomNav */}
+			{isLoggedIn && isPwa && (
+				<UserDropdown />
+			)}
+
+			{/* DESKTOP — kun når IKKE i PWA-mode */}
+			{isLoggedIn && !isPwa && (
 				<div className="hidden lg:flex items-center gap-6">
-
 					<NavLinks />
-
-					<div className="relative" ref={userMenuRef}>
-						<button
-							onClick={() => setUserMenuOpen(!userMenuOpen)}
-							aria-label="Bruger menu"
-						>
-							<UserCircleIcon className="w-8 h-8" />
-						</button>
-
-						{userMenuOpen && (
-							<div className="absolute right-0 mt-2 bg-white text-black py-1 min-w-[160px] z-20">
-								<Link
-									href="/user"
-									className="block px-4 py-2 hover:bg-gray-100"
-									onClick={() => setUserMenuOpen(false)}
-								>
-									Min konto
-								</Link>
-
-								<button
-									onClick={() => {
-										logout();
-										setUserMenuOpen(false);
-										router.push("/");
-									}}
-									className="w-full text-left px-4 py-2 hover:bg-gray-100"
-								>
-									Log ud
-								</button>
-							</div>
-						)}
-					</div>
+					<UserDropdown />
 				</div>
 			)}
 
-			{/* MOBILE */}
-			{isLoggedIn && (
+			{/* MOBILE burger — kun når IKKE i PWA-mode */}
+			{isLoggedIn && !isPwa && (
 				<div className="lg:hidden relative" ref={mobileMenuRef}>
 					<button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 						{mobileMenuOpen ? (
