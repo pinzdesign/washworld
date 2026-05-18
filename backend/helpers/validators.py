@@ -1,10 +1,5 @@
 from flask import request
 import re
-from icecream import ic
-import jwt
-import os
-
-SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
 ##############################
 REGEX_USER_EMAIL = "^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$"
@@ -101,18 +96,3 @@ def validate_address(address_str):
     if not (ADDRESS_MIN <= len(address) <= ADDRESS_MAX):
         raise Exception("company_exception address")
     return address
-
-##############################
-def get_user_id_from_jwt():
-    auth_header = request.headers.get("Authorization")
-
-    if not auth_header:
-        return None
-
-    try:
-        token = auth_header.split(" ")[1]
-        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return payload.get("user_pk")
-    except Exception as e:
-        ic(e)
-        return None
